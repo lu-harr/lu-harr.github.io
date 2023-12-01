@@ -27,9 +27,14 @@
 
                     // Load and display each HTML file
                     htmlFiles.forEach(function (htmlFile) {
-                        fetch(htmlDirectory + '/' + htmlFile)
+                        var filePath = htmlDirectory + '/' + htmlFile;
+                        console.log('Fetching:', filePath);
+    
+                        fetch(filePath)
                             .then(response => response.text())
                             .then(htmlContent => {
+                                console.log('Fetched content for:', filePath);
+
                                 // Create a div for each snippet
                                 var snippetDiv = document.createElement('div');
                                 snippetDiv.innerHTML = htmlContent;
@@ -39,6 +44,8 @@
 
                                 // Add a horizontal line between snippets for better separation
                                 document.getElementById('htmlSnippetsContainer').appendChild(document.createElement('hr'));
+                                console.log('Appended content for:', filePath);
+
                             });
                     });
                 })
