@@ -15,19 +15,20 @@
 
     <script>
     document.addEventListener("DOMContentLoaded", function () {
-        console.log("here2")
+        console.log("here2");
         var htmlDirectory = 'research';
         const fs = require('fs');
         
         function getFiles(dir, files = []) {
           // Get an array of all files and directories in the passed directory using fs.readdirSync
-          const fileList = fs.readdirSync(dir)
+          const fileList = fs.readdirSync(dir);
           // Create the full path of the file/directory by concatenating the passed directory and file/directory name
           for (const file of fileList) {
             // If it is a file, push the full path to the files array
-            files.push(file)
+            files.push(file);
           }
-          return files
+          return files;
+        }
         
         const filesInTheFolder = getFiles(htmlDirectory)
         console.log("files", filesInTheFolder);
