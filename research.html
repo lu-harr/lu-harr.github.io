@@ -1,63 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Render HTML Snippets</title>
-</head>
-
-<body>
-
-    <h3>HTML Snippets</h3>
-
-    <div id="htmlSnippetsContainer"></div>
-
-    <script>
+<script>
     document.addEventListener("DOMContentLoaded", function () {
-        console.log("here2");
         var htmlDirectory = 'research';
-        const fs = require('fs');
-        
-        function getFiles(dir, files = []) {
-          // Get an array of all files and directories in the passed directory using fs.readdirSync
-          const fileList = fs.readdirSync(dir);
-          // Create the full path of the file/directory by concatenating the passed directory and file/directory name
-          for (const file of fileList) {
-            // If it is a file, push the full path to the files array
-            files.push(file);
-          }
-          return files;
-        }
-        
-        const filesInTheFolder = getFiles(htmlDirectory)
-        console.log("files", filesInTheFolder);
-        
-        htmlFiles.forEach(function (htmlFile) {
-            var filePath = htmlDirectory + '/' + htmlFile;
-            console.log('Fetching:', filePath);
 
-            fetch(filePath)
-                .then(response => response.text())
-                .then(htmlContent => {
-                    console.log('Fetched content for:', filePath);
+        fetch(htmlDirectory)
+            .then(response => response.text())
+            .then(data => {
+                var htmlFiles = data.split('\n').filter(Boolean);
 
-                    var snippetDiv = document.createElement('div');
-                    snippetDiv.innerHTML = htmlContent;
+                htmlFiles.forEach(function (htmlFile) {
+                    var filePath = htmlDirectory + '/' + htmlFile;
+                    console.log('Fetching:', filePath);
 
-                    document.getElementById('htmlSnippetsContainer').appendChild(snippetDiv);
-                    document.getElementById('htmlSnippetsContainer').appendChild(document.createElement('hr'));
+                    fetch(filePath)
+                        .then(response => response.text())
+                        .then(htmlContent => {
+                            console.log('Fetched content for:', filePath);
 
-                    console.log('Appended content for:', filePath);
-                })
-                .catch(error => console.error('Error fetching content for:', filePath, error));
-          });
-        })
-        .catch(error => console.error('Error fetching HTML file list:', error));
+                            var snippetDiv = document.createElement('div');
+                            snippetDiv.innerHTML = htmlContent;
+
+                            document.getElementById('htmlSnippetsContainer').appendChild(snippetDiv);
+                            document.getElementById('htmlSnippetsContainer').appendChild(document.createElement('hr'));
+
+                            console.log('Appended content for:', filePath);
+                        })
+                        .catch(error => console.error('Error fetching content for:', filePath, error));
+                });
+            })
+            .catch(error => console.error('Error fetching HTML file list:', error));
     });
 </script>
-
-
-</body>
-
-</html>
