@@ -1,81 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
+<!-- other_file.html -->
+<script>
+    // Fetch and insert the preamble
+    fetch('common.html')
+        .then(response => response.text())
+        .then(preamble => {
+            document.getElementById('preambleContainer').innerHTML = preamble;
+        })
+        .catch(error => console.error('Error fetching preamble:', error));
+</script>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Render HTML Snippets</title>
-    
-    <style>
-      .container {
-	  width: 100%;
-	  max-width: 800px;
-	  margin: auto;
-	  padding: 0 10px;
-      }
+<!-- Add the container for the preamble -->
+<div id="preambleContainer"></div>
 
-      header {
-	  position: sticky;
-	  top: 0;
-	  background-color: #fff;
-	  z-index: 1000;
-      }
-
-      nav {
-	  display: flex;
-	  justify-content: space-between;
-	  align-items: center;
-	  padding: 0.5em 0.0em;
-      }
-
-      .nav-links {
-	  margin-left: auto;
-	  margin-right: 20px;
-	  text-decoration: none;
-          font-family: Arial, sans-serif;
-      }
-
-      section {
-	  scroll-margin-top: 80px; /* Adjust this value based on the actual height of your header */
-	  margin-top: 40px;
-	  margin-bottom: 40px;
-      }
-
-      section h2 {
-	  font-family: Arial, sans-serif;
-      }
-
-      h3 {
-	  font-family: Arial, sans-serif;
-      }
-
-      .grid-item img {
-	  width: 100%;
-	  height: auto;
-	  display: block;
-	  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
-      }
-
-    </style>
-</head>
-
-<body>
-  
-  <header>
-	<nav>
-	  <div>
-	    <h3>Lucy Harrison is a scientist</h3>
-	  </div>
-          <div class="nav-links">
-            <a href="./index.html">Home</a>
-            <a href="./about.html">About</a>
-            <a href="./publications.html">Publications</a>
-            <a href="./research.html">Research</a>
-            <a href="./craft.html">Craft</a>
-	          <a href="https://github.com/lu-harr">GitHub</a>
-          </div>
-	</nav>
-      </header>
+<!-- The rest of your specific content goes here -->
+<main>
 
     <h3>Diary of research activities</h3>
 
@@ -113,7 +51,6 @@
             .catch(error => console.error('Error fetching manifest:', error));
     });
 </script>
-
 
 </body>
 
