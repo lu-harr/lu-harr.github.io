@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Render HTML Snippets</title>
+    
+    <style>
+      .container {
+	  width: 100%;
+	  max-width: 800px;
+	  margin: auto;
+	  padding: 0 10px;
+      }
+
+      header {
+	  position: sticky;
+	  top: 0;
+	  background-color: #fff;
+	  z-index: 1000;
+      }
+
+      nav {
+	  display: flex;
+	  justify-content: space-between;
+	  align-items: center;
+	  padding: 0.5em 0.0em;
+      }
+
+      .nav-links {
+	  margin-left: auto;
+	  margin-right: 20px;
+	  text-decoration: none;
+          font-family: Arial, sans-serif;
+      }
+
+      section {
+	  scroll-margin-top: 80px; /* Adjust this value based on the actual height of your header */
+	  margin-top: 40px;
+	  margin-bottom: 40px;
+      }
+
+      section h2 {
+	  font-family: Arial, sans-serif;
+      }
+
+      h3 {
+	  font-family: Arial, sans-serif;
+      }
+
+      .grid-item img {
+	  width: 100%;
+	  height: auto;
+	  display: block;
+	  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+      }
+
+    </style>
+</head>
+
+<body>
+  
+  <header>
+	<nav>
+	  <div>
+	    <h3>Lucy Harrison is a scientist</h3>
+	  </div>
+          <div class="nav-links">
+            <a href="./index.html">Home</a>
+            <a href="./about.html">About</a>
+            <a href="./publications.html">Publications</a>
+            <a href="./research.html">Research</a>
+            <a href="./craft.html">Craft</a>
+	          <a href="https://github.com/lu-harr">GitHub</a>
+          </div>
+	</nav>
+      </header>
+
+    <h1>Diary of craft activities</h1>
+
+    <div id="htmlSnippetsContainer"></div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var manifestPath = 'craft_diary/entry_list.json';
+
+        fetch(manifestPath)
+            .then(response => response.json())
+            .then(manifest => {
+                var htmlFiles = manifest.htmlFiles;
+
+                htmlFiles.forEach(function (htmlFile) {
+                    var filePath = 'craft_diary/' + htmlFile;
+                    console.log('Fetching:', filePath);
+
+                    fetch(filePath)
+                        .then(response => response.text())
+                        .then(htmlContent => {
+                            console.log('Fetched content for:', filePath);
+
+                            var snippetDiv = document.createElement('div');
+                            snippetDiv.innerHTML = htmlContent;
+
+                            document.getElementById('htmlSnippetsContainer').appendChild(snippetDiv);
+                            document.getElementById('htmlSnippetsContainer').appendChild(document.createElement('hr'));
+
+                            console.log('Appended content for:', filePath);
+                        })
+                        .catch(error => console.error('Error fetching content for:', filePath, error));
+                });
+            })
+            .catch(error => console.error('Error fetching manifest:', error));
+    });
+</script>
+
+
+</body>
+
+</html>
+
+
+
