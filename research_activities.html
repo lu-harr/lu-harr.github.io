@@ -13,38 +13,7 @@
 
     <div id="htmlSnippetsContainer"></div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Define the HTML snippet directory
-            var htmlDirectory = 'research_diary'; // Change this to the path of your HTML snippets directory
-
-            // Fetch HTML files in the directory
-            fetch(htmlDirectory)
-                .then(response => response.text())
-                .then(data => {
-                    // Split the response into individual HTML file names
-                    var htmlFiles = data.split('\n').filter(Boolean);
-
-                    // Load and display each HTML file
-                    htmlFiles.forEach(function (htmlFile) {
-                        fetch(htmlDirectory + '/' + htmlFile)
-                            .then(response => response.text())
-                            .then(htmlContent => {
-                                // Create a div for each snippet
-                                var snippetDiv = document.createElement('div');
-                                snippetDiv.innerHTML = htmlContent;
-
-                                // Append the snippet div to the container
-                                document.getElementById('htmlSnippetsContainer').appendChild(snippetDiv);
-
-                                // Add a horizontal line between snippets for better separation
-                                document.getElementById('htmlSnippetsContainer').appendChild(document.createElement('hr'));
-                            });
-                    });
-                })
-                .catch(error => console.error('Error fetching HTML snippets:', error));
-        });
-    </script>
+    
 
 </body>
 
