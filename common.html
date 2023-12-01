@@ -56,13 +56,19 @@
 	  font-family: Arial, sans-serif;
       }
       
-    .image-container {
-          display: flex;
+    .image-container-two {
+	  display: grid;
+	  grid-template-columns: repeat(2, 1fr); /* 3 columns */
+	  gap: 10px; /* space between grid items */
+	  max-width: 600px; /* Adjust the maximum width as needed */
+	  margin: auto; /* Center the grid */
+          padding-top: 20px;
+          padding-bottom: 20px;
       }
 
-      .image-container img {
-          margin: 0 10px; /* Adjust the margin as needed */
-      }
+    .image-container-two img {
+        margin: 0 10px; /* Adjust the margin as needed */
+    }
       
     </style>
   </head>
