@@ -14,44 +14,38 @@
     <div id="htmlSnippetsContainer"></div>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Define the HTML snippet directory
-            var htmlDirectory = './research'; // Change this to the path of your HTML snippets directory
+    document.addEventListener("DOMContentLoaded", function () {
+        var htmlDirectory = './research';
 
-            // Fetch HTML files in the directory
-            fetch(htmlDirectory)
-                .then(response => response.text())
-                .then(data => {
-                    // Split the response into individual HTML file names
-                    var htmlFiles = data.split('\n').filter(Boolean);
+        fetch(htmlDirectory)
+            .then(response => response.text())
+            .then(data => {
+                var htmlFiles = data.split('\n').filter(Boolean);
 
-                    // Load and display each HTML file
-                    htmlFiles.forEach(function (htmlFile) {
-                        var filePath = htmlDirectory + '/' + htmlFile;
-                        console.log('Fetching:', filePath);
-    
-                        fetch(filePath)
-                            .then(response => response.text())
-                            .then(htmlContent => {
-                                console.log('Fetched content for:', filePath);
+                htmlFiles.forEach(function (htmlFile) {
+                    var filePath = htmlDirectory + '/' + htmlFile;
+                    console.log('Fetching:', filePath);
 
-                                // Create a div for each snippet
-                                var snippetDiv = document.createElement('div');
-                                snippetDiv.innerHTML = htmlContent;
+                    fetch(filePath)
+                        .then(response => response.text())
+                        .then(htmlContent => {
+                            console.log('Fetched content for:', filePath);
 
-                                // Append the snippet div to the container
-                                document.getElementById('htmlSnippetsContainer').appendChild(snippetDiv);
+                            var snippetDiv = document.createElement('div');
+                            snippetDiv.innerHTML = htmlContent;
 
-                                // Add a horizontal line between snippets for better separation
-                                document.getElementById('htmlSnippetsContainer').appendChild(document.createElement('hr'));
-                                console.log('Appended content for:', filePath);
+                            document.getElementById('htmlSnippetsContainer').appendChild(snippetDiv);
+                            document.getElementById('htmlSnippetsContainer').appendChild(document.createElement('hr'));
 
-                            });
-                    });
-                })
-                .catch(error => console.error('Error fetching HTML snippets:', error));
-        });
-    </script>
+                            console.log('Appended content for:', filePath);
+                        })
+                        .catch(error => console.error('Error fetching content for:', filePath, error));
+                });
+            })
+            .catch(error => console.error('Error fetching HTML file list:', error));
+    });
+</script>
+
 
 </body>
 
