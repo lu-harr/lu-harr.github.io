@@ -1,0 +1,33 @@
+<!-- other_file.html -->
+<script>
+    // Fetch and insert the preamble
+    fetch('common.html')
+        .then(response => response.text())
+        .then(preamble => {
+            document.getElementById('preambleContainer').innerHTML = preamble;
+        })
+        .catch(error => console.error('Error fetching preamble:', error));
+</script>
+
+<!-- Add the container for the preamble -->
+<div id="preambleContainer"></div>
+
+<div class="container">
+<!-- The rest of your specific content goes here -->
+  <main>
+      <h2>A list of all the fabulous papers I've written:</h2>
+      
+      <ul>
+        <li>The first Pk paper will be published one day!</li>
+      </ul>
+      
+      <h2>And other papers I've been involved with:</h2>
+      <ul>
+        <li>Yap et al. Workforce model</li>
+      </ul>
+  
+  </main>
+</div>
+
+
+</body>
