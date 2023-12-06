@@ -14,14 +14,30 @@
 
 <!-- The rest of your specific content goes here -->
 <main>
+  
+    <div class="container">
 
-    <h3>Diary of research activities</h3>
+    <h3>Crafty stuff: this bit's under construction</h3>
+    
+    <p>Chat GPT drew me this ball of yarn:</p>
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+      <!-- Yarn Body -->
+      <circle cx="50" cy="50" r="40" fill="#FFD700" />
+    
+      <!-- Yarn Detail -->
+      <circle cx="35" cy="35" r="5" fill="#FFFFFF" />
+      <circle cx="50" cy="40" r="5" fill="#FFFFFF" />
+      <circle cx="65" cy="35" r="5" fill="#FFFFFF" />
+      <circle cx="42" cy="50" r="5" fill="#FFFFFF" />
+      <circle cx="58" cy="50" r="5" fill="#FFFFFF" />
+    </svg>
 
     <div id="htmlSnippetsContainer"></div>
 
     <script>
     document.addEventListener("DOMContentLoaded", function () {
-        var manifestPath = 'craft_diary/entry_list.json';
+        var manifestPath = 'research_diary/entry_list.json';
 
         fetch(manifestPath)
             .then(response => response.json())
@@ -29,7 +45,7 @@
                 var htmlFiles = manifest.htmlFiles;
 
                 htmlFiles.forEach(function (htmlFile) {
-                    var filePath = 'craft_diary/' + htmlFile;
+                    var filePath = 'research_diary/' + htmlFile;
                     console.log('Fetching:', filePath);
 
                     fetch(filePath)
@@ -51,6 +67,8 @@
             .catch(error => console.error('Error fetching manifest:', error));
     });
 </script>
+
+</div>
 
 </body>
 
