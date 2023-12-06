@@ -19,7 +19,7 @@
 
     <h3>Crafty stuff: this bit's under construction</h3>
     
-    <p>Chat GPT drew me this ball of yarn:</p>
+    <p>I asked chat GPT for a ball of yarn and this is what it gave me: </p>
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
       <!-- Yarn Body -->
@@ -37,7 +37,7 @@
 
     <script>
     document.addEventListener("DOMContentLoaded", function () {
-        var manifestPath = 'research_diary/entry_list.json';
+        var manifestPath = 'craft_diary/entry_list.json';
 
         fetch(manifestPath)
             .then(response => response.json())
@@ -45,7 +45,7 @@
                 var htmlFiles = manifest.htmlFiles;
 
                 htmlFiles.forEach(function (htmlFile) {
-                    var filePath = 'research_diary/' + htmlFile;
+                    var filePath = 'craft_diary/' + htmlFile;
                     console.log('Fetching:', filePath);
 
                     fetch(filePath)

@@ -1,0 +1,5 @@
+TODO
+- think about craft layout
+- grab link from ammnet
+- make it look prettier
+- suss out ordering of "blog" entries ... why is it inconsistent?
