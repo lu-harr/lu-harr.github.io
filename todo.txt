@@ -1,5 +1,11 @@
 TODO
-- think about craft layout
-- grab link from ammnet
-- make it look prettier
-- suss out ordering of "blog" entries ... why is it inconsistent?
+- Craft
+  - Women and gender diverse mathematicians activity (pop link in ANZIAM post)
+- Research page
+  - AMMNet link
+  - ANZIAM with picture
+  - Publications
+    - Add RT's Pk paper and systematic review
+    - Add blurb on Pk #1 to research activities
+- Make it look prettier
+- Suss out ordering of "blog" entries ... why is it inconsistent?
