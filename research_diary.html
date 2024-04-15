@@ -8,7 +8,6 @@
         })
         .catch(error => console.error('Error fetching preamble:', error));
 </script>
-
 <!-- Add the container for the preamble -->
 <div id="preambleContainer"></div>
 
@@ -24,47 +23,32 @@
 
       <p>I presented some new research at the ANZIAM conference held in Hahndorf, South Australia, last week. I have been exploring the use of  iterative optimisation methods (e.g. simulated annealing, genetic algorithms) for multi-objective site selection problems and presented an application of these methods to the selection of sites for surveillance of Japanese encephalitis in mosquitoes.</p>
       
-      <p>I also helped to organise some activities for the Women In Maths Special Interest Group's annual ANZIAM lunch. This year, we aimed to make the lunch a positive celebration of women and gender diverse people in maths. With the help of my peers, I created a card game of clues relating to well-known and less recognised women and non-binary people who have made contributions to mathematics. It was great seeing everyone engage with the game over lunch. A highlight of the conference! Find out more details about the game <a href="craft_diary#2024-04-15-game">here</a>.</p>
+      <p>I also helped to organise some activities for the Women In Maths Special Interest Group's annual ANZIAM lunch. This year, we aimed to make the lunch a positive celebration of women and gender diverse people in maths. With the help of my peers, I created a card game of clues relating to well-known and less recognised women and non-binary people who have made contributions to mathematics. It was great seeing everyone engage with the game over lunch. A highlight of the conference! Find out more details about the game <a href="craft#2024-04-15-game">here</a>.</p>
       <div class="container">
       <img src="images/anziam.jpg">
       </div>
   </section>
 
-    <div id="htmlSnippetsContainer"></div>
+  <section id="2023-12-06-ammnet">
+    
+    <h3>2023-12-06: AMMNet seminar</h3>
 
-    <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        var manifestPath = 'research_diary/entry_list.json';
+    <p>I presented a seminar for the Applied Malaria Modelling Network (AMMNet) yesterday, on <i>Structured decision making with geospatial modelling outputs</i>. The talk focused on a <i>P. knowlesi</i> malaria human surveillance case study from north-west Indonesia. This setting is quite different to malaria transmission settings in other parts of the world: many endemic countries are approaching malaria elimination and the involvement of macaque hosts and likely influence of land use and land cover over interactions between the species involved in transmission represent further complexities.</p>
+    
+    <p>Have a look at the recording of the seminar <a href="https://youtu.be/JxH39RfI6R4?si=nATDkUKIqn8FGvrL">here</a>.</p>
+    
+  </section>  
 
-        fetch(manifestPath)
-            .then(response => response.json())
-            .then(manifest => {
-                var htmlFiles = manifest.htmlFiles;
-
-                htmlFiles.forEach(function (htmlFile) {
-                    var filePath = 'research_diary/' + htmlFile;
-                    console.log('Fetching:', filePath);
-
-                    fetch(filePath)
-                        .then(response => response.text())
-                        .then(htmlContent => {
-                            console.log('Fetched content for:', filePath);
-
-                            var snippetDiv = document.createElement('div');
-                            snippetDiv.innerHTML = htmlContent;
-
-                            document.getElementById('htmlSnippetsContainer').appendChild(snippetDiv);
-                            document.getElementById('htmlSnippetsContainer').appendChild(document.createElement('hr'));
-
-                            console.log('Appended content for:', filePath);
-                        })
-                        .catch(error => console.error('Error fetching content for:', filePath, error));
-                });
-            })
-            .catch(error => console.error('Error fetching manifest:', error));
-    });
-</script>
-
+  <section id="2024-12-01-ammnet">
+    <h3>2023-12-01: Jakarta visit</h3>
+    
+      <p>I visited Jakarta last week to present at a meeting of the ZOOMAL consortium. ZOOMAL is a group of scientists and clinicians researching the zoonotic malaria parasite, <i>Plasmodium knowlesi</i>, in Indonesia. Unlike other types of malaria that infect humans, <i>knowlesi</i> malaria is naturally transmitted between macaques, via mosquito vectors. To understand variation in the spatial distribution of <i>knowlesi</i> malaria transmission risk, we need to understand the distributions of macaque hosts and the mosquito vector species, how these relate to climatic variables and land cover, and how each of the species involved (including people) interact with each other and the parasite. There are many unknowns! I've been involved in geospatial risk mapping and optimal surveillance site selection with the ZOOMAL consortium and presented this work to group members and other key stakeholders in Jakarta. Publications to come!</p>
+        
+        <div class="image-container-two">
+            <img src="images/jakarta_action_shot.jpg" alt="Image 1" class="img-fluid">
+            <img src="images/jakarta_group.jpeg" alt="Image 2" class="img-fluid">
+        </div>
+    </section>
 </div>
 
 </main>
