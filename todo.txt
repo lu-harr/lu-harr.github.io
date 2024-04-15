@@ -5,4 +5,4 @@ TODO
 - Research page
   - ANZIAM with picture
 - Make it look prettier
-- Suss out ordering of "blog" entries ... why is it inconsistent?
+- Acknowledgement of Country
