@@ -1,8 +1,7 @@
 TODO
 - Craft
-  - Women and gender diverse mathematicians activity (pop link in ANZIAM post)
   - Add picture to craft page and add download link to pdf
-- Research page
-  - ANZIAM with picture
-- Make it look prettier
-- Acknowledgement of Country
+- Make it look prettier (dark mode! pastel colours!)
+- Acknowledgement of Country - footer
+- Linked images - there was a good picture of the game on someone's twitter that I could link to?
+- Link to app under Pk1 post!
