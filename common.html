@@ -104,6 +104,49 @@
         background-color: #cfbfd8; /* Light purple color */
         margin: 20px 0; /* Add some space above and below the line */
     }
+    
+  /* Here comes the stuff for the card flippppp ...... */
+  .flip-container {
+    perspective: 1000px;
+    display: inline-block;
+  }
+
+  .flip-container:hover .flipper,
+  .flip-container.flip .flipper {
+    transform: rotateY(180deg);
+  }
+
+  .flip-container,
+  .front,
+  .back {
+    width: 200px;
+    height: 200px;
+  }
+
+  .flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+  }
+
+  .front,
+  .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .front {
+    z-index: 2;
+    background: url('resources/cards/frontface.png') center/cover;
+  }
+
+  .back {
+    transform: rotateY(180deg);
+    background: url('florence.png') center/cover;
+  }
+  /* All done ? */
       
     </style>
   </head>

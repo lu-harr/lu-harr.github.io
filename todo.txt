@@ -4,4 +4,4 @@ TODO
 - Make it look prettier (dark mode! pastel colours!)
 - Acknowledgement of Country - footer
 - Linked images - there was a good picture of the game on someone's twitter that I could link to?
-- Link to app under Pk1 post!
+- "Random woman in maths" button - floating picture of card design that flips to reveal card, click link to answer
