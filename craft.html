@@ -33,13 +33,42 @@
     </section>  
     
     <p>Have a play with one of our cards here: </p>
-    <div class="flip-container" onclick="this.classList.toggle('flip')">
-      <div class="flipper">
-        <div class="front"></div>
-        <div class="back"></div>
+    <div class="container">
+      <div class="card" onclick="flipCard()">
+          <img class="front" src="resources/cards/frontface.png" alt="Front Image">
+          <img class="back" src="" alt="Back Image">
       </div>
     </div>
     
+    <script>
+    function flipCard() {
+        var card = document.querySelector('.card');
+        card.classList.toggle('flipped');
+    
+        var backImage = document.querySelector('.back');
+        var randomImage = getRandomImage(); // Function to get a random image name
+        backImage.src = randomImage;
+    }
+    
+    function getRandomImage() {
+        // Array of JPEG file names in your directory
+        var images = [
+            "ada.png",
+            "florence.png",
+            "katherine.png",
+            // Add more file names as needed
+        ];
+    
+        // Get a random index from the images array
+        var randomIndex = Math.floor(Math.random() * images.length);
+    
+        // Construct the path to the random image
+        var imagePath = "resources/cards/" + images[randomIndex]; // Replace "directory/" with the path to your directory
+    
+        return imagePath;
+    }
+    </script>
+      
     
     
   </div>

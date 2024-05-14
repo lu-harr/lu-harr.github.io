@@ -106,46 +106,30 @@
     }
     
   /* Here comes the stuff for the card flippppp ...... */
-  .flip-container {
-    perspective: 1000px;
-    display: inline-block;
-  }
-
-  .flip-container:hover .flipper,
-  .flip-container.flip .flipper {
-    transform: rotateY(180deg);
-  }
-
-  .flip-container,
-  .front,
-  .back {
-    width: 220px;
-    height: 330px;
-  }
-
-  .flipper {
-    transition: 0.6s;
-    transform-style: preserve-3d;
-    position: relative;
-  }
-
-  .front,
-  .back {
-    backface-visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
-  .front {
-    z-index: 2;
-    background: url('resources/cards/frontface.png') center/cover;
-  }
-
-  .back {
-    transform: rotateY(180deg);
-    background: url('resources/cards/florence.png') center/cover;
-  }
+  .container {
+        perspective: 1000px;
+    }
+    .card {
+        width: 220px;
+        height: 330px;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: transform 1s;
+    }
+    .card:hover,
+    .flipped {
+        transform: rotateY(180deg);
+    }
+    .card .front,
+    .card .back {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        backface-visibility: hidden;
+    }
+    .card .back {
+        transform: rotateY(180deg);
+    }
   /* All done ? */
       
     </style>
