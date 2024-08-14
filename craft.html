@@ -24,7 +24,7 @@
     <section id="wimsig-game">
     <h3>Women and gender diverse people in maths: the card game</h3>
 
-      <p>For my first entry in this crafty section of my website, I introduce <b>Women and gender diverse people in maths: the card game</b>! I made this deck of cards with my friends from the maths community at the University of Melbourne, <b>Isobel Abell, Adriana Zanca, Punya Alahakoon</b> and <b>Jennifer Flegg</b>. <b>TK Le</b> made the lovely artwork for the rear side of the cards.</p>
+      <p>For my first entry in this crafty section, I introduce <b>Women and gender diverse people in maths: the card game</b>! I made this deck of cards with my friends from the maths community at the University of Melbourne, <b>Isobel Abell, Adriana Zanca, Punya Alahakoon</b> and <b>Jennifer Flegg</b>. <b>TK Le</b> made the lovely artwork for the rear side of the cards.</p>
       
       <p>This "card game" was created for the Women In Maths Special Interest Group's annual ANZIAM lunch in Hahndorf, South Australia, in February 2024. We aimed to start a conversation about the women and non-binary people who have contributed to mathematics from ancient and more recent history - we have included some well-known people and some mathematicians who are much less well-recognised. The cards in our deck are like Christmas cracker activities - read out the hints to your friends and see if you can guess who the card is describing! Scan the QR code on each card for the answer. If the mathematician is someone you've never heard about before, read on about their life, career and influence on maths as we know it!</p>
       
@@ -32,7 +32,8 @@
       <a href="resources/wimsig_game.pdf">here</a>!</p>
     </section>  
     
-    <p>Have a play with one of our cards here: </p>
+    <p>...or have a play with this card I've left for you... </p>
+    <!-- The trouble is that this now changes the back face when the user is looking at it :/ -->
     <div class="container">
       <div class="card" onmouseover="flipCard()">
           <img class="front" src="resources/cards/frontface.png" alt="Front Image">
@@ -63,7 +64,7 @@
         var randomIndex = Math.floor(Math.random() * images.length);
     
         // Construct the path to the random image
-        var imagePath = "resources/cards/" + images[randomIndex]; // Replace "directory/" with the path to your directory
+        var imagePath = "resources/cards/" + images[randomIndex];
     
         return imagePath;
     }
