@@ -98,6 +98,16 @@
             margin: 0 10px; /* Adjust the margin as needed */
     }
     
+    .icon-two {
+	  display: grid;
+	  grid-template-columns: repeat(2, 1fr); /* 3 columns */
+	  gap: 10px; /* space between grid items */
+	  max-width: 200px; /* Same as text container */
+	  margin: auto; /* Center the grid */
+          padding-top: 20px;
+          padding-bottom: 20px;
+      }
+    
     hr {
         border: none; /* Remove default border */
         height: 1px; /* Set the height of the line */
@@ -111,7 +121,7 @@
     }
     .card {
         width: 300px;
-        height: 300px;
+        height: auto;
         position: relative;
         transform-style: preserve-3d;
         transition: transform 1s;

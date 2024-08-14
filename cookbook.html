@@ -1,0 +1,37 @@
+<!-- other_file.html -->
+<script>
+    // Fetch and insert the preamble
+    fetch('common.html')
+        .then(response => response.text())
+        .then(preamble => {
+            document.getElementById('preambleContainer').innerHTML = preamble;
+        })
+        .catch(error => console.error('Error fetching preamble:', error));
+</script>
+<!-- Add the container for the preamble -->
+<div id="preambleContainer"></div>
+
+<!-- The rest of your specific content goes here -->
+<main>
+  
+    <div class="container">
+
+    <h2>A list of recipes I don't want to forget ???</h2>
+    
+    <ul>
+        <li> <a href="./resources/cookbook/miso_pasta.html"> Corn + miso pasta </a> </li>
+        <li> Starter focatch </li>
+        <li> Tomato + egg noodles </li>
+        <li> Starter dahl </li>
+        <li> Eggplant lasagne </li>
+      </ul>
+    
+    
+</div>
+
+</main>
+
+</html>
+
+
+
