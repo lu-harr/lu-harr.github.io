@@ -98,6 +98,16 @@
 	  display: block;
 	  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
       }
+      
+      .icon-two {
+	  display: grid;
+	  grid-template-columns: repeat(2, 1fr); /* 3 columns */
+	  gap: 10px; /* space between grid items */
+	  max-width: 200px; /* Same as text container */
+	  margin: auto; /* Center the grid */
+          padding-top: 20px;
+          padding-bottom: 20px;
+      }
 
       .grid-item:hover img {
 	  filter: brightness(110%);
