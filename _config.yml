@@ -115,9 +115,7 @@ analytics:
 author:
   name             : "Lucinda Harrison"
   avatar           : "images/Lucinda-2019.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am a postdoctoral researcher in the <a href="https://www.iddo.org">Infectious Diseases Data Observatory</a> (IDDO), 
-	    at the University of Oxford. As part of the <a href="https://www.iddo.org/wwarn">Worldwide Antimalarial 
-	    Resistance Network</a> (WWARN), I am constructing geospatial models of antimalarial drug resistance in Africa."
+  bio              : "I am a postdoctoral researcher in the Infectious Diseases Data Observatory (IDDO), at the University of Oxford. As part of the Worldwide Antimalarial Resistance Network (WWARN), I am constructing geospatial models of antimalarial drug resistance in Africa."
   location         : ""
   email            :
   links:
