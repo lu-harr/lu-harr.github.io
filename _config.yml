@@ -84,13 +84,23 @@ author:
       url: "https://github.com/lu-harr"
     - label: "ORCID"
       icon: "fab fa-fw fa-orcid"
-      url: "https://orcid.org"
+      url: "https://orcid.org/0000-0002-0590-1444"
+    - label: "Ravelry"
+      icon: "fab fa-fw fa-ravelry"
+      url: "https://www.ravelry.com/projects/luharr"
 
 footer:
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/lu-harr" # RSS there automatically ?
+      url: "https://github.com/lu-harr" 
+    - label: "ORCID"
+      icon: "fab fa-fw fa-orcid"
+      url: "https://orcid.org/0000-0002-0590-1444"
+    - label: "Ravelry"
+      icon: "fab fa-fw fa-ravelry"
+      url: "https://www.ravelry.com/projects/luharr"
+      # RSS there automatically ?
 
 defaults:
   # _posts
