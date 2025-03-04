@@ -1,5 +1,5 @@
 ---
-permalink: /not_publications/
+permalink: /publications/
 title: Publications
 toc: true
 ---
@@ -16,32 +16,30 @@ toc: true
         Have a play with the companion Shiny app <a href="http://lucyharrison.shinyapps.io/pk_multicrit_shiny/">
           here</a>.
       
-      # Others
+      # Other papers
 
-      <ul>
-        <li> <h3><a href="https://doi.org/10.1371/journal.pntd.0011570">Updating 
-        estimates of <i>Plasmodium knowlesi</i> malaria risk in 
-        response to changing land use patterns across Southeast Asia</a></h3>
-        <p>Ruarai J. Tobin, <b>Lucinda E. Harrison</b>, Meg K. Tully, Inke N. D. 
-        Lubis, Rintis Noviyanti, Nicholas M. Anstey, Giri S. Rajahram, Matthew J. Grigg, 
-        Jennifer A. Flegg, David J. Price and Freya M. Shearer. (2024). 
-        <i>PLOS Neglected Tropical Diseases.</i> </p></li>
-          
-        <li><h3><a href="https://doi.org/10.4269/ajtmh.23-0631">Systematic Review 
-        and Geospatial Modeling of Molecular Markers of Resistance to Artemisinins 
-        and Sulfadoxine-Pyrimethamine in <i>Plasmodium falciparum</i> in India</a></h3>
-        <p>M Nain, M Dhorda, J. A. Flegg, A. Gupta, <b>L. E. Harrison</b>, S. Singh-Phulgenda , 
-        S. D. Otienoburu, E. Harriss, P. K. Bharti, B. Behera, M. Rahi, P. J. Guerin and A Sharma. 
-        (2024). <i>The American Journal of Tropical Medicine and Hygiene</i>.</p></li>
+      - <a href="https://doi.org/10.1371/journal.pntd.0011570">Updating 
+        estimates of *Plasmodium knowlesi* malaria risk in 
+        response to changing land use patterns across Southeast Asia</a>
         
-        <li><h3><a href="https://doi.org/10.1136%2Fbmjno-2023-000407">Modelling 
-        accessibility of adult neurology care in Australia, 2020–2034</a></h3>
-        <p>Steve Simpson-Yap, Federico Frascoli, <b>Lucinda Harrison</b>, Charles Malpas, 
-        James Burrell, Nicholas Child, Lauren P Giles, Christian Lueck, Merrilee Needham, 
-        Benjamin Tsang and Tomas Kalincik. (2023). <i>BMJ Neurology Open</i></p></li>
-      </ul>
+        Ruarai J. Tobin, **Lucinda E. Harrison**, Meg K. Tully, Inke N. D. 
+        Lubis, Rintis Noviyanti, Nicholas M. Anstey, Giri S. Rajahram, Matthew J. Grigg, Jennifer A. Flegg, David J. Price and Freya M. Shearer. (2024). *PLOS Neglected Tropical Diseases.*
+          
+      - <a href="https://doi.org/10.4269/ajtmh.23-0631">Systematic Review 
+        and Geospatial Modeling of Molecular Markers of Resistance to Artemisinins 
+        and Sulfadoxine-Pyrimethamine in *Plasmodium falciparum* in India</a>
+
+        M Nain, M Dhorda, J. A. Flegg, A. Gupta, **L. E. Harrison**, S. Singh-Phulgenda , S. D. Otienoburu, E. Harriss, P. K. Bharti, B. Behera, M. Rahi, P. J. Guerin and A Sharma. 
+        (2024). *The American Journal of Tropical Medicine and Hygiene*.
+        
+      - <a href="https://doi.org/10.1136%2Fbmjno-2023-000407">Modelling 
+        accessibility of adult neurology care in Australia, 2020–2034</a>
+
+        Steve Simpson-Yap, Federico Frascoli, **Lucinda Harrison**, Charles Malpas, 
+        James Burrell, Nicholas Child, Lauren P Giles, Christian Lueck, Merrilee Needham, Benjamin Tsang and Tomas Kalincik. (2023). *BMJ Neurology Open*
       
-      <h2>Reports to Government&ast;:</h2>
+      # Reports to Government&ast;
+
       <ul>
         <li><h3>Mapping Japanese encephalitis infection risk in Australia to 
         inform public health response</h3>
@@ -57,7 +55,8 @@ toc: true
 
       &ast;Not published in the public domain
       
-      <h2>Manuscripts in prep.:</h2>
+      # Manuscripts in prep.
+
       <ul>
         <li><h3>Geospatial assessment of Japanese encephalitis virus infection risk in Australia (LH first author)</h3>
         <p>A description of models of potential and realised niche of Japanese encephalitis virus, 
