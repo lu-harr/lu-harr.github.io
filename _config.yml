@@ -74,7 +74,7 @@ plugins:
 author:
   name   : "Lucinda Harrison"
   avatar : "/assets/images/Lucinda-2019.jpg"
-  bio    : "I work with IDDO"
+  bio    : "geospatial models; spaghetti engineering"
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
