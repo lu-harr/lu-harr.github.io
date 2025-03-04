@@ -3,6 +3,6 @@ permalink: /about/
 title: "About"
 ---
 
-Tempor velit sint sunt ipsum tempor enim ad qui ullamco. Est dolore anim ad velit duis dolore minim sunt aliquip amet commodo labore. Ut eu pariatur aute ea aute excepteur laborum. Esse ea esse excepteur minim mollit qui cillum excepteur ex dolore magna. Labore deserunt fugiat incididunt incididunt sint ea. Consequat dolore aute laboris quis proident quis non et est consectetur ex eiusmod sit culpa.
+I am a postdoctoral researcher in the <a href="https://www.iddo.org">Infectious Diseases Data Observatory</a> (IDDO), at the University of Oxford. As part of the <a href="https://www.iddo.org/wwarn">Worldwide Antimalarial Resistance Network</a> (WWARN), I am constructing geospatial models of antimalarial drug resistance in Africa.
 
-Cupidatat ea do et in excepteur in. Ad nostrud ut est esse eu duis ea sunt eiusmod. Aliquip tempor veniam sint elit fugiat. Velit incididunt laboris amet incididunt labore dolore irure velit excepteur commodo deserunt laborum. Consectetur eu fugiat veniam veniam Lorem labore magna eiusmod. Ea occaecat reprehenderit pariatur consectetur minim labore ut aliquip.
+Until November 2024, I was a PhD student in the School of Maths and Stats at the University of Melbourne, in the <a href="https://mathematical-biology.science.unimelb.edu.au">Melbourne Mathematical Biology</a> Group. My thesis explores structured decision making using geospatial modelling outputs. During my PhD, I applied methods of structured decision making to models of <i>Plasmodium knowlesi</i> malaria in Indonesia, antimalarial resistance in <i>Plasmodium falciparum</i> in India and Japanese encephalitis virus in Australia.
