@@ -88,6 +88,9 @@ author:
     - label: "Ravelry"
       icon: "fab fa-fw fa-ravelry"
       url: "https://www.ravelry.com/projects/luharr"
+    - label: ""
+      icon: "fab fa-fw fa-bowl-rice"
+      url: "https://www.lu-harr.github.io/cookbook.html"
 
 footer:
   links:
