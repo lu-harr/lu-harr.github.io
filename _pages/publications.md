@@ -7,27 +7,24 @@ toc: true
 ## First author paper/s
       
 - <a href="https://doi.org/10.1098/rsos.230641">A multi-criteria framework for disease surveillance site selection: case study for *Plasmodium knowlesi* malaria in Indonesia</a> 
-  **Lucinda E. Harrison**, Jennifer A. Flegg, Ruarai Tobin, Inke N. D. Lubis, Rintis Noviyanti, Matthew J. Grigg, Freya M. Shearer and David J. Price. (2024). *Royal Society Open Science*.
-        
-  Have a play with the companion Shiny app <a href="http://lucyharrison.shinyapps.io/pk_multicrit_shiny/">here</a>.
+**Lucinda E. Harrison**, Jennifer A. Flegg, Ruarai Tobin, Inke N. D. Lubis, Rintis Noviyanti, Matthew J. Grigg, Freya M. Shearer and David J. Price. (2024). *Royal Society Open Science*. 
+Have a play with the companion Shiny app <a href="http://lucyharrison.shinyapps.io/pk_multicrit_shiny/">here</a>.
       
 ## Other papers
 
 - <a href="https://doi.org/10.1371/journal.pntd.0011570">Updating 
 estimates of *Plasmodium knowlesi* malaria risk in 
 response to changing land use patterns across Southeast Asia</a> 
-
-  Ruarai J. Tobin, **Lucinda E. Harrison**, Meg K. Tully, Inke N. D. Lubis, Rintis Noviyanti, Nicholas M. Anstey, Giri S. Rajahram, Matthew J. Grigg, Jennifer A. Flegg, David J. Price and Freya M. Shearer. (2024). *PLOS Neglected Tropical Diseases.*
+Ruarai J. Tobin, **Lucinda E. Harrison**, Meg K. Tully, Inke N. D. Lubis, Rintis Noviyanti, Nicholas M. Anstey, Giri S. Rajahram, Matthew J. Grigg, Jennifer A. Flegg, David J. Price and Freya M. Shearer. (2024). *PLOS Neglected Tropical Diseases.*
           
 - <a href="https://doi.org/10.4269/ajtmh.23-0631">Systematic Review 
 and Geospatial Modeling of Molecular Markers of Resistance to Artemisinins 
 and Sulfadoxine-Pyrimethamine in *Plasmodium falciparum* in India</a>
-
-  M Nain, M Dhorda, J. A. Flegg, A. Gupta, **L. E. Harrison**, S. Singh-Phulgenda , S. D. Otienoburu, E. Harriss, P. K. Bharti, B. Behera, M. Rahi, P. J. Guerin and A Sharma. (2024). *The American Journal of Tropical Medicine and Hygiene*.
+M Nain, M Dhorda, J. A. Flegg, A. Gupta, **L. E. Harrison**, S. Singh-Phulgenda , S. D. Otienoburu, E. Harriss, P. K. Bharti, B. Behera, M. Rahi, P. J. Guerin and A Sharma. (2024). *The American Journal of Tropical Medicine and Hygiene*.
         
 - <a href="https://doi.org/10.1136%2Fbmjno-2023-000407">Modelling 
 accessibility of adult neurology care in Australia, 2020–2034</a>
-  Steve Simpson-Yap, Federico Frascoli, **Lucinda Harrison**, Charles Malpas, James Burrell, Nicholas Child, Lauren P Giles, Christian Lueck, Merrilee Needham, Benjamin Tsang and Tomas Kalincik. (2023). *BMJ Neurology Open*
+Steve Simpson-Yap, Federico Frascoli, **Lucinda Harrison**, Charles Malpas, James Burrell, Nicholas Child, Lauren P Giles, Christian Lueck, Merrilee Needham, Benjamin Tsang and Tomas Kalincik. (2023). *BMJ Neurology Open*
       
 ## Reports to Government
 
