@@ -9,5 +9,6 @@ TODO
 - Add links from publications page to paper-specific posts? Or have publications as a separate collection? Not really sure how collections work yet ...
 - Add acknowledgement of country to PhD section
 - hidden recipes/hairdressing testimonials because that would amuse me
+- want to land on "about" (change "about" to "hello!") and keep "recent posts" as the thing that comes up on "posts" ... and maybe change "posts" to "blog" or decide if I want to partitition things out ...
 
 

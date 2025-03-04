@@ -1,6 +1,6 @@
 ---
-permalink: /about/
-title: "About"
+permalink: /
+title: "Hello!"
 ---
 
 I am a postdoctoral researcher in the <a href="https://www.iddo.org">Infectious Diseases Data Observatory</a> (IDDO), at the University of Oxford. As part of the <a href="https://www.iddo.org/wwarn">Worldwide Antimalarial Resistance Network</a> (WWARN), I am constructing geospatial models of antimalarial drug resistance in *Plasmodium falciparum* parasites in Africa.
