@@ -89,7 +89,7 @@ author:
       icon: "fab fa-fw fa-ravelry"
       url: "https://www.ravelry.com/projects/luharr"
     - label: "test"
-      icon: "fab fa-fw fa-bowl-rice"
+      icon: "fab fa-fw fa-bowl-food"
       url: "https://www.lu-harr.github.io/cookbook.html"
 
 footer:
