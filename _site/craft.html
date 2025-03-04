@@ -1,0 +1,84 @@
+<!-- WATCH OUT! YOU DROPPED SOMETHING AT THE BOTTOM! -->
+
+<!-- other_file.html -->
+<script>
+    // Fetch and insert the preamble
+    fetch('common.html')
+        .then(response => response.text())
+        .then(preamble => {
+            document.getElementById('preambleContainer').innerHTML = preamble;
+        })
+        .catch(error => console.error('Error fetching preamble:', error));
+</script>
+
+<!-- Add the container for the preamble -->
+<div id="preambleContainer"></div>
+
+<!-- The rest of your specific content goes here -->
+<main>
+  
+    <div class="container">
+
+    <h2>Crafty stuff: this bit's under construction</h2>
+    
+    <section id="wimsig-game">
+    <h3>Women and gender diverse people in maths: the card game</h3>
+
+      <p>For my first entry in this crafty section, I introduce <b>Women and gender diverse people in maths: the card game</b>! I made this deck of cards with my friends from the maths community at the University of Melbourne, <b>Isobel Abell, Adriana Zanca, Punya Alahakoon</b> and <b>Jennifer Flegg</b>. <b>TK Le</b> made the lovely artwork for the rear side of the cards.</p>
+      
+      <p>This "card game" was created for the Women In Maths Special Interest Group's annual ANZIAM lunch in Hahndorf, South Australia, in February 2024. We aimed to start a conversation about the women and non-binary people who have contributed to mathematics from ancient and more recent history - we have included some well-known people and some mathematicians who are much less well-recognised. The cards in our deck are like Christmas cracker activities - read out the hints to your friends and see if you can guess who the card is describing! Scan the QR code on each card for the answer. If the mathematician is someone you've never heard about before, read on about their life, career and influence on maths as we know it!</p>
+      
+      <p>Download the deck of cards
+      <a href="resources/wimsig_game.pdf">here</a>!</p>
+    </section>  
+    
+    <p>...or have a play with this card I've left for you... </p>
+    <!-- The trouble is that this now changes the back face when the user is looking at it :/ -->
+    <div class="container">
+      <div class="card" onmouseover="flipCard()">
+          <img class="front" src="resources/cards/frontface.png" alt="Front Image">
+          <img class="back" src="" alt="Back Image">
+      </div>
+    </div>
+    
+    <script>
+    function flipCard() {
+        var card = document.querySelector('.card');
+        card.classList.toggle('flipped');
+    
+        var backImage = document.querySelector('.back');
+        var randomImage = getRandomImage(); // Function to get a random image name
+        backImage.src = randomImage;
+    }
+    
+    function getRandomImage() {
+        // Array of JPEG file names in your directory
+        var images = [
+            "ada.png",
+            "florence.png",
+            "katherine.png",
+            // Add more file names as needed
+        ];
+    
+        // Get a random index from the images array
+        var randomIndex = Math.floor(Math.random() * images.length);
+    
+        // Construct the path to the random image
+        var imagePath = "resources/cards/" + images[randomIndex];
+    
+        return imagePath;
+    }
+    </script>
+    
+  </div>
+
+
+
+</main>
+
+</html>
+
+
+
+
+

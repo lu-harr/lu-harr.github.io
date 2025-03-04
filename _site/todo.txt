@@ -1,0 +1,9 @@
+TODO
+- Craft
+  - Add picture to craft page and add download link to pdf
+- Make it look prettier (dark mode! pastel colours!)
+- Acknowledgement of Country - footer
+- Linked images - there was a good picture of the game on someone's twitter that I could link to?
+- "Random woman in maths" button - floating picture of card design that flips to reveal card, click link to answer
+- Also footer: icons for craft/recipes/git/... as a means of hiding some of the craft and also hiding recipes :)
+- Set up scholar please !
