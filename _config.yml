@@ -89,8 +89,8 @@ author:
       icon: "fab fa-fw fa-ravelry"
       url: "https://www.ravelry.com/projects/luharr"
     - label: "test"
-      icon: "fa-solid fa-flask"
-      url: "https://www.lu-harr.github.io/cookbook.html"
+      icon: "fa-solid fa-fw fa-flask"
+      url: "/cookbook/"
 
 footer:
   links:
