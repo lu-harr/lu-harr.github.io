@@ -38,7 +38,7 @@ Steve Simpson-Yap, Federico Frascoli, **Lucinda Harrison**, Charles Malpas, Jame
   A. Flegg, David J. Price, James M. McCaw, Nick Golding, Freya M. Shearer. (2023).
   Report to Australian Government Department of Health and Aged Care.
 
-//* Not published in the public domain
+\* Not published in the public domain
       
 ## Manuscripts in prep.
 
@@ -51,7 +51,7 @@ A description of ecological niche models of ardeid birds and <i>Culex</i> mosqui
 With David Duncan (first author), Freya Shearer, Nick Golding, Jennifer Flegg, David Price and others.
   
 - Adaptive geospatial surveillance system for antimalarial drug resistance (LH joint first author)  \
-Geospatial models of SP and artemisinin resistance in India are summarised to find candidate districts for surveillance of antimalarial resistance. See <a href=https://lucyharrison.shinyapps.io/pf_drug_resistance_shiny/>companion RShiny app</a>.  \
+Geospatial models of SP and artemisinin resistance in India are summarised to find candidate districts for surveillance of antimalarial resistance. See <a href=https://lucyharrison.shinyapps.io/pf_drug_resistance_shiny>companion RShiny app</a>.  \
 With Apoorv Gupta (first author), Minu Nain, Sauman Singh-Phulgenda, Rutuja Chhajed, Manju Rahi, Philippe Guerin, Mehul Dhorda, Jennifer Flegg and Praveen Bharti.
   
 - Using geospatial models to select primary healthcare centres for surveillance of <i>Plasmodium knowlesi</i> malaria (LH first author)  \

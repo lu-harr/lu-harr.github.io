@@ -88,9 +88,6 @@ author:
     - label: "Ravelry"
       icon: "fab fa-fw fa-ravelry"
       url: "https://www.ravelry.com/projects/luharr"
-    - label: "test"
-      icon: "fa-solid fa-fw fa-flask"
-      url: "/cookbook/"
 
 footer:
   links:
@@ -103,6 +100,9 @@ footer:
     - label: "Ravelry"
       icon: "fab fa-fw fa-ravelry"
       url: "https://www.ravelry.com/projects/luharr"
+    - label: "t"
+      icon: "fa-solid fa-fw fa-flask"
+      url: "/cookbook/"
       # RSS there automatically ?
 
 defaults:
