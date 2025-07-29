@@ -3,8 +3,6 @@ permalink: /teaching/mapping_intro
 title: Mapping in R
 ---
 
-Lucy Harrison
-
 2025-01-29
 
 ## Preamble
