@@ -24,15 +24,15 @@ audience for the workshop was R beginners (if you know the difference
 between the console and the terminal then you’re not a beginner any
 more!), but I haven’t provided as much written content as is needed for
 this to be particularly useful. Either way, I’m popping it here for now
-and will probably come back to it in future when the need arises.
+and will come back to it in the future.
 
-Download the workshop as an `.Rmd` from [here](https://lu-harr.github.io/_pages/teaching/mapping_intro.Rmd).
+Download the workshop as an `.Rmd` and run it for yourself [here](https://lu-harr.github.io/_pages/teaching/mapping_intro.Rmd).
 
 
 
 ## Resources
 
-Today I’m working from/plagiarising the following useful resources:
+Today I’m working from/gently plagiarising the following useful resources:
 
 1.  Spatial data with R and `terra` (<https://rspatial.org/index.html>)
 2.  Spatial statistics for data science: theory and practice with R
