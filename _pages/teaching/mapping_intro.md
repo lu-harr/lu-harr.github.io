@@ -1,5 +1,7 @@
-# Mapping in R
-================
+---
+permalink: /teaching/mapping_intro.md
+title: Mapping in R
+---
 
 Lucy Harrison
 
