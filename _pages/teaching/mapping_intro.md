@@ -26,7 +26,9 @@ more!), but I haven’t provided as much written content as is needed for
 this to be particularly useful. Either way, I’m popping it here for now
 and will probably come back to it in future when the need arises.
 
-Download the workshop as an `.Rmd` from [here](teaching/mapping_intro.Rmd).
+Download the workshop as an `.Rmd` from [here](https://lu-harr.github.io/_pages/teaching/mapping_intro.Rmd).
+
+
 
 ## Resources
 
