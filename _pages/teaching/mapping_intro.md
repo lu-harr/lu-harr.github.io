@@ -1,5 +1,5 @@
 ---
-permalink: /teaching/mapping_intro.md
+permalink: /teaching/mapping_intro
 title: Mapping in R
 ---
 
