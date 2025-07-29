@@ -1,6 +1,7 @@
 ---
 permalink: /teaching/mapping_intro
 title: Mapping in R
+toc: true
 ---
 
 2025-01-29
@@ -24,6 +25,8 @@ between the console and the terminal then you’re not a beginner any
 more!), but I haven’t provided as much written content as is needed for
 this to be particularly useful. Either way, I’m popping it here for now
 and will probably come back to it in future when the need arises.
+
+Download the workshop as an `.Rmd` from [teaching/mapping_intro.Rmd][here].
 
 ## Resources
 
