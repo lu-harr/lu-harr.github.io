@@ -1,0 +1,14 @@
+---
+title: "How to give a great poster presentation"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Some resources
+
+## Some rules of thumb
+
+## Some examples (okay, one example)
