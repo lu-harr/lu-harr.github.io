@@ -5,10 +5,63 @@ output: github_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+getwd()
 ```
+
+## Preamble
+
+Giving a poster presentation at a conference is a great opportunity to get your work out there! Here's a workshop of helpful hints and tips to make up a great poster!
 
 ## Some resources
 
-## Some rules of thumb
+There is lots of advice out there:
 
-## Some examples (okay, one example)
+1. An outreach librarian at the Bod has a great set of slides: <https://www.bodleian.ox.ac.uk/sites/default/files/bodreader/documents/media/iskills-designing-conference-poster.pdf>
+2. 
+
+## Making a plan
+
+### Audience
+
+Before you start
+
+### Layout
+
+**Consider reading flow:**
+
+Imagine you are reading your poster, or ask someone with fresh eyes to read it: does the natural order your audience reads your poster in match your expectation?
+
+This ain't working :(
+
+![](how_to_poster_files/figure-gfm/read_direction.png)
+
+### Bullet points
+
+### Pictures
+
+
+
+## Miscellaneous tips
+
+- Don't forget to acknowledge co-authors/research groups/sponsors/grants involved in supporting your work (e.g., with a logo for a grant/sponsor)
+
+- Include a QR code to your website/linkedIn/preprint - if your audience has bookmarked you, they're more likely to remember your research at a later date!
+
+- Once you have a draft, stand back! Imagine your draft at A0 size, across the other end of Radcliffe square - 
+
+## Some examples
+
+Here are some example posters from me + my friends :)
+
+Let's discuss:
+
+- Who is the audience of each of these posters?
+- What do these posters do well?
+- Where could these posters improve?
+
+
+
+
+
+
+
