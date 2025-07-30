@@ -11,17 +11,34 @@ make up a great poster!
 
 There is lots of advice out there:
 
-1.  From the Bod (obvs):
+1.  A great set of slides from an outreach librarian at the Bod:
     <https://www.bodleian.ox.ac.uk/sites/default/files/bodreader/documents/media/iskills-designing-conference-poster.pdf>
-2.  
+    (very comprehensive)
+2.  UCL’s design guide:
+    <https://www.ucl.ac.uk/creative-services/printing-services/designing-your-poster>
+    (advises UCL’ers to only use UCL colours but the webpage is beige)
+3.  University of Liverpool’s guide:
+    <https://www.liverpool.ac.uk/media/livacuk/computingservices/printing/making-an-impact-with-your-poster.pdf>
+    (I particularly like their notes on graphs, text and colours)
+4.  Brief guide from NYU: <https://guides.nyu.edu/posters>
 
-## Before
+## Making a plan
 
 ### Audience
 
-### Bullet points
+Before you start thinking too hard about what your poster will look
+like, consider your audience. Are they likely to:
 
-### Pictures
+- …be academics? Or should your poster be accessible to industry
+  representatives, public servants, etc.?  
+  *People who are not academics might have some surprising insights into
+  your work - be prepared to translate your work to public health
+  workers, policy-makers, or industry representatives*
+
+- …have clinical training? Have statistical training? Have some
+  specialist knowledge relevant to the focus of the event your are
+  presenting at? Remember, at every global health conference there is a
+  poor lost modeller (me) who has no idea about
 
 ### Layout
 
@@ -31,13 +48,59 @@ Imagine you are reading your poster, or ask someone with fresh eyes to
 read it: does the natural order your audience reads your poster in match
 your expectation?
 
-![](how_to_poster_files/read_direction.png)
+<figure>
+<img src="how_to_poster_files/figure-gfm/reading_direction.png"
+alt="(from UCL resource)" />
+<figcaption aria-hidden="true">(from UCL resource)</figcaption>
+</figure>
+
+### Text
+
+- Bite-size pieces of information are easier to digest than large
+  chunks!
+- Consider organising the text of your poster into bullets,
+- highlighting words that you want to **jump** off the page,
+- and removing 90% of all jargon!
+  - For example, *I* know what the word *zoonotic* means in the context
+    of *malaria*, but lots of people at a public health/applied
+    maths/epidemiology conference may not! Perhaps I should consider
+    writing about \`\`*malaria that infects monkeys*’’ instead!
+
+### Pictures
 
 ## Miscellaneous tips
 
 - Don’t forget to acknowledge co-authors/research groups/sponsors/grants
   involved in supporting your work (e.g., with a logo for a
   grant/sponsor)
-  
 
-## Some examples (okay, one example)
+- Include a QR code to your website/linkedIn/preprint - if your audience
+  has bookmarked you, they’re more likely to remember your research at a
+  later date!
+
+- Once you have a draft, **stand back!** Imagine your draft at A0 size,
+  across the other end of Radcliffe square - what things in your poster
+  stand out from far away? Does it send a clear message when a reader
+  can only see the title, pictures, and maybe some sub-headings?
+
+## Some examples
+
+Here are some example posters from me + my friends :)
+
+Let’s discuss:
+
+- Who is the audience of each of these posters?
+- What do we think the poster is about when we look at it from a
+  distance?
+- How much reading time do we need to get the gist of the poster?
+- What do these posters do well?
+- Where could these posters improve?
+
+## Conclusion
+
+Hopefully now you’re feeling confident and ready to whip up a great
+poster!
+
+The University has a
+<print studio><https://estates.admin.ox.ac.uk/print-studio> which I
+think is available to students and staff!
