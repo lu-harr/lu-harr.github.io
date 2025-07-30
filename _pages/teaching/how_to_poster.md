@@ -1,5 +1,8 @@
-How to give a great poster presentation
-================
+---
+permalink: /teaching/how_to_poster
+title: How to give a great poster presentation
+toc: true
+---
 
 ## Preamble
 

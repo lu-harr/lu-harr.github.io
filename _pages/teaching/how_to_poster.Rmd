@@ -1,7 +1,13 @@
 ---
-title: "How to give a great poster presentation"
 output: github_document
 ---
+
+<!---Note this will remove itself:-->
+<!---
+permalink: /teaching/how_to_poster
+title: How to give a great poster presentation
+toc: true
+--->
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
