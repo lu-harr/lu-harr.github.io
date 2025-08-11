@@ -1,8 +1,18 @@
----
+
+<!---Note this will remove itself:-->
+
+<!---
 permalink: /teaching/how_to_poster
 title: How to give a great poster presentation
 toc: true
----
+--->
+
+``` r
+knitr::opts_chunk$set(echo = TRUE)
+getwd()
+```
+
+    ## [1] "/Users/lharrison/lu-harr.github.io/_pages/teaching"
 
 ## Preamble
 
@@ -14,16 +24,16 @@ make up a great poster!
 
 There is lots of advice out there:
 
-1.  A great set of slides from an outreach librarian at the Bod:
-    <https://www.bodleian.ox.ac.uk/sites/default/files/bodreader/documents/media/iskills-designing-conference-poster.pdf>
-    (very comprehensive)
-2.  UCL’s design guide:
-    <https://www.ucl.ac.uk/creative-services/printing-services/designing-your-poster>
+1.  A [great set of
+    slides](https://www.bodleian.ox.ac.uk/sites/default/files/bodreader/documents/media/iskills-designing-conference-poster.pdf)
+    from an outreach librarian at the Bod (very comprehensive)
+2.  UCL’s [design
+    guide](https://www.ucl.ac.uk/creative-services/printing-services/designing-your-poster)
     (advises UCL’ers to only use UCL colours but the webpage is beige)
-3.  University of Liverpool’s guide:
-    <https://www.liverpool.ac.uk/media/livacuk/computingservices/printing/making-an-impact-with-your-poster.pdf>
+3.  University of Liverpool’s
+    [guide](https://www.liverpool.ac.uk/media/livacuk/computingservices/printing/making-an-impact-with-your-poster.pdf)
     (I particularly like their notes on graphs, text and colours)
-4.  Brief guide from NYU: <https://guides.nyu.edu/posters>
+4.  Brief [guide](https://guides.nyu.edu/posters) from NYU
 
 ## Making a plan
 
@@ -40,8 +50,10 @@ like, consider your audience. Are they likely to:
 
 - …have clinical training? Have statistical training? Have some
   specialist knowledge relevant to the focus of the event your are
-  presenting at? Remember, at every global health conference there is a
-  poor lost modeller (me) who has no idea about
+  presenting at?  
+  *Remember, at every global health conference there is a poor lost
+  modeller (me) who has no idea about the physical/clinical/ecological
+  details of your research that are important to you!*
 
 ### Layout
 
@@ -104,6 +116,6 @@ Let’s discuss:
 Hopefully now you’re feeling confident and ready to whip up a great
 poster!
 
-The University has a
-<print studio><https://estates.admin.ox.ac.uk/print-studio> which I
-think is available to students and staff!
+The University has a [print
+studio](https://estates.admin.ox.ac.uk/print-studio) which I think is
+available to students and staff!

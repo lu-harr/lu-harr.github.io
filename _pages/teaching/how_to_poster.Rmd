@@ -9,7 +9,7 @@ title: How to give a great poster presentation
 toc: true
 --->
 
-```{r setup, include=FALSE}
+```{r setup}
 knitr::opts_chunk$set(echo = TRUE)
 getwd()
 ```
@@ -22,10 +22,10 @@ Giving a poster presentation at a conference is a great opportunity to get your 
 
 There is lots of advice out there:
 
-1. A great set of slides from an outreach librarian at the Bod: <https://www.bodleian.ox.ac.uk/sites/default/files/bodreader/documents/media/iskills-designing-conference-poster.pdf> (very comprehensive)
-2. UCL's design guide: <https://www.ucl.ac.uk/creative-services/printing-services/designing-your-poster> (advises UCL'ers to only use UCL colours but the webpage is beige)
-3. University of Liverpool's guide: <https://www.liverpool.ac.uk/media/livacuk/computingservices/printing/making-an-impact-with-your-poster.pdf> (I particularly like their notes on graphs, text and colours)
-4. Brief guide from NYU: <https://guides.nyu.edu/posters>
+1. A [great set of slides](https://www.bodleian.ox.ac.uk/sites/default/files/bodreader/documents/media/iskills-designing-conference-poster.pdf) from an outreach librarian at the Bod (very comprehensive)
+2. UCL's [design guide](https://www.ucl.ac.uk/creative-services/printing-services/designing-your-poster) (advises UCL'ers to only use UCL colours but the webpage is beige)
+3. University of Liverpool's [guide](https://www.liverpool.ac.uk/media/livacuk/computingservices/printing/making-an-impact-with-your-poster.pdf) (I particularly like their notes on graphs, text and colours)
+4. Brief [guide](https://guides.nyu.edu/posters) from NYU
 
 ## Making a plan
 
@@ -36,7 +36,8 @@ Before you start thinking too hard about what your poster will look like, consid
 - ...be academics? Or should your poster be accessible to industry representatives, public servants, etc.?  
 *People who are not academics might have some surprising insights into your work - be prepared to translate your work to public health workers, policy-makers, or industry representatives*
 
-- ...have clinical training? Have statistical training? Have some specialist knowledge relevant to the focus of the event your are presenting at? Remember, at every global health conference there is a poor lost modeller (me) who has no idea about
+- ...have clinical training? Have statistical training? Have some specialist knowledge relevant to the focus of the event your are presenting at?  
+*Remember, at every global health conference there is a poor lost modeller (me) who has no idea about the physical/clinical/ecological details of your research that are important to you!*
 
 ### Layout
 
@@ -52,7 +53,7 @@ Imagine you are reading your poster, or ask someone with fresh eyes to read it: 
 - Consider organising the text of your poster into bullets,
 - highlighting words that you want to **jump** off the page,
 - and removing 90\% of all jargon!
-  - For example, *I* know what the word *zoonotic* means in the context of *malaria*, but lots of people at a public health/applied maths/epidemiology conference may not! Perhaps I should consider writing about ``*malaria that infects monkeys*'' instead!
+  - For example, *I* know what the word *zoonotic* means in the context of *malaria*, but lots of people at a public health/applied maths/epidemiology conference may not! I'll use "*malaria that infects monkeys*" instead! And, of course, a *picture* of the zoonotic malaria transmission cycle ...
 
 ### Pictures
 
@@ -82,7 +83,7 @@ Let's discuss:
 
 Hopefully now you're feeling confident and ready to whip up a great poster!
 
-The University has a <print studio><https://estates.admin.ox.ac.uk/print-studio> which I think is available to students and staff!
+The University has a [print studio](https://estates.admin.ox.ac.uk/print-studio) which I think is available to students and staff!
 
 
 
