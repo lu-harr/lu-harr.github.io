@@ -4,8 +4,6 @@ title: How to give a great poster presentation
 toc: true
 ---
 
-<!---Note this will remove itself:-->
-
 ## Preamble
 
 Giving a poster presentation at a conference is a great opportunity to
@@ -161,4 +159,4 @@ studio](https://estates.admin.ox.ac.uk/print-studio) which I think is
 available to students and staff!
 
 Download today’s workshop as a .pdf
-[here](/_pages/teaching/how_to_poster_files/how_to_poster_to_pdf.pdf)
+[here](/_pages/teaching/how_to_poster_to_pdf.pdf)
