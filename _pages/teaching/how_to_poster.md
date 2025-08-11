@@ -1,3 +1,9 @@
+---
+permalink: /teaching/how_to_poster
+title: How to give a great poster presentation
+toc: true
+---
+
 
 <!---Note this will remove itself:-->
 
@@ -78,10 +84,26 @@ alt="(from UCL resource)" />
 - and removing 90% of all jargon!
   - For example, *I* know what the word *zoonotic* means in the context
     of *malaria*, but lots of people at a public health/applied
-    maths/epidemiology conference may not! Perhaps I should consider
-    writing about \`\`*malaria that infects monkeys*’’ instead!
+    maths/epidemiology conference may not! I’ll use “*malaria that
+    infects monkeys*” instead! And, of course, a *picture* of the
+    zoonotic malaria transmission cycle …
 
 ### Pictures
+
+### Interactive elements
+
+During a poster presentation, you only have a short window to catch the
+attention of your audience. You also have an advantage over giving an
+oral presentation: your audience can get right up close with your
+presentation! Interactive elements to a poster presentation can really
+increase audience engagement, and they don’t need to be direct or
+obvious. My favourite poster presentations have involved chalk
+annotations over a mathematical model diagram, a spring attached to a
+poster to explain the forces involved between cells in a mathematical
+model of wound-healing, and a jar of sand to start a discussion about
+the dynamics of a landslide. I presented a [Shiny
+app](https://lucyharrison.shinyapps.io/pf_drug_resistance_shiny/) as a
+poster with animated buttons and sliders!
 
 ## Miscellaneous tips
 

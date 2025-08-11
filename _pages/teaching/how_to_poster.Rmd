@@ -59,6 +59,10 @@ Imagine you are reading your poster, or ask someone with fresh eyes to read it: 
 
 
 
+### Interactive elements
+
+During a poster presentation, you only have a short window to catch the attention of your audience. You also have an advantage over giving an oral presentation: your audience can get right up close with your presentation! Interactive elements to a poster presentation can really increase audience engagement, and they don't need to be direct or obvious. My favourite poster presentations have involved chalk annotations over a mathematical model diagram, a spring attached to a poster to explain the forces involved between cells in a mathematical model of wound-healing, and a jar of sand to start a discussion about the dynamics of a landslide. I presented a [Shiny app](https://lucyharrison.shinyapps.io/pf_drug_resistance_shiny/) as a poster with animated buttons and sliders!
+
 ## Miscellaneous tips
 
 - Don't forget to acknowledge co-authors/research groups/sponsors/grants involved in supporting your work (e.g., with a logo for a grant/sponsor)
