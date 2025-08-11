@@ -9,8 +9,9 @@ title: How to give a great poster presentation
 toc: true
 --->
 
-```{r setup}
+```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_knit$set(root.dir = "~/lu-harr.github.io")
 getwd()
 ```
 
@@ -45,11 +46,12 @@ Before you start thinking too hard about what your poster will look like, consid
 
 Imagine you are reading your poster, or ask someone with fresh eyes to read it: does the natural order your audience reads your poster in match your expectation?
 
-![(from UCL resource)](how_to_poster_files/figure-gfm/reading_direction.png)
+![(from UCL resource)](_pages/teaching/how_to_poster_files/figure-gfm/reading_direction.png)
 
 ### Text
 
-- Bite-size pieces of information are easier to digest than large chunks! 
+- Bite-size pieces of information are easier to digest than large chunks!
+- Use bigger text than you think you should!
 - Consider organising the text of your poster into bullets,
 - highlighting words that you want to **jump** off the page,
 - and removing 90\% of all jargon!

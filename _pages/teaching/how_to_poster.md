@@ -13,13 +13,6 @@ title: How to give a great poster presentation
 toc: true
 --->
 
-``` r
-knitr::opts_chunk$set(echo = TRUE)
-getwd()
-```
-
-    ## [1] "/Users/lharrison/lu-harr.github.io/_pages/teaching"
-
 ## Preamble
 
 Giving a poster presentation at a conference is a great opportunity to
@@ -70,7 +63,8 @@ read it: does the natural order your audience reads your poster in match
 your expectation?
 
 <figure>
-<img src="how_to_poster_files/figure-gfm/reading_direction.png"
+<img
+src="_pages/teaching/how_to_poster_files/figure-gfm/reading_direction.png"
 alt="(from UCL resource)" />
 <figcaption aria-hidden="true">(from UCL resource)</figcaption>
 </figure>
@@ -79,6 +73,7 @@ alt="(from UCL resource)" />
 
 - Bite-size pieces of information are easier to digest than large
   chunks!
+- Use bigger text than you think you should!
 - Consider organising the text of your poster into bullets,
 - highlighting words that you want to **jump** off the page,
 - and removing 90% of all jargon!
