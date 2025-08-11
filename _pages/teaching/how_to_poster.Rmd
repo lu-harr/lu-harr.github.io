@@ -11,7 +11,7 @@ toc: true
 
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-knitr::opts_knit$set(root.dir = "~/lu-harr.github.io")
+#knitr::opts_knit$set(root.dir = "~/lu-harr.github.io/")
 getwd()
 ```
 
@@ -46,7 +46,7 @@ Before you start thinking too hard about what your poster will look like, consid
 
 Imagine you are reading your poster, or ask someone with fresh eyes to read it: does the natural order your audience reads your poster in match your expectation?
 
-![(from UCL resource)](_pages/teaching/how_to_poster_files/figure-gfm/reading_direction.png)
+![(from UCL resource)](how_to_poster_files/reading_direction.png)
 
 ### Text
 
@@ -59,11 +59,29 @@ Imagine you are reading your poster, or ask someone with fresh eyes to read it: 
 
 ### Pictures
 
+There are lots of details that are important to a figure when we include it in a paper, that we should subtract when we use the same information in a slide deck or research poster. Supply the minimal detail to understand the idea/result that your figure is communicating. Make text big and concise and avoid technical language that we would need to read your paper to understand. Consider colourblind-friendly colour palettes ([these](https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3) [resources](https://colororacle.org) might be helpful).
 
+```{r, include = FALSE, eval = FALSE}
+ggplot(ToothGrowth) +
+  geom_point(aes(x = dose, y = len, col = supp))
+```
+The University of Liverpool resource has a great example of how to format graphs for a poster:
+
+![(from University of Liverpool resource)](how_to_poster_files/graphs.png)
+
+Another example - here's a figure I put in [this paper](https://doi.org/10.1098/rsos.230641):
+
+![](how_to_poster_files/rsos230641f04.jpg)
+
+... and here's what the same information looked like when I presented the project as a poster:  
+
+![](how_to_poster_files/MiM_poster.png)
+
+(This poster was for an online conference!)
 
 ### Interactive elements
 
-During a poster presentation, you only have a short window to catch the attention of your audience. You also have an advantage over giving an oral presentation: your audience can get right up close with your presentation! Interactive elements to a poster presentation can really increase audience engagement, and they don't need to be direct or obvious. My favourite poster presentations have involved chalk annotations over a mathematical model diagram, a spring attached to a poster to explain the forces involved between cells in a mathematical model of wound-healing, and a jar of sand to start a discussion about the dynamics of a landslide. I presented a [Shiny app](https://lucyharrison.shinyapps.io/pf_drug_resistance_shiny/) as a poster with animated buttons and sliders!
+During a poster presentation, you only have a short window to catch the attention of your audience. You also have an advantage over giving an oral presentation: your audience can get right up close with your presentation! Interactive elements to a poster presentation can really increase audience engagement, and they don't need to be direct or obvious. My favourite poster presentations have involved **chalk annotations** over a mathematical model diagram, a **spring attached to a poster** to explain the forces involved between cells in a mathematical model of wound-healing, and a **jar of sand** to start a discussion about the dynamics of a landslide. I presented a [Shiny app](https://lucyharrison.shinyapps.io/pf_drug_resistance_shiny/) as a poster with fishing wire to animate buttons and sliders!
 
 ## Miscellaneous tips
 
@@ -75,7 +93,7 @@ During a poster presentation, you only have a short window to catch the attentio
 
 ## Some examples
 
-Here are some example posters from me + my friends :)
+Now let's have a look at some example posters from me + my friends :)
 
 Let's discuss:
 
@@ -89,7 +107,7 @@ Let's discuss:
 
 Hopefully now you're feeling confident and ready to whip up a great poster!
 
-The University has a [print studio](https://estates.admin.ox.ac.uk/print-studio) which I think is available to students and staff!
+UniOxford has a [print studio](https://estates.admin.ox.ac.uk/print-studio) which I think is available to students and staff!
 
 
 

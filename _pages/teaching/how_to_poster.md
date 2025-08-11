@@ -1,9 +1,3 @@
----
-permalink: /teaching/how_to_poster
-title: How to give a great poster presentation
-toc: true
----
-
 
 <!---Note this will remove itself:-->
 
@@ -63,8 +57,7 @@ read it: does the natural order your audience reads your poster in match
 your expectation?
 
 <figure>
-<img
-src="_pages/teaching/how_to_poster_files/figure-gfm/reading_direction.png"
+<img src="how_to_poster_files/reading_direction.png"
 alt="(from UCL resource)" />
 <figcaption aria-hidden="true">(from UCL resource)</figcaption>
 </figure>
@@ -85,6 +78,37 @@ alt="(from UCL resource)" />
 
 ### Pictures
 
+There are lots of details that are important to a figure when we include
+it in a paper, that we should subtract when we use the same information
+in a slide deck or research poster. Supply the minimal detail to
+understand the idea/result that your figure is communicating. Make text
+big and concise and avoid technical language that we would need to read
+your paper to understand. Consider colourblind-friendly colour palettes
+([these](https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3)
+[resources](https://colororacle.org) might be helpful).
+
+The University of Liverpool resource has a great example of how to
+format graphs for a poster:
+
+<figure>
+<img src="how_to_poster_files/graphs.png"
+alt="(from University of Liverpool resource)" />
+<figcaption aria-hidden="true">(from University of Liverpool
+resource)</figcaption>
+</figure>
+
+Another example - here’s a figure I put in [this
+paper](https://doi.org/10.1098/rsos.230641):
+
+![](how_to_poster_files/rsos230641f04.jpg)
+
+… and here’s what the same information looked like when I presented the
+project as a poster:
+
+![](how_to_poster_files/MiM_poster.png)
+
+(This poster was for an online conference!)
+
 ### Interactive elements
 
 During a poster presentation, you only have a short window to catch the
@@ -92,13 +116,13 @@ attention of your audience. You also have an advantage over giving an
 oral presentation: your audience can get right up close with your
 presentation! Interactive elements to a poster presentation can really
 increase audience engagement, and they don’t need to be direct or
-obvious. My favourite poster presentations have involved chalk
-annotations over a mathematical model diagram, a spring attached to a
-poster to explain the forces involved between cells in a mathematical
-model of wound-healing, and a jar of sand to start a discussion about
-the dynamics of a landslide. I presented a [Shiny
+obvious. My favourite poster presentations have involved **chalk
+annotations** over a mathematical model diagram, a **spring attached to
+a poster** to explain the forces involved between cells in a
+mathematical model of wound-healing, and a **jar of sand** to start a
+discussion about the dynamics of a landslide. I presented a [Shiny
 app](https://lucyharrison.shinyapps.io/pf_drug_resistance_shiny/) as a
-poster with animated buttons and sliders!
+poster with fishing wire to animate buttons and sliders!
 
 ## Miscellaneous tips
 
@@ -117,7 +141,7 @@ poster with animated buttons and sliders!
 
 ## Some examples
 
-Here are some example posters from me + my friends :)
+Now let’s have a look at some example posters from me + my friends :)
 
 Let’s discuss:
 
@@ -133,6 +157,6 @@ Let’s discuss:
 Hopefully now you’re feeling confident and ready to whip up a great
 poster!
 
-The University has a [print
+UniOxford has a [print
 studio](https://estates.admin.ox.ac.uk/print-studio) which I think is
 available to students and staff!
