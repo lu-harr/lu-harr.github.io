@@ -1,3 +1,6 @@
+
+
+
 ---
 permalink: /teaching/how_to_poster
 title: How to give a great poster presentation
@@ -159,3 +162,6 @@ poster!
 UniOxford has a [print
 studio](https://estates.admin.ox.ac.uk/print-studio) which I think is
 available to students and staff!
+
+Download today’s workshop as a .pdf
+[here](/_pages/teaching/how_to_poster_files/how_to_poster_to_pdf.pdf)
