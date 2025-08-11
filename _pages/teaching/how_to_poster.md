@@ -1,6 +1,3 @@
-
-
-
 ---
 permalink: /teaching/how_to_poster
 title: How to give a great poster presentation
