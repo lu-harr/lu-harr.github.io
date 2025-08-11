@@ -1,11 +1,11 @@
 
 <!---Note this will remove itself:-->
 
-<!---
+---
 permalink: /teaching/how_to_poster
 title: How to give a great poster presentation
 toc: true
---->
+---
 
 ## Preamble
 
@@ -57,7 +57,7 @@ read it: does the natural order your audience reads your poster in match
 your expectation?
 
 <figure>
-<img src="how_to_poster_files/reading_direction.png"
+<img src="/_pages/teaching/how_to_poster_files/reading_direction.png"
 alt="(from UCL resource)" />
 <figcaption aria-hidden="true">(from UCL resource)</figcaption>
 </figure>
@@ -91,7 +91,7 @@ The University of Liverpool resource has a great example of how to
 format graphs for a poster:
 
 <figure>
-<img src="how_to_poster_files/graphs.png"
+<img src="/_pages/teaching/how_to_poster_files/graphs.png"
 alt="(from University of Liverpool resource)" />
 <figcaption aria-hidden="true">(from University of Liverpool
 resource)</figcaption>
@@ -100,12 +100,12 @@ resource)</figcaption>
 Another example - here’s a figure I put in [this
 paper](https://doi.org/10.1098/rsos.230641):
 
-![](how_to_poster_files/rsos230641f04.jpg)
+![](/_pages/teaching/how_to_poster_files/rsos230641f04.jpg)
 
 … and here’s what the same information looked like when I presented the
 project as a poster:
 
-![](how_to_poster_files/MiM_poster.png)
+![](/_pages/teaching/how_to_poster_files/MiM_poster.png)
 
 (This poster was for an online conference!)
 

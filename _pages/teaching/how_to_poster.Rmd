@@ -11,7 +11,7 @@ toc: true
 
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-#knitr::opts_knit$set(root.dir = "~/lu-harr.github.io/")
+knitr::opts_knit$set(root.dir = "~/lu-harr.github.io/")
 getwd()
 ```
 
@@ -46,7 +46,7 @@ Before you start thinking too hard about what your poster will look like, consid
 
 Imagine you are reading your poster, or ask someone with fresh eyes to read it: does the natural order your audience reads your poster in match your expectation?
 
-![(from UCL resource)](how_to_poster_files/reading_direction.png)
+![(from UCL resource)](/_pages/teaching/how_to_poster_files/reading_direction.png)
 
 ### Text
 
@@ -67,15 +67,15 @@ ggplot(ToothGrowth) +
 ```
 The University of Liverpool resource has a great example of how to format graphs for a poster:
 
-![(from University of Liverpool resource)](how_to_poster_files/graphs.png)
+![(from University of Liverpool resource)](/_pages/teaching/how_to_poster_files/graphs.png)
 
 Another example - here's a figure I put in [this paper](https://doi.org/10.1098/rsos.230641):
 
-![](how_to_poster_files/rsos230641f04.jpg)
+![](/_pages/teaching/how_to_poster_files/rsos230641f04.jpg)
 
 ... and here's what the same information looked like when I presented the project as a poster:  
 
-![](how_to_poster_files/MiM_poster.png)
+![](/_pages/teaching/how_to_poster_files/MiM_poster.png)
 
 (This poster was for an online conference!)
 
