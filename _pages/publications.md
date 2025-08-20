@@ -24,7 +24,11 @@ M Nain, M Dhorda, J. A. Flegg, A. Gupta, **L. E. Harrison**, S. Singh-Phulgenda 
 - <a href="https://doi.org/10.1136%2Fbmjno-2023-000407">Modelling 
 accessibility of adult neurology care in Australia, 2020–2034</a>  \
 Steve Simpson-Yap, Federico Frascoli, **Lucinda Harrison**, Charles Malpas, James Burrell, Nicholas Child, Lauren P Giles, Christian Lueck, Merrilee Needham, Benjamin Tsang and Tomas Kalincik. (2023). *BMJ Neurology Open*
-      
+
+- <a href="https://doi.org/10.1101/2025.05.15.25327572 ">Adaptive geospatial surveillance system for antimalarial drug resistance</a> **(preprint)**  \
+Apoorv Gupta, **Lucinda E. Harrison**, Minu Nain, Sauman Singh-Phulgenda, Rutuja Chhajed, Roopal S kumar, Aishika Das, Manju Rahi, Philippe J. Guerin, Anup R Anvikar, Mehul Dhorda, Jennifer A. Flegg, Praveen K. Bharti. (2025). *medRxiv*
+
+
 ## Reports to Government
 
 - *Mapping Japanese encephalitis infection risk in Australia to 
@@ -49,10 +53,6 @@ With David Duncan, Freya Shearer, Nick Golding, Jennifer Flegg, David Price, Dom
 - *A dynamic geospatial model of the wildlife reservoir for Japanese encephalitis virus in Australia* (LH second author)  \
 A description of ecological niche models of ardeid birds and <i>Culex</i> mosquitoes in Australia; first described in reports to government.  \
 With David Duncan (first author), Freya Shearer, Nick Golding, Jennifer Flegg, David Price and others.
-  
-- *Adaptive geospatial surveillance system for antimalarial drug resistance* (LH joint first author)  \
-Geospatial models of SP and artemisinin resistance in India are summarised to find candidate districts for surveillance of antimalarial resistance. See <a href="https://lucyharrison.shinyapps.io/pf_drug_resistance_shiny/">companion RShiny app</a>.  \
-With Apoorv Gupta (first author), Minu Nain, Sauman Singh-Phulgenda, Rutuja Chhajed, Manju Rahi, Philippe Guerin, Mehul Dhorda, Jennifer Flegg and Praveen Bharti.
   
 - *Using geospatial models to select primary healthcare centres for surveillance of <i>Plasmodium knowlesi</i> malaria* (LH first author)  \
 Disease surveillance produces critical information on disease prevalence, incidence and clinical outcomes, however it is limited by available resources and should be carefully planned. The spatial distribution of risk of <i>Plasmodium knowlesi</i> malaria in north-western Indonesia is not well understood. However, numerous studies have linked disease risk to environments where humans, macaque hosts and mosquito vectors interact, on the forest fringe and in croplands and plantations. We present a flexible framework for the selection of primary healthcare centres for targeted disease surveillance, applied to the surveillance of <i>P. knowlesi</i> malaria in north-western Indonesia. We consider several definitions of healthcare centre catchment area, and explore a number of possible objectives for disease surveillance, incorporating the outputs of a geospatial model of disease risk. These objectives can be optimised for individual sites or complete surveillance designs, and can be optimised independently or simultaneously, in a multi-objective decision problem.  \
