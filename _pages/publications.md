@@ -22,7 +22,7 @@ See <a href="https://lucyharrison.shinyapps.io/pf_drug_resistance_shiny/">compan
 David H. Duncan, **Lucinda Harrison**, Abbey Potter, Craig Brockway, Kimberly Evasco, Stephen Doggett, Rebecca Feldman, Peter Neville, Andrew van den Hurk, Cassie Jansen, Michaela Hobby, Vicky Burns, Andrew Vickers, Nina Kurucz, Nick Golding, and Freya Shearer
 
 - <a href="https://doi.org/10.1371/journal.pntd.0011570">Updating estimates of *Plasmodium knowlesi* malaria risk in response to changing land use patterns across Southeast Asia</a> (2024)  \
-Ruarai J. Tobin, **Lucinda E. Harrison**, Meg K. Tully, Inke N. D. Lubis, Rintis Noviyanti, Nicholas M. Anstey, Giri S. Rajahram, Matthew J. Grigg, Jennifer A. Flegg, David J. Price, and Freya M. Shearer. *PLOS Neglected Tropical Diseases.*
+Ruarai J. Tobin, **Lucinda E. Harrison**, Meg K. Tully, Inke N. D. Lubis, Rintis Noviyanti, Nicholas M. Anstey, Giri S. Rajahram, Matthew J. Grigg, Jennifer A. Flegg, David J. Price, and Freya M. Shearer. *PLOS Neglected Tropical Diseases*.
           
 - <a href="https://doi.org/10.4269/ajtmh.23-0631">Systematic Review 
 and Geospatial Modeling of Molecular Markers of Resistance to Artemisinins 
@@ -31,7 +31,7 @@ M Nain, M Dhorda, J. A. Flegg, A. Gupta, **L. E. Harrison**, S. Singh-Phulgenda 
         
 - <a href="https://doi.org/10.1136%2Fbmjno-2023-000407">Modelling 
 accessibility of adult neurology care in Australia, 2020–2034</a> (2023)  \
-Steve Simpson-Yap, Federico Frascoli, **Lucinda Harrison**, Charles Malpas, James Burrell, Nicholas Child, Lauren P Giles, Christian Lueck, Merrilee Needham, Benjamin Tsang, and Tomas Kalincik. *BMJ Neurology Open*
+Steve Simpson-Yap, Federico Frascoli, **Lucinda Harrison**, Charles Malpas, James Burrell, Nicholas Child, Lauren P Giles, Christian Lueck, Merrilee Needham, Benjamin Tsang, and Tomas Kalincik. *BMJ Neurology Open*.
 
 ## Reports to Government
 
