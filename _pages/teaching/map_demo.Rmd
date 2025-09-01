@@ -7,7 +7,7 @@ output:
 
 <!---
 permalink: /teaching/map_demo
-title: A quick little guide for how to get into the MAP R package
+title: A quick demo of the MAP R package
 toc: true
 --->
 
@@ -26,6 +26,8 @@ https://github.com/malaria-atlas-project/malariaAtlas/blob/master/vignettes/over
 This has lots of detail related to all of the different features of the package. I'm not trying to recreate that here!
 
 But, if you're specifically trying to get at PfPR (or another MAP surface) for a couple of points/countries, here's a short demonstration to get you started.
+
+Download this demo as an `.Rmd` [here]("https://lu-harr.github.io/_pages/teaching/map_demo.Rmd")
 
 ## Bring in packages
 

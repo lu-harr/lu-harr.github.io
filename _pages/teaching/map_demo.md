@@ -1,6 +1,6 @@
 ---
 permalink: /teaching/map_demo
-title: A quick little guide for how to get into the MAP R package
+title: A quick demo of the MAP R package
 toc: true
 ---
 
@@ -26,6 +26,9 @@ package. I’m not trying to recreate that here!
 But, if you’re specifically trying to get at PfPR (or another MAP
 surface) for a couple of points/countries, here’s a short demonstration
 to get you started.
+
+Download this demo as an `.Rmd`
+[here](%22https://lu-harr.github.io/_pages/teaching/map_demo.Rmd%22)
 
 ## Bring in packages
 
@@ -182,13 +185,13 @@ pts$year <- sample(pfpr_years, nrow(pts), replace = TRUE)
 head(pts)
 ```
 
-    ##           x         y year
-    ## 2  75.85417 15.895835 2017
-    ## 8  78.35417 22.520835 2015
-    ## 15 73.77083 17.770835 2016
-    ## 16 81.31250 16.854168 2016
-    ## 26 77.85417  8.604168 2015
-    ## 28 76.89583 23.729168 2017
+    ##           x        y year
+    ## 2  79.47917 23.02083 2021
+    ## 5  86.89583 22.72917 2017
+    ## 6  77.18750 29.93750 2022
+    ## 11 91.93750 23.97917 2018
+    ## 15 91.39583 25.72917 2019
+    ## 17 77.64583 14.06250 2021
 
 ``` r
 ind_shp %>%
