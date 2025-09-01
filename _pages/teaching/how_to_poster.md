@@ -1,8 +1,11 @@
----
+
+<!---Note this will remove itself:-->
+
+<!---
 permalink: /teaching/how_to_poster
 title: How to give a great poster presentation
 toc: true
----
+--->
 
 ## Preamble
 
@@ -54,7 +57,7 @@ read it: does the natural order your audience reads your poster in match
 your expectation?
 
 <figure>
-<img src="/_pages/teaching/how_to_poster_files/reading_direction.png"
+<img src="how_to_poster_files/reading_direction.png"
 alt="(from UCL resource)" />
 <figcaption aria-hidden="true">(from UCL resource)</figcaption>
 </figure>
@@ -88,7 +91,7 @@ The University of Liverpool resource has a great example of how to
 format graphs for a poster:
 
 <figure>
-<img src="/_pages/teaching/how_to_poster_files/graphs.png"
+<img src="how_to_poster_files/graphs.png"
 alt="(from University of Liverpool resource)" />
 <figcaption aria-hidden="true">(from University of Liverpool
 resource)</figcaption>
@@ -97,12 +100,12 @@ resource)</figcaption>
 Another example - here’s a figure I put in [this
 paper](https://doi.org/10.1098/rsos.230641):
 
-![](/_pages/teaching/how_to_poster_files/rsos230641f04.jpg)
+![](how_to_poster_files/rsos230641f04.jpg)
 
 … and here’s what the same information looked like when I presented the
 project as a poster:
 
-![](/_pages/teaching/how_to_poster_files/MiM_poster.png)
+![](how_to_poster_files/MiM_poster.png)
 
 (This poster was for an online conference!)
 
@@ -149,6 +152,14 @@ Let’s discuss:
 - What do these posters do well?
 - Where could these posters improve?
 
+## Aside: Better Poster
+
+A different school of thought to the classic research poster is the
+[better poster](https://www.youtube.com/watch?v=1RwJbhkCA58), which
+prioritises a single, headline result, and negative space for maximal
+impact. Love them or hate them, they do make us think a bit more
+critically about what we put on a poster!
+
 ## Conclusion
 
 Hopefully now you’re feeling confident and ready to whip up a great
@@ -158,5 +169,4 @@ UniOxford has a [print
 studio](https://estates.admin.ox.ac.uk/print-studio) which I think is
 available to students and staff!
 
-Download today’s workshop as a .pdf
-[here](/_pages/teaching/how_to_poster_to_pdf.pdf)
+Download today’s workshop as a .pdf [here](how_to_poster_to_pdf.pdf)
