@@ -1,11 +1,11 @@
 
 <!---Note this will remove itself:-->
 
-<!---
+---
 permalink: /teaching/how_to_poster
 title: How to give a great poster presentation
 toc: true
---->
+---
 
 ## Preamble
 

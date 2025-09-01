@@ -1,7 +1,10 @@
-A quick little guide for how to get into the MAP R package
-================
-Lucy Harrison
-2025-09-01
+<!---Note this will remove itself:-->
+
+---
+permalink: /teaching/map_demo
+title: A quick little guide for how to get into the MAP R package
+toc: true
+---
 
 The Malaria Atlas Project (MAP) have made many of their great products
 available through an R package, `malariaAtlas`. This means that if
