@@ -1,5 +1,3 @@
-<!---Note this will remove itself:-->
-
 ---
 permalink: /teaching/map_demo
 title: A quick little guide for how to get into the MAP R package

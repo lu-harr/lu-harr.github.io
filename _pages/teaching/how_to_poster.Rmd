@@ -42,10 +42,10 @@ Before you start thinking too hard about what your poster will look like, consid
 
 **Consider reading flow:**
 
-Imagine you are reading your poster, or ask someone with fresh eyes to read it: does the natural order your audience reads your poster in match your expectation?
+Imagine you are reading your poster, or ask someone with fresh eyes to read it: does the natural order your audience reads your poster in match your expectation? From the UCL resource:
 
 
-![(from UCL resource)](how_to_poster_files/reading_direction.png)
+![](how_to_poster_files/reading_direction.png)
 
 ### Text
 
@@ -66,7 +66,7 @@ ggplot(ToothGrowth) +
 ```
 The University of Liverpool resource has a great example of how to format graphs for a poster:
 
-![(from University of Liverpool resource)](how_to_poster_files/graphs.png)
+![](how_to_poster_files/graphs.png)
 
 Another example - here's a figure I put in [this paper](https://doi.org/10.1098/rsos.230641):
 

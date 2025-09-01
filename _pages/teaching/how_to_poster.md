@@ -51,13 +51,9 @@ like, consider your audience. Are they likely to:
 
 Imagine you are reading your poster, or ask someone with fresh eyes to
 read it: does the natural order your audience reads your poster in match
-your expectation?
+your expectation? From the UCL resource:
 
-<figure>
-<img src="how_to_poster_files/reading_direction.png"
-alt="(from UCL resource)" />
-<figcaption aria-hidden="true">(from UCL resource)</figcaption>
-</figure>
+![](how_to_poster_files/reading_direction.png)
 
 ### Text
 
@@ -87,12 +83,7 @@ your paper to understand. Consider colourblind-friendly colour palettes
 The University of Liverpool resource has a great example of how to
 format graphs for a poster:
 
-<figure>
-<img src="how_to_poster_files/graphs.png"
-alt="(from University of Liverpool resource)" />
-<figcaption aria-hidden="true">(from University of Liverpool
-resource)</figcaption>
-</figure>
+![](how_to_poster_files/graphs.png)
 
 Another example - here’s a figure I put in [this
 paper](https://doi.org/10.1098/rsos.230641):
