@@ -27,7 +27,7 @@ This has lots of detail related to all of the different features of the package.
 
 But, if you're specifically trying to get at PfPR (or another MAP surface) for a couple of points/countries, here's a short demonstration to get you started.
 
-Download this demo as an `.Rmd` <here><https://lu-harr.github.io/_pages/teaching/map_demo.Rmd>
+Download this demo as an `.Rmd` [here](https://lu-harr.github.io/_pages/teaching/map_demo.Rmd)
 
 ## Bring in packages
 

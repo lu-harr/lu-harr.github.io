@@ -28,7 +28,7 @@ surface) for a couple of points/countries, here’s a short demonstration
 to get you started.
 
 Download this demo as an `.Rmd`
-<here><https://lu-harr.github.io/_pages/teaching/map_demo.Rmd>
+[here](https://lu-harr.github.io/_pages/teaching/map_demo.Rmd)
 
 ## Bring in packages
 
@@ -185,12 +185,12 @@ head(pts)
 ```
 
     ##           x        y year
-    ## 1  80.22917 20.18750 2016
-    ## 5  72.14583 21.77083 2022
-    ## 8  80.14583 27.77083 2021
-    ## 9  79.97917 12.22917 2015
-    ## 11 71.43750 22.10417 2017
-    ## 13 80.52083 16.77083 2015
+    ## 3  73.22917 24.06250 2016
+    ## 6  77.43750 17.77083 2020
+    ## 8  75.93750 23.10417 2022
+    ## 11 76.27083 27.97917 2020
+    ## 16 83.39583 25.02083 2020
+    ## 17 75.72917 29.14583 2021
 
 ``` r
 ind_shp %>%
