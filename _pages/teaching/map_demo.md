@@ -28,7 +28,7 @@ surface) for a couple of points/countries, here’s a short demonstration
 to get you started.
 
 Download this demo as an `.Rmd`
-[here](%22https://lu-harr.github.io/_pages/teaching/map_demo.Rmd%22)
+<here><https://lu-harr.github.io/_pages/teaching/map_demo.Rmd>
 
 ## Bring in packages
 
@@ -168,11 +168,10 @@ pfpr <- as.list(pfpr) %>%
 writeRaster(pfpr, "pfpr_rasters_ind.tif")
 ```
 
-``` r
-pfpr <- rast("pfpr_rasters_ind.tif")
-```
-
-Let’s make up some locations (in space and time) in India:
+If you’ve read this far, you’ve probably got some specific points in
+space/time that you would like to extract MAP raster values for. For our
+worked example, let’s make up some locations (in space and time) in
+India:
 
 ``` r
 pts <- terra::spatSample(pfpr[[1]], size = 100, method = "random", xy = TRUE)
@@ -186,12 +185,12 @@ head(pts)
 ```
 
     ##           x        y year
-    ## 2  79.47917 23.02083 2021
-    ## 5  86.89583 22.72917 2017
-    ## 6  77.18750 29.93750 2022
-    ## 11 91.93750 23.97917 2018
-    ## 15 91.39583 25.72917 2019
-    ## 17 77.64583 14.06250 2021
+    ## 1  80.22917 20.18750 2016
+    ## 5  72.14583 21.77083 2022
+    ## 8  80.14583 27.77083 2021
+    ## 9  79.97917 12.22917 2015
+    ## 11 71.43750 22.10417 2017
+    ## 13 80.52083 16.77083 2015
 
 ``` r
 ind_shp %>%
@@ -237,7 +236,13 @@ df <- do.call(rbind, lapply(pfpr_years, function(yr){extract_pfpr(pfpr, pts, yr)
 write.csv(pts, "pts_with_pfpr.csv", row.names = FALSE)
 ```
 
-## Have a look at what we’ve grabbed
+## Have a look at what we’ve extracted
+
+``` r
+hist(df$median, main = "PfPR extracted")
+```
+
+![](map_demo_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
 ``` r
 ind_shp %>%
@@ -248,7 +253,7 @@ ind_shp %>%
 points(df$x, df$y, col = viridis(10)[cut(log10(df$median), breaks=10)], pch=16)
 ```
 
-![](map_demo_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+![](map_demo_files/figure-gfm/unnamed-chunk-5-2.png)<!-- -->
 
 ``` r
 # i should really put a scale here but that's all for now!

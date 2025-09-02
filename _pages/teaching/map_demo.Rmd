@@ -27,7 +27,7 @@ This has lots of detail related to all of the different features of the package.
 
 But, if you're specifically trying to get at PfPR (or another MAP surface) for a couple of points/countries, here's a short demonstration to get you started.
 
-Download this demo as an `.Rmd` [here]("https://lu-harr.github.io/_pages/teaching/map_demo.Rmd")
+Download this demo as an `.Rmd` <here><https://lu-harr.github.io/_pages/teaching/map_demo.Rmd>
 
 ## Bring in packages
 
@@ -111,11 +111,11 @@ pfpr <- as.list(pfpr) %>%
 writeRaster(pfpr, "pfpr_rasters_ind.tif")
 ```
 
-```{r}
+```{r, echo = FALSE}
 pfpr <- rast("pfpr_rasters_ind.tif")
 ```
 
-Let's make up some locations (in space and time) in India:
+If you've read this far, you've probably got some specific points in space/time that you would like to extract MAP raster values for. For our worked example, let's make up some locations (in space and time) in India:
 
 ```{r}
 pts <- terra::spatSample(pfpr[[1]], size = 100, method = "random", xy = TRUE)
@@ -167,9 +167,11 @@ df <- do.call(rbind, lapply(pfpr_years, function(yr){extract_pfpr(pfpr, pts, yr)
 write.csv(pts, "pts_with_pfpr.csv", row.names = FALSE)
 ```
 
-## Have a look at what we've grabbed
+## Have a look at what we've extracted
 
 ```{r}
+
+hist(df$median, main = "PfPR extracted")
 
 ind_shp %>%
   st_simplify(dTolerance = 0.1) %>%
@@ -179,3 +181,7 @@ ind_shp %>%
 points(df$x, df$y, col = viridis(10)[cut(log10(df$median), breaks=10)], pch=16)
 # i should really put a scale here but that's all for now!
 ```
+
+
+
+
