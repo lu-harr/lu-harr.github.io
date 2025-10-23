@@ -6,8 +6,8 @@ title: "Hello"
 I am a postdoctoral researcher in the <a href="https://www.iddo.org">Infectious 
 Diseases Data Observatory</a> (IDDO), at the University of Oxford. As part of 
 the <a href="https://www.iddo.org/wwarn">Worldwide Antimalarial Resistance 
-Network</a> (WWARN), and in collaboration with the Mitigating Antimalarial 
-Resistance Consortium in South-East Africa (MARC-SE Africa),
+Network</a> (WWARN), and in collaboration with the <a href="https://www.marcse-africa.org">Mitigating Antimalarial 
+Resistance Consortium in South-East Africa</a> (MARC-SE Africa),
 I am constructing geospatial models of molecular markers for antimalarial drug 
 resistance in <i>Plasmodium falciparum</i> malaria in Africa.
 
