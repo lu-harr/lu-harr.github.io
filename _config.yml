@@ -13,8 +13,8 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Lucinda Harrison
-email: lucinda.harrison.research(at)gmail.com
+title: Lucy Harrison
+email: lucy.harrison.research(at)gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Welcome to my website !
 github_username: lu-harr
@@ -24,11 +24,11 @@ search: true
 # Site Settings
 locale                   : "en-GB"
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
-title                    : "Lucinda Harrison"
+title                    : "Lucy Harrison"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Lucinda Harrison"
-description              : "Welcome to my website!"
+name                     : "Lucy Harrison"
+description              : "Welcome to Lucy's website"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"

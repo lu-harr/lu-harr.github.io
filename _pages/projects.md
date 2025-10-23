@@ -17,7 +17,7 @@ feature_row:
   - image_path: /assets/images/dunsborough_rainbow_cropped.jpg
     alt: "wwarn"
     title: "Drug resistance in malaria"
-    excerpt: "In collaboration with the Worldwide Antimalarial Resistance Network (WWARN), we're developing geospatial models of artemisinin resistance in malaria parasites"
+    excerpt: "In collaboration with the Worldwide Antimalarial Resistance Network (WWARN), we're developing geospatial models of molecular markers for artemisinin partial resistance in *P. falciparum* malaria"
     url: "/404/"
 ---
 
