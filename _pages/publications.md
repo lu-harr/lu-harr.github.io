@@ -10,9 +10,9 @@ toc: true
 **Lucinda E. Harrison**, Jennifer A. Flegg, Ruarai Tobin, Inke N. D. Lubis, Rintis Noviyanti, Matthew J. Grigg, Freya M. Shearer and David J. Price. (2024). *Royal Society Open Science*.  \
 Have a play with the companion Shiny app <a href="http://lucyharrison.shinyapps.io/pk_multicrit_shiny/">here</a>.
 
-- <a href="https://doi.org/10.1101/2025.05.15.25327572 ">Adaptive geospatial surveillance system for antimalarial drug resistance</a> (*preprint*)  \
+- <a href="https://doi.org/10.1371/journal.pgph.0004717">Model-based geospatial surveillance system for antimalarial drug resistance</a>  \
 Apoorv Gupta\*, **Lucinda E. Harrison**\*, Minu Nain, Sauman Singh-Phulgenda, Rutuja Chhajed, Roopal S kumar, Aishika Das, Manju Rahi, Philippe J. Guerin, Anup R Anvikar, Mehul Dhorda, Jennifer A. Flegg, Praveen K. Bharti. (2025). *medRxiv*  \
-See <a href="https://lucyharrison.shinyapps.io/pf_drug_resistance_shiny/">companion RShiny app</a>.
+See <a href="https://iddo.shinyapps.io/pf_drug_resistance/">companion RShiny app</a>.
 
 \* Contributed equally
 
