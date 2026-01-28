@@ -12,5 +12,7 @@ Some resources for a workshop on making up a research poster
 - <a href="/teaching/mapping_intro">Introduction to mapping in R</a>, January 2025  
 An introduction to manipulating spatial data in R with `raster`, `sf`, and `terra`
 - ["Let's talk about visual clarity"](https://lu-harr.github.io/_pages/teaching/visualisation_workshop.pdf), July 2023  
-Some introductory slides for a peer-to-peer workshop on visualising research
+Some introductory slides for a peer-to-peer workshop on visualising research at the Melbourne Math Bio away day
+  - ["v2: Visualising data and other horror stories"](https://lu-harr.github.io/_pages/teaching/visualisation_workshop_v2.pdf), January 2026
+  For the UCT-CCOAT MARC SE-Africa writing retreat
 - [Foundations of Computing resources are not uploaded here but I'll put them in a private repo]
