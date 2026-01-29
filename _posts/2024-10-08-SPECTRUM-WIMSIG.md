@@ -4,10 +4,9 @@ date: 2024-10-08T15:34:30-04:00
 categories:
   - blog
 tags:
-  - travel
-  - JEV
-  - WIMSIG
-  - SPECTRUM
+  - jev
+  - wimsig
+  - spectrum
 ---
 
 I recently travelled to Byron Bay to speak at the final meeting of SPECTRUM. I was awarded the prize for best student talk for a presentation on my final PhD project, finding candidate optimal sites for Japanese encephalitis virus surveillance in mosquitoes. This project has well and truly evolved since I first presented it at ANZIAM in February.
