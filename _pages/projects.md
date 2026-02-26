@@ -16,9 +16,9 @@ feature_row:
     url: "https://lu-harr.github.io/tags/#jev"
   - image_path: /assets/images/toronto_marcse.JPG
     alt: "wwarn"
-    title: "Drug resistance in malaria"
+    title: "Antimalarial drug resistance"
     excerpt: "In collaboration with the Worldwide Antimalarial Resistance Network (WWARN), we're developing geospatial models of molecular markers for artemisinin partial resistance in *P. falciparum* malaria"
-    url: "https://lu-harr.github.io/tags/#marcse"
+    url: "https://lu-harr.github.io/tags/#wwarn"
 ---
 
 {% include feature_row id="intro" type="center" %}
