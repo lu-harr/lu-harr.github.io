@@ -1,7 +1,13 @@
 ---
 permalink: /teaching/map_demo
 title: A quick demo of the MAP R package
+categories:
+  - howto
+tags:
+  - geo
+  - R
 toc: true
+author_profile: false
 ---
 
 The Malaria Atlas Project (MAP) have made many of their great products

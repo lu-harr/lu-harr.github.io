@@ -131,3 +131,8 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+
+# collections:
+#   teaching:
+#     output: true
+#     permalink: /:collection/:path/
