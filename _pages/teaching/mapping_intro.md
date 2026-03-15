@@ -1,8 +1,15 @@
+Intro to mapping in R
+================
+Lucy Harrison
+2025-01-29
+
+<!-- For .md
 ---
 permalink: /teaching/mapping_intro
 title: Intro to mapping in R
 toc: true
 ---
+-->
 
 ## Preamble
 
@@ -25,14 +32,13 @@ this to be particularly useful. Either way, I’m popping it here for now
 and will probably come back to it in future when the need arises.
 
 Download the workshop as an `.Rmd` and run it for yourself
-<here><https://lu-harr.github.io/_pages/teaching/mapping_intro.Rmd>.
+[here](https://lu-harr.github.io/_pages/teaching/mapping_intro.Rmd).
 
 ## Resources
 
 Today I’m working from/plagiarising the following useful resources:
 
-1.  Spatial data with R and `terra`
-    (<https://rspatial.org/index.html>)
+1.  Spatial data with R and `terra` (<https://rspatial.org/index.html>)
 2.  Spatial statistics for data science: theory and practice with R
     (<https://www.paulamoraga.com/book-spatial/index.html>)
 3.  Introduction to visualising spatial data in R
@@ -225,8 +231,8 @@ vic_elevation # have a look at all of the information associated with our raster
     ## resolution : 0.009960519, 0.009960519  (x, y)
     ## extent     : 140.625, 151.8704, -40.97639, -31.95216  (xmin, xmax, ymin, ymax)
     ## crs        : +proj=longlat +datum=WGS84 +no_defs 
-    ## source     : file5d00435d1d57.tif 
-    ## names      : file5d00435d1d57
+    ## source     : file5ea86580a2ff.tif 
+    ## names      : file5ea86580a2ff
 
 ``` r
 plot(vic_elevation, main="Elevation in metres")
@@ -300,7 +306,7 @@ rivers <- ne_download(scale =  10, type = 'rivers_lake_centerlines',
 ```
 
     ## Reading layer `ne_10m_rivers_lake_centerlines' from data source 
-    ##   `/private/var/folders/d3/y1ry00t94rbg0nbfhc8z23p80000gr/T/Rtmp495NWV/ne_10m_rivers_lake_centerlines.shp' 
+    ##   `/private/var/folders/d3/y1ry00t94rbg0nbfhc8z23p80000gr/T/RtmphBQ8nX/ne_10m_rivers_lake_centerlines.shp' 
     ##   using driver `ESRI Shapefile'
     ## Simple feature collection with 1473 features and 38 fields
     ## Geometry type: MULTILINESTRING
@@ -553,20 +559,20 @@ summary(m)
     ## 
     ## Coefficients:
     ##                  Estimate Std. Error z value Pr(>|z|)    
-    ## (Intercept)     1.152e+00  1.702e-01   6.771 1.28e-11 ***
-    ## hpop           -3.310e-03  3.056e-04 -10.832  < 2e-16 ***
-    ## dist_to_coast  -2.668e-08  9.341e-07  -0.029  0.97721    
-    ## dist_to_rivers  3.932e-05  1.513e-05   2.599  0.00935 ** 
-    ## elevation      -1.306e-03  5.030e-04  -2.597  0.00941 ** 
+    ## (Intercept)     1.269e+00  1.700e-01   7.463 8.46e-14 ***
+    ## hpop           -3.253e-03  3.044e-04 -10.689  < 2e-16 ***
+    ## dist_to_coast  -7.959e-07  8.172e-07  -0.974   0.3301    
+    ## dist_to_rivers  2.675e-05  1.290e-05   2.073   0.0382 *  
+    ## elevation      -1.343e-03  5.208e-04  -2.579   0.0099 ** 
     ## ---
     ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
     ## 
     ## (Dispersion parameter for binomial family taken to be 1)
     ## 
     ##     Null deviance: 1181.10  on 851  degrees of freedom
-    ## Residual deviance:  722.73  on 847  degrees of freedom
+    ## Residual deviance:  737.44  on 847  degrees of freedom
     ##   (4 observations deleted due to missingness)
-    ## AIC: 732.73
+    ## AIC: 747.44
     ## 
     ## Number of Fisher Scoring iterations: 7
 
@@ -580,12 +586,12 @@ m
     ## 
     ## Coefficients:
     ##    (Intercept)            hpop   dist_to_coast  dist_to_rivers       elevation  
-    ##      1.152e+00      -3.310e-03      -2.668e-08       3.932e-05      -1.306e-03  
+    ##      1.269e+00      -3.253e-03      -7.959e-07       2.675e-05      -1.343e-03  
     ## 
     ## Degrees of Freedom: 851 Total (i.e. Null);  847 Residual
     ##   (4 observations deleted due to missingness)
     ## Null Deviance:       1181 
-    ## Residual Deviance: 722.7     AIC: 732.7
+    ## Residual Deviance: 737.4     AIC: 747.4
 
 And make some predictions …
 
