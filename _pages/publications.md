@@ -3,8 +3,8 @@ permalink: /publications/
 title: Publications
 toc: true
 gallery:
-  - url: /_pages/teaching/how_to_poster_files/eggs/mim_poster_2023.pdf
-    image_path: /_pages/teaching/how_to_poster_files/eggs/mim_poster_2023.pdf
+  - url: /assets/images/mim_poster_2023.jpeg
+    image_path: /assets/images/mim_poster_2023.jpeg
     alt: "placeholder image 1"
     title: "Image 1 title caption"
   - url: /assets/images/cape_town_penguins
@@ -61,7 +61,7 @@ Steve Simpson-Yap, Federico Frascoli, **Lucinda Harrison**, Charles Malpas, Jame
 
 ## Presentations and posters
 
-{% include gallery caption="This is a sample gallery with **Markdown support**." %}
+{% include gallery %}
       
 ## Manuscripts in prep.
 
