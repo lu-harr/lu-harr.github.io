@@ -1,13 +1,8 @@
+
 ---
 permalink: /teaching/chloropleths_101
 title: Chloropleths + the malariaAtlas accessibility raster in one go!
-categories:
-  - howto
-tags:
-  - geo
-  - R
 toc: true
-author_profile: false
 ---
 
 ## Preamble
@@ -17,7 +12,7 @@ We’ll also have a look at some of the raster products released by the
 Malaria Atlas Project.
 
 I’ll show a mix of base graphics and `ggplot2`: while ggplot is often
-the way to go, it doesn’t hurt to understand some base graphics!
+the way to go, it doesn’t hurt to know about base graphics!
 
 ## Packages
 
@@ -37,7 +32,7 @@ Lots of spatial analysis relies on data associated with specific
 administrative units. For the purposes of this demonstration, let’s
 retrieve admin level 1s in Nigeria.
 
-There’s lots of packages we can grab these data from,
+There’s lots of packages we can grab these sort of data from,
 e.g. `rnaturalearth` and `worlddatr`. Here’s how you can do it with the
 MAP package:
 
@@ -66,8 +61,8 @@ ggplot() +
 ![](chloropleths_101_files/figure-gfm/unnamed-chunk-1-2.png)<!-- -->
 
 Have a look at `nigeria`: it’s a simple feature collection that looks a
-bit like a data.frame. However, each row as geometry associated with it,
-as well as regular columns!
+bit like a data.frame. However, each row has geometry associated with
+it, as well as regular columns:
 
 ``` r
 head(nigeria)
@@ -125,7 +120,7 @@ nigeria %>%
     ## MULTIPOLYGON (((11.2449 11.2936, 11.2878 11.266...
 
 ``` r
-# we can pick out rows just like a data frame!
+# we can pick out rows just like a data frame:
 plot(st_geometry(nigeria[1,]))
 ```
 
@@ -133,8 +128,8 @@ plot(st_geometry(nigeria[1,]))
 
 ## Our first chloropleth
 
-Let’s have a first go at a chloropleth map … for demonstration, let’s
-map the first letter of the state name:
+Let’s have a first go at a chloropleth map … in this example, I map the
+first letter of the state name:
 
 ``` r
 nigeria <- mutate(nigeria,
@@ -161,11 +156,11 @@ most_common_letters <- nigeria %>%
   unlist()
 
 ggplot() +
-  geom_sf(data = nigeria) + # give us all of the states first
+  geom_sf(data = nigeria, fill = NA) + # give us all of the states first
   geom_sf(data = nigeria %>% 
             filter(first_letter %in% most_common_letters),
           aes(fill = first_letter)) + # now filled in states
-  scale_fill_viridis_d() +
+  scale_fill_viridis_d(option = "A") +
   xlab("Longitude") +
   ylab("Latitude") +
   labs(title = "Nigerian states with the most common first letter")
@@ -173,10 +168,9 @@ ggplot() +
 
 ![](chloropleths_101_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
-Great! We’ve made some chloropleth maps on discrete data, the first
-letter of the state names.
+Great! We’ve made some chloropleth maps to visualise discrete data.
 
-Now, let’s download some raster data and have a look at it
+Now, let’s download some raster data and have a look at it.
 
 ## Global accessibility map
 
@@ -189,9 +183,13 @@ traverse it given the landscape and transport infrastructure.
 
 Amelia Bertozzi-Villa has a [*medium*
 post](https://medium.com/@abertozz/mapping-travel-times-with-malariaatlas-and-friction-surfaces-f4960f584f08)
-describing how to use the friction surface. Here, we’ll take the derived
-output, which is a surface of the estimated travel time to the nearest
-city of population greater than 10,000 people (if memory serves).
+describing how to use the friction surface for an arbitrary set of
+reference points. Using healthcare centres as reference points, Weiss et
+al. subsequently used the friction surface to examine [access to
+healthcare](https://doi.org/10.1038/s41591-020-1059-1).
+
+Here, we’ll take a raster of the derived output, the estimated travel
+time to the nearest city of population greater than 50,000 people.
 
 ``` r
 # download the travel time raster:
@@ -220,7 +218,8 @@ travel_time
     ## min value   :                     0 
     ## max value   :                   978
 
-Our freshly downloaded `travel_time` is a `SpatRaster`: a gridded
+Our freshly downloaded `travel_time` is a `SpatRaster`, the raster
+format as represented in the `terra` package. A *raster* is a gridded
 dataset of values associated with two-dimensional coordinates (i.e.,
 longitude and latitude), with a specific *resolution*, *extent*, and
 [*coordinate reference
@@ -229,6 +228,7 @@ system*](https://en.wikipedia.org/wiki/Spatial_reference_system).
 Let’s have a look at our raster:
 
 ``` r
+# base graphics:
 plot(travel_time, main = "Travel time to cities in Nigeria")
 ```
 
@@ -257,8 +257,9 @@ access_df <- cbind(xyFromCell(access,
                    as.data.frame(access))
 
 ggplot() +
-  geom_sf(data = nigeria) + 
   # including the polygons sorts out the aspect of the raster
+  geom_sf(data = nigeria) + 
+  # access_df needs to be a data.frame here:
   geom_tile(data = access_df,
               aes(x = x, y = y, fill = `Travel Time to Cities`)) +
   scale_fill_viridis_c("Access")
@@ -268,15 +269,15 @@ ggplot() +
 
 ## Bring it all together: chloropleth of accessibility
 
-Let’s make a chloropleth map of a continuous variable like
-accessibility! *Of course, I don’t suggest that our accessibility raster
-is the best way to capture state-level accessibility in Nigeria - this
-map is for the purposes of demonstration.*
+Let’s make a chloropleth map of a continuous variable using our new
+accessibility raster. *Of course, I don’t suggest that our accessibility
+raster is the best way to capture state-level “accessibility” in
+Nigeria - this map is for the purposes of demonstration.*
 
-We first use `terra::extract()` to grab the mean accessibility for each
-state. The `na.rm = TRUE` excludes NAs from our mean calculation, and
-the `bind = TRUE` asks for the output to be bound to the polygons in the
-second argument, `nigeria`.
+We first use `terra::extract()` to grab the mean of our accessibility
+surface for each state. The `na.rm = TRUE` excludes NAs from our mean
+calculation, and the `bind = TRUE` asks for the output to be bound to
+the polygons in the second argument, `nigeria`.
 
 ``` r
 access_states <- terra::extract(access, nigeria, mean, na.rm = TRUE, bind = TRUE) %>%
