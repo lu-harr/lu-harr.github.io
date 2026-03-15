@@ -1,7 +1,13 @@
 ---
 permalink: /teaching/mapping_intro
 title: Intro to mapping in R
+categories:
+  - howto
+tags:
+  - geo
+  - R
 toc: true
+author_profile: false
 ---
 
 
