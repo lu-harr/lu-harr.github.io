@@ -1,11 +1,11 @@
 
 <!---Note this will remove itself:-->
 
-<!---
+---
 permalink: /teaching/chloropleths_101
 title: Chloropleths + the malariaAtlas accessibility raster in one go!
 toc: true
---->
+---
 
 ## Preamble
 
