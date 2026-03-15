@@ -1,10 +1,13 @@
-
-<!---Note this will remove itself:-->
-
 ---
 permalink: /teaching/chloropleths_101
 title: Chloropleths + the malariaAtlas accessibility raster in one go!
+categories:
+  - howto
+tags:
+  - geo
+  - R
 toc: true
+author_profile: false
 ---
 
 ## Preamble
