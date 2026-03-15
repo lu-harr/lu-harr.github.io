@@ -1,10 +1,9 @@
 ---
 permalink: /teaching/mapping_intro
-title: Mapping in R
+title: Intro to mapping in R
 toc: true
 ---
 
-2025-01-29
 
 ## Preamble
 
@@ -24,15 +23,14 @@ audience for the workshop was R beginners (if you know the difference
 between the console and the terminal then you’re not a beginner any
 more!), but I haven’t provided as much written content as is needed for
 this to be particularly useful. Either way, I’m popping it here for now
-and will come back to it in the future.
+and will probably come back to it in future when the need arises.
 
-Download the workshop as an `.Rmd` and run it for yourself [here](https://lu-harr.github.io/_pages/teaching/mapping_intro.Rmd).
-
-
+Download the workshop as an `.Rmd` and run it for yourself
+<here><https://lu-harr.github.io/_pages/teaching/mapping_intro.Rmd>.
 
 ## Resources
 
-Today I’m working from/gently plagiarising the following useful resources:
+Today I’m working from/plagiarising the following useful resources:
 
 1.  Spatial data with R and `terra` (<https://rspatial.org/index.html>)
 2.  Spatial statistics for data science: theory and practice with R
@@ -85,6 +83,8 @@ library(ggmap)  # extends ggplot for maps
 library(dplyr)
 ```
 
+    ## Warning: package 'dplyr' was built under R version 4.4.3
+
     ## 
     ## Attaching package: 'dplyr'
 
@@ -108,6 +108,8 @@ library(dplyr)
 library(tidyr)
 ```
 
+    ## Warning: package 'tidyr' was built under R version 4.4.3
+
     ## 
     ## Attaching package: 'tidyr'
 
@@ -123,10 +125,16 @@ library(tidyr)
 library(tidyverse)
 ```
 
+    ## Warning: package 'tibble' was built under R version 4.4.3
+
+    ## Warning: package 'readr' was built under R version 4.4.3
+
+    ## Warning: package 'purrr' was built under R version 4.4.3
+
     ## ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-    ## ✔ forcats   1.0.0     ✔ readr     2.1.5
-    ## ✔ lubridate 1.9.4     ✔ stringr   1.5.1
-    ## ✔ purrr     1.0.4     ✔ tibble    3.3.0
+    ## ✔ forcats   1.0.0     ✔ readr     2.1.6
+    ## ✔ lubridate 1.9.4     ✔ stringr   1.6.0
+    ## ✔ purrr     1.2.1     ✔ tibble    3.3.1
 
     ## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
     ## ✖ tidyr::extract() masks terra::extract(), raster::extract()
@@ -180,7 +188,7 @@ plot(ras, main="Our first raster")
 
 ![](mapping_intro_files/figure-gfm/unnamed-chunk-1-2.png)<!-- -->
 
-(I have contempt for ggplot but here it is: )
+(And here we go in ggplot:)
 
 ``` r
 df = data.frame(x = xxx, y = yyy)
@@ -303,8 +311,8 @@ vic_elevation # have a look at all of the information associated with our raster
     ## resolution : 0.009960519, 0.009960519  (x, y)
     ## extent     : 140.625, 151.8704, -40.97639, -31.95216  (xmin, xmax, ymin, ymax)
     ## crs        : +proj=longlat +datum=WGS84 +no_defs 
-    ## source     : file481c6dec67b1.tif 
-    ## names      : file481c6dec67b1
+    ## source     : file5c1c6c1fb9ff.tif 
+    ## names      : file5c1c6c1fb9ff
 
 ``` r
 plot(vic_elevation, main="Elevation in metres")
@@ -378,7 +386,7 @@ rivers <- ne_download(scale =  10, type = 'rivers_lake_centerlines',
 ```
 
     ## Reading layer `ne_10m_rivers_lake_centerlines' from data source 
-    ##   `/private/var/folders/d3/y1ry00t94rbg0nbfhc8z23p80000gr/T/RtmpG5oP69/ne_10m_rivers_lake_centerlines.shp' 
+    ##   `/private/var/folders/d3/y1ry00t94rbg0nbfhc8z23p80000gr/T/Rtmpn2MLmz/ne_10m_rivers_lake_centerlines.shp' 
     ##   using driver `ESRI Shapefile'
     ## Simple feature collection with 1473 features and 38 fields
     ## Geometry type: MULTILINESTRING
@@ -631,22 +639,22 @@ summary(m)
     ## 
     ## Coefficients:
     ##                  Estimate Std. Error z value Pr(>|z|)    
-    ## (Intercept)     1.747e+00  1.795e-01   9.737  < 2e-16 ***
-    ## hpop           -5.462e-03  5.299e-04 -10.308  < 2e-16 ***
-    ## dist_to_coast  -1.515e-07  9.542e-07  -0.159  0.87381    
-    ## dist_to_rivers  2.659e-06  1.071e-05   0.248  0.80384    
-    ## elevation      -1.502e-03  5.023e-04  -2.991  0.00278 ** 
+    ## (Intercept)     1.294e+00  1.655e-01   7.820 5.28e-15 ***
+    ## hpop           -3.135e-03  2.868e-04 -10.931  < 2e-16 ***
+    ## dist_to_coast   3.006e-07  8.993e-07   0.334  0.73821    
+    ## dist_to_rivers  1.176e-05  1.135e-05   1.036  0.30022    
+    ## elevation      -1.398e-03  5.156e-04  -2.711  0.00671 ** 
     ## ---
     ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
     ## 
     ## (Dispersion parameter for binomial family taken to be 1)
     ## 
-    ##     Null deviance: 1213.00  on 874  degrees of freedom
-    ## Residual deviance:  626.44  on 870  degrees of freedom
-    ##   (3 observations deleted due to missingness)
-    ## AIC: 636.44
+    ##     Null deviance: 1181.10  on 851  degrees of freedom
+    ## Residual deviance:  737.45  on 847  degrees of freedom
+    ##   (4 observations deleted due to missingness)
+    ## AIC: 747.45
     ## 
-    ## Number of Fisher Scoring iterations: 8
+    ## Number of Fisher Scoring iterations: 7
 
 ``` r
 m
@@ -658,12 +666,12 @@ m
     ## 
     ## Coefficients:
     ##    (Intercept)            hpop   dist_to_coast  dist_to_rivers       elevation  
-    ##      1.747e+00      -5.462e-03      -1.515e-07       2.659e-06      -1.502e-03  
+    ##      1.294e+00      -3.135e-03       3.006e-07       1.176e-05      -1.398e-03  
     ## 
-    ## Degrees of Freedom: 874 Total (i.e. Null);  870 Residual
-    ##   (3 observations deleted due to missingness)
-    ## Null Deviance:       1213 
-    ## Residual Deviance: 626.4     AIC: 636.4
+    ## Degrees of Freedom: 851 Total (i.e. Null);  847 Residual
+    ##   (4 observations deleted due to missingness)
+    ## Null Deviance:       1181 
+    ## Residual Deviance: 737.5     AIC: 747.5
 
 And make some predictions …
 
@@ -721,6 +729,11 @@ plot(st_geometry(emus), col=alpha("orange", 0.5), add=TRUE, pch=16, cex=0.8)
 
 ``` r
 library(viridisLite)
+```
+
+    ## Warning: package 'viridisLite' was built under R version 4.4.3
+
+``` r
 ?viridis
 plot(out, col=viridis(100), main="Viridis is a fab colour map")
 ```

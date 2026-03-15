@@ -1,5 +1,5 @@
 ---
-title: "Mapping in R"
+title: "Intro to mapping in R"
 author: "Lucy Harrison"
 date: "2025-01-29"
 output:
@@ -9,6 +9,14 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+<!-- For .md
+---
+permalink: /teaching/mapping_intro
+title: Intro to mapping in R
+toc: true
+---
+-->
 
 ## Preamble
 
@@ -85,7 +93,7 @@ ras <- rnorm(10000) %>%
 plot(ras, main="Our first raster")
 ```
 
-(I have contempt for ggplot but here it is: )
+(And here we go in ggplot:)
 
 ```{r}
 df = data.frame(x = xxx, y = yyy)
