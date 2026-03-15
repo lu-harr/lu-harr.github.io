@@ -1,4 +1,3 @@
-
 ---
 permalink: /teaching/chloropleths_101
 title: Chloropleths + the malariaAtlas accessibility raster in one go!
