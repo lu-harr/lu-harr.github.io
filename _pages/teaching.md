@@ -6,7 +6,6 @@ title: Teaching Resources
 Here's an archive of bits and bobs I've made up for workshops and tutoring. Added and updated sporadically.
 
 - <a href="/teaching/chloropleths_101">How to plot polygons and rasters in base graphics and `ggplot2`</a>, March 2026 
-How to use the `malariaAtlas` package to extract MAP estimates of malaria transmission rate
 - <a href="/teaching/map_demo">How to use the `malariaAtlas` package to extract MAP estimates of malaria transmission rate</a>, September 2025  
 - <a href="/teaching/how_to_poster">How to give a great poster presentation</a>, August 2025  
 Some resources for a workshop on making up a research poster
