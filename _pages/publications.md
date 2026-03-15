@@ -3,24 +3,20 @@ permalink: /publications/
 title: Publications
 toc: true
 gallery:
-  - url: /assets/images/cape_town_penguins
-    image_path: /assets/images/cape_town_penguins
+  - url: /_pages/teaching/how_to_poster_files/eggs/mim_poster_2023.pdf
+    image_path: /_pages/teaching/how_to_poster_files/eggs/mim_poster_2023.pdf
     alt: "placeholder image 1"
     title: "Image 1 title caption"
   - url: /assets/images/cape_town_penguins
     image_path: /assets/images/cape_town_penguins
     alt: "placeholder image 2"
     title: "Image 2 title caption"
-  - url: /assets/images/cape_town_penguins
-    image_path: /assets/images/cape_town_penguins
-    alt: "placeholder image 3"
-    title: "Image 3 title caption"
 ---
 
 ## First author papers
 
 - <a href="https://doi.org/10.64898/2026.03.03.26347488">Estimating the changing prevalence of molecular markers of artemisinin partial resistance in *Plasmodium falciparum* malaria in Sub-Saharan Africa</a> (*preprint*) \
-**Lucinda E Harrison**, Nick Golding, Tianxiao Hao, Imke Botha, Stephanie van Wyk, Donnie Mategula, Prabin Dahal, Jaishree Raman, Daniel J Weiss, Karen I Barnes, Philippe J Guérin, and Jennifer A Flegg. (2026). *MedRxiv*  \
+**Lucinda E Harrison**, Nick Golding, Tianxiao Hao, Imke Botha, Stephanie van Wyk, Donnie Mategula, Prabin Dahal, Jaishree Raman, Daniel J Weiss, Karen I Barnes, Philippe J Guérin, and Jennifer A Flegg. (2026). *MedRxiv*.  
 
 - <a href="https://doi.org/10.1371/journal.pgph.0004717">Model-based geospatial surveillance system for antimalarial drug resistance</a>  \
 Apoorv Gupta\*, **Lucinda E. Harrison**\*, Minu Nain, Sauman Singh-Phulgenda, Rutuja Chhajed, Roopal S kumar, Aishika Das, Manju Rahi, Philippe J. Guerin, Anup R Anvikar, Mehul Dhorda, Jennifer A. Flegg, and Praveen K. Bharti. (2026). *PLOS Global Public Health*  \
@@ -65,9 +61,7 @@ Steve Simpson-Yap, Federico Frascoli, **Lucinda Harrison**, Charles Malpas, Jame
 
 ## Presentations and posters
 
-```liquid
-{% raw %}{% include gallery caption="This is a sample gallery with **Markdown support**." %}{% endraw %}
-```
+{% include gallery caption="This is a sample gallery with **Markdown support**." %}
       
 ## Manuscripts in prep.
 
