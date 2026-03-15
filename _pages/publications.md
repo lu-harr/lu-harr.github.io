@@ -3,14 +3,14 @@ permalink: /publications/
 title: Publications
 toc: true
 gallery:
-  - url: /assets/images/cape_town_penguins.jpeg
+  - url: /assets/images/mim_poster_2023.jpeg
     image_path: /assets/images/mim_poster_2023.jpeg
     alt: "placeholder image 1"
-    title: "Image 1 title caption"
+    title: "Malaria in Melbourne 2023: Multi-objective decision framework"
   - url: /assets/images/smb_poster_2022.jpeg
     image_path: /assets/images/smb_poster_2022.jpeg
     alt: "placeholder image 2"
-    title: "Image 2 title caption"
+    title: "ECMTB 2022: Multi-criteria decision framework"
 ---
 
 ## First author papers
