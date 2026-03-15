@@ -3,7 +3,7 @@ title: "Intro to mapping in R"
 author: "Lucy Harrison"
 date: "2025-01-29"
 output:
-  github_document: default
+  github_document
 ---
 
 ```{r setup, include=FALSE}
@@ -43,7 +43,7 @@ Today I'm working from/plagiarising the following useful resources:
 
 ## Useful packages
 
-```{r packages, messages = FALSE}
+```{r packages, message = FALSE, warning = FALSE,}
 library(raster)  # for bread and butter
 library(terra)  # masks lots of the functionality in `raster`
 library(sf)  # replaces lots of the functionality in `sp`

@@ -1,9 +1,15 @@
+Intro to mapping in R
+================
+Lucy Harrison
+2025-01-29
+
+<!-- For .md
 ---
 permalink: /teaching/mapping_intro
 title: Intro to mapping in R
 toc: true
 ---
-
+-->
 
 ## Preamble
 
@@ -32,7 +38,8 @@ Download the workshop as an `.Rmd` and run it for yourself
 
 Today I’m working from/plagiarising the following useful resources:
 
-1.  Spatial data with R and `terra` (<https://rspatial.org/index.html>)
+1.  Spatial data with R and `terra`
+    (<https://rspatial.org/index.html>)
 2.  Spatial statistics for data science: theory and practice with R
     (<https://www.paulamoraga.com/book-spatial/index.html>)
 3.  Introduction to visualising spatial data in R
@@ -46,102 +53,16 @@ Today I’m working from/plagiarising the following useful resources:
 
 ``` r
 library(raster)  # for bread and butter
-```
-
-    ## Loading required package: sp
-
-``` r
 library(terra)  # masks lots of the functionality in `raster`
-```
-
-    ## terra 1.8.42
-
-``` r
 library(sf)  # replaces lots of the functionality in `sp`
-```
 
-    ## Linking to GEOS 3.11.0, GDAL 3.5.3, PROJ 9.1.0; sf_use_s2() is TRUE
-
-``` r
 library(ggplot2)  # some say this is required to make nice maps in R .. not I!
 library(ggmap)  # extends ggplot for maps
-```
 
-    ## ℹ Google's Terms of Service: <https://mapsplatform.google.com>
-    ##   Stadia Maps' Terms of Service: <https://stadiamaps.com/terms-of-service/>
-    ##   OpenStreetMap's Tile Usage Policy: <https://operations.osmfoundation.org/policies/tiles/>
-    ## ℹ Please cite ggmap if you use it! Use `citation("ggmap")` for details.
-
-    ## 
-    ## Attaching package: 'ggmap'
-
-    ## The following object is masked from 'package:terra':
-    ## 
-    ##     inset
-
-``` r
 library(dplyr)
-```
-
-    ## Warning: package 'dplyr' was built under R version 4.4.3
-
-    ## 
-    ## Attaching package: 'dplyr'
-
-    ## The following objects are masked from 'package:terra':
-    ## 
-    ##     intersect, union
-
-    ## The following objects are masked from 'package:raster':
-    ## 
-    ##     intersect, select, union
-
-    ## The following objects are masked from 'package:stats':
-    ## 
-    ##     filter, lag
-
-    ## The following objects are masked from 'package:base':
-    ## 
-    ##     intersect, setdiff, setequal, union
-
-``` r
 library(tidyr)
-```
-
-    ## Warning: package 'tidyr' was built under R version 4.4.3
-
-    ## 
-    ## Attaching package: 'tidyr'
-
-    ## The following object is masked from 'package:terra':
-    ## 
-    ##     extract
-
-    ## The following object is masked from 'package:raster':
-    ## 
-    ##     extract
-
-``` r
 library(tidyverse)
 ```
-
-    ## Warning: package 'tibble' was built under R version 4.4.3
-
-    ## Warning: package 'readr' was built under R version 4.4.3
-
-    ## Warning: package 'purrr' was built under R version 4.4.3
-
-    ## ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-    ## ✔ forcats   1.0.0     ✔ readr     2.1.6
-    ## ✔ lubridate 1.9.4     ✔ stringr   1.6.0
-    ## ✔ purrr     1.2.1     ✔ tibble    3.3.1
-
-    ## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-    ## ✖ tidyr::extract() masks terra::extract(), raster::extract()
-    ## ✖ dplyr::filter()  masks stats::filter()
-    ## ✖ dplyr::lag()     masks stats::lag()
-    ## ✖ dplyr::select()  masks raster::select()
-    ## ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
 
 ## Types of spatial data
 
@@ -311,8 +232,8 @@ vic_elevation # have a look at all of the information associated with our raster
     ## resolution : 0.009960519, 0.009960519  (x, y)
     ## extent     : 140.625, 151.8704, -40.97639, -31.95216  (xmin, xmax, ymin, ymax)
     ## crs        : +proj=longlat +datum=WGS84 +no_defs 
-    ## source     : file5c1c6c1fb9ff.tif 
-    ## names      : file5c1c6c1fb9ff
+    ## source     : file5d00435d1d57.tif 
+    ## names      : file5d00435d1d57
 
 ``` r
 plot(vic_elevation, main="Elevation in metres")
@@ -386,7 +307,7 @@ rivers <- ne_download(scale =  10, type = 'rivers_lake_centerlines',
 ```
 
     ## Reading layer `ne_10m_rivers_lake_centerlines' from data source 
-    ##   `/private/var/folders/d3/y1ry00t94rbg0nbfhc8z23p80000gr/T/Rtmpn2MLmz/ne_10m_rivers_lake_centerlines.shp' 
+    ##   `/private/var/folders/d3/y1ry00t94rbg0nbfhc8z23p80000gr/T/Rtmp495NWV/ne_10m_rivers_lake_centerlines.shp' 
     ##   using driver `ESRI Shapefile'
     ## Simple feature collection with 1473 features and 38 fields
     ## Geometry type: MULTILINESTRING
@@ -639,20 +560,20 @@ summary(m)
     ## 
     ## Coefficients:
     ##                  Estimate Std. Error z value Pr(>|z|)    
-    ## (Intercept)     1.294e+00  1.655e-01   7.820 5.28e-15 ***
-    ## hpop           -3.135e-03  2.868e-04 -10.931  < 2e-16 ***
-    ## dist_to_coast   3.006e-07  8.993e-07   0.334  0.73821    
-    ## dist_to_rivers  1.176e-05  1.135e-05   1.036  0.30022    
-    ## elevation      -1.398e-03  5.156e-04  -2.711  0.00671 ** 
+    ## (Intercept)     1.152e+00  1.702e-01   6.771 1.28e-11 ***
+    ## hpop           -3.310e-03  3.056e-04 -10.832  < 2e-16 ***
+    ## dist_to_coast  -2.668e-08  9.341e-07  -0.029  0.97721    
+    ## dist_to_rivers  3.932e-05  1.513e-05   2.599  0.00935 ** 
+    ## elevation      -1.306e-03  5.030e-04  -2.597  0.00941 ** 
     ## ---
     ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
     ## 
     ## (Dispersion parameter for binomial family taken to be 1)
     ## 
     ##     Null deviance: 1181.10  on 851  degrees of freedom
-    ## Residual deviance:  737.45  on 847  degrees of freedom
+    ## Residual deviance:  722.73  on 847  degrees of freedom
     ##   (4 observations deleted due to missingness)
-    ## AIC: 747.45
+    ## AIC: 732.73
     ## 
     ## Number of Fisher Scoring iterations: 7
 
@@ -666,12 +587,12 @@ m
     ## 
     ## Coefficients:
     ##    (Intercept)            hpop   dist_to_coast  dist_to_rivers       elevation  
-    ##      1.294e+00      -3.135e-03       3.006e-07       1.176e-05      -1.398e-03  
+    ##      1.152e+00      -3.310e-03      -2.668e-08       3.932e-05      -1.306e-03  
     ## 
     ## Degrees of Freedom: 851 Total (i.e. Null);  847 Residual
     ##   (4 observations deleted due to missingness)
     ## Null Deviance:       1181 
-    ## Residual Deviance: 737.5     AIC: 747.5
+    ## Residual Deviance: 722.7     AIC: 732.7
 
 And make some predictions …
 
