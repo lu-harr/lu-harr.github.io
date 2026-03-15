@@ -45,6 +45,10 @@ M Nain, M Dhorda, J. A. Flegg, A. Gupta, **L. E. Harrison**, S. Singh-Phulgenda 
 accessibility of adult neurology care in Australia, 2020–2034</a> (2023)  \
 Steve Simpson-Yap, Federico Frascoli, **Lucinda Harrison**, Charles Malpas, James Burrell, Nicholas Child, Lauren P Giles, Christian Lueck, Merrilee Needham, Benjamin Tsang, and Tomas Kalincik. *BMJ Neurology Open*.
 
+## Presentations and posters
+
+{% include gallery %}
+
 ## Reports to Government
 
 - *Mapping Japanese encephalitis infection risk in Australia to inform public health response*\* (2022)  \
@@ -58,10 +62,6 @@ Steve Simpson-Yap, Federico Frascoli, **Lucinda Harrison**, Charles Malpas, Jame
   Report to Australian Government Department of Health and Aged Care.
 
 \* Not published in the public domain
-
-## Presentations and posters
-
-{% include gallery %}
       
 ## Manuscripts in prep.
 
