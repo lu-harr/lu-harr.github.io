@@ -35,11 +35,11 @@ Download the workshop as an `.Rmd` and run it for yourself [here](https://lu-har
 
 Today I'm working from/plagiarising the following useful resources:
 
-1. Spatial data with R and `terra` (<https://rspatial.org/index.html>)
-2. Spatial statistics for data science: theory and practice with R (<https://www.paulamoraga.com/book-spatial/index.html>)
-3. Introduction to visualising spatial data in R (<https://cran.r-project.org/doc/contrib/intro-spatial-rl.pdf>)
-4. A very brief introduction to species distribution modelling in R (<https://jcoliver.github.io/learn-r/011-species-distribution-models.html>)
-5. How to (quickly) enrich a map with natural and anthropic details (<http://francescobailo.net/2018/08/how-to-quickly-enrich-a-map-with-natural-and-anthropic-details/>)
+1. Spatial data with R and `terra` ([https://rspatial.org/index.html])
+2. Spatial statistics for data science: theory and practice with R ([https://www.paulamoraga.com/book-spatial/index.html])
+3. Introduction to visualising spatial data in R ([https://cran.r-project.org/doc/contrib/intro-spatial-rl.pdf])
+4. A very brief introduction to species distribution modelling in R ([https://jcoliver.github.io/learn-r/011-species-distribution-models.html])
+5. How to (quickly) enrich a map with natural and anthropic details ([http://francescobailo.net/2018/08/how-to-quickly-enrich-a-map-with-natural-and-anthropic-details/])
 
 ## Useful packages
 
@@ -68,7 +68,7 @@ There are a couple of different types of data:
 
 All types come with their own things to think about!
 
-See <https://rspatial.org/spatial/2-spatialdata.html>
+See [https://rspatial.org/spatial/2-spatialdata.html]
 
 (If you would rather see the plot in the Viewer pane, go to RStudio > Preferences > R Markdown and unselect “Show output inline for all R Markdown documents”)
 
@@ -243,7 +243,7 @@ plot(st_geometry(vic), add=TRUE, border="blue")
 # plot(vic_elevation_masked, dist_to_rivers)
 ```
 
-(see <https://stackoverflow.com/questions/77614574/how-do-i-create-a-raster-of-distance-to-nearest-feature-using-the-terra-sf-r-pac>)
+(see [https://stackoverflow.com/questions/77614574/how-do-i-create-a-raster-of-distance-to-nearest-feature-using-the-terra-sf-r-pac])
 
 We can do the same thing to figure out distance from the coast:
 
@@ -354,7 +354,7 @@ points(pseudo_absences_random, col="violet")
 legend("top", fill=c("red", "violet"), c("biased to human pop", "random"), title="Background")
 ```
 
-Let's fit a model ! (<https://rspatial.org/sdm/5_sdm_models.html>)
+Let's fit a model ! ([https://rspatial.org/sdm/5_sdm_models.html])
 
 ```{r}
 emus_pa <- rbind(emus %>%
@@ -427,7 +427,7 @@ There are some reasons why we should doubt this map of where the emus are!
 
 Could you fit a new model using the biased background data? Which of the models is likely more useful?
 
-And here's some info on where the emus are: <https://www.wildlife.vic.gov.au/__data/assets/pdf_file/0025/91384/Emu.pdf>
+And here's some info on where the emus are: [https://www.wildlife.vic.gov.au/__data/assets/pdf_file/0025/91384/Emu.pdf]
 
 If you would really like to fancy it up, there's always ggplot:
 
@@ -446,10 +446,10 @@ ggplot(rasterToPoints(out)) +
 
 We've all seen a bad map! How did we know it was bad?
 
-- Weird colours are hard to interpret! Try colour brewer (<https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3>)
-- Colour-blind accessibility! Try colour oracle (<https://colororacle.org>) and have a look at what happens to the base graphics default palette (e.g., `plot(vic_elevation_masked)`)
+- Weird colours are hard to interpret! Try colour brewer ([https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3])
+- Colour-blind accessibility! Try colour oracle ([https://colororacle.org]) and have a look at what happens to the base graphics default palette (e.g., `plot(vic_elevation_masked)`)
 - Dark colours mean more of the thing; red is hot and blue is cold; water should be blue and things that aren't water shouldn't be blue; yada yada
-- Viridis color maps are often helpful (<https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html>) but don't overuse !
+- Viridis color maps are often helpful ([https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html]) but don't overuse !
 
 ## Conclusion
 

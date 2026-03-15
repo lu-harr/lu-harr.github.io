@@ -1,15 +1,9 @@
-Intro to mapping in R
-================
-Lucy Harrison
-2025-01-29
-
-<!-- For .md
 ---
 permalink: /teaching/mapping_intro
 title: Intro to mapping in R
 toc: true
 ---
--->
+
 
 ## Preamble
 
