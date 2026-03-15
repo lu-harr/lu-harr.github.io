@@ -2,6 +2,19 @@
 permalink: /publications/
 title: Publications
 toc: true
+gallery:
+  - url: /assets/images/cape_town_penguins
+    image_path: /assets/images/cape_town_penguins
+    alt: "placeholder image 1"
+    title: "Image 1 title caption"
+  - url: /assets/images/cape_town_penguins
+    image_path: /assets/images/cape_town_penguins
+    alt: "placeholder image 2"
+    title: "Image 2 title caption"
+  - url: /assets/images/cape_town_penguins
+    image_path: /assets/images/cape_town_penguins
+    alt: "placeholder image 3"
+    title: "Image 3 title caption"
 ---
 
 ## First author papers
@@ -49,6 +62,12 @@ Steve Simpson-Yap, Federico Frascoli, **Lucinda Harrison**, Charles Malpas, Jame
   Report to Australian Government Department of Health and Aged Care.
 
 \* Not published in the public domain
+
+## Presentations and posters
+
+```liquid
+{% raw %}{% include gallery caption="This is a sample gallery with **Markdown support**." %}{% endraw %}
+```
       
 ## Manuscripts in prep.
 
