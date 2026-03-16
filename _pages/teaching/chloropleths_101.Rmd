@@ -65,7 +65,7 @@ head(nigeria)
 
 # this gives us a data.frame without any geometry
 nigeria %>%
-  st_geometry() %>%
+  st_drop_geometry() %>%
   head()
 
 # we can pick out rows just like a data frame:

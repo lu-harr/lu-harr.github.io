@@ -103,7 +103,7 @@ head(nigeria)
 ``` r
 # this gives us a data.frame without any geometry
 nigeria %>%
-  st_geometry() %>%
+  st_drop_geometry() %>%
   head()
 ```
 
