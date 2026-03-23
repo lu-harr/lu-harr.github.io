@@ -30,8 +30,8 @@ Have a play with the companion Shiny app <a href="http://lucyharrison.shinyapps.
 
 ## Other papers
 
-- <a href="https://doi.org/10.31219/osf.io/jhqv6_v1">A dynamic geospatial model of habitat suitability for Japanese encephalitis virus vectors and vertebrate hosts in Australia</a> (*preprint*) \
-David H. Duncan, **Lucinda Harrison**, Abbey Potter, Craig Brockway, Kimberly Evasco, Stephen Doggett, Rebecca Feldman, Peter Neville, Andrew van den Hurk, Cassie Jansen, Michaela Hobby, Vicky Burns, Andrew Vickers, Nina Kurucz, Nick Golding, and Freya Shearer
+- <a href="https://doi.org/10.31219/osf.io/jhqv6_v1">A dynamic geospatial model of habitat suitability for Japanese encephalitis virus vectors and vertebrate hosts in Australia</a> (2026) \
+David H. Duncan, **Lucinda Harrison**, Abbey Potter, Craig Brockway, Kimberly Evasco, Stephen Doggett, Rebecca Feldman, Peter Neville, Andrew van den Hurk, Cassie Jansen, Michaela Hobby, Vicky Burns, Andrew Vickers, Nina Kurucz, Nick Golding, and Freya Shearer. *PLOS Neglected Tropical Diseases*.
 
 - <a href="https://doi.org/10.1371/journal.pntd.0011570">Updating estimates of *Plasmodium knowlesi* malaria risk in response to changing land use patterns across Southeast Asia</a> (2024)  \
 Ruarai J. Tobin, **Lucinda E. Harrison**, Meg K. Tully, Inke N. D. Lubis, Rintis Noviyanti, Nicholas M. Anstey, Giri S. Rajahram, Matthew J. Grigg, Jennifer A. Flegg, David J. Price, and Freya M. Shearer. *PLOS Neglected Tropical Diseases*.
