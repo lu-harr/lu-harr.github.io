@@ -135,7 +135,18 @@ Now commit:
 git commit -m "my first commit"
 ```
 
-The text that follows `-m` is the **commit message**. 
+The text that follows `-m` is the **commit message**. We write this ourselves to give a human-readable description of changes in the new commit.
+The commit message is more important than you might think! Use it to track your own progress as you write your code: what are the key changes in each commit? Consider yourself in the future, when you've forgotten the train of thought you had as you wrote and edited your code: what will you need to know in order to find your place. It might help to think of your set of commit messages as a *lab book*. In a wet lab, scientists use a lab book to track each of the things they do during their experiment, so that they have a record when their results don't turn out how they would expect. This is what we should be using commit messages for!
+
+### Exercise: our second commit
+
+1. Make a change to your repository. Edit your README, or add a file. 
+2. Check the status of your repository, add your changes to the staging area. This command might be useful:
+```
+git add *
+```
+This will add all untracked changes to the staging area.
+3. Commit! Make sure you use a descriptive commit message.
 
 
 
