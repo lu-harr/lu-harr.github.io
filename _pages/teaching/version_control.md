@@ -29,7 +29,7 @@ for different skills levels:
 - git is my lab book
 - and of course, your friendly local LLM is absolutely welcome :)
 
-### Before we get started: the command line
+## Before we get started: the command line
 
 Today, we’ll be driving git using *the command line*. In RStudio (or
 whichever IDE you’re using), navigate to the *Terminal* window. Welcome
@@ -47,7 +47,7 @@ and CMD/E are my favourite command line shortcuts. There are lots of
 other commands and interesting ways to use them but we’ll move on for
 now!
 
-### Version control: why are we here?
+## Version control: why are we here?
 
 Have you ever found yourself hours or days into a change to a coding or
 stats project, only to realise you need to go back? It’s times like
@@ -61,32 +61,60 @@ progress on your code you can:
 - (and, with a platform like GitHub, allow other people to track your
   progress)
 
-### Some terminology
-
 One widely-used system for version control is
-[**git**](https://en.wikipedia.org/wiki/Git). Here are some words we’re
-going to be using:
+[**git**](https://en.wikipedia.org/wiki/Git).
 
-- “repository” or “repo”: think of this as a folder where all your code
-  and other stuff goes. Each repo is a self-contained unit for a single
-  project.
-  - “local” repository: the version of your repo on your computer.
-  - “remote” repository: the version of your repo on GitHub, for
-    example.
-- “commit”: a discrete change to your repository. Each commit is a
-  snapshot of the repository. We’ll control the changes that are
-  included in our commits
+## Our first repository
+
+To make your first repository, navigate to the directory where you would
+like it to be located.
 
 <div class="notice">
 
 <h4>
 
-Message
+Terminology alert!
 </h4>
 
 <p>
 
-A basic message.
+“repository” or “repo”: think of this as a folder where all your code
+and other stuff goes. Each repo is a self-contained unit for a single
+project. - “local” repository: the version of your repo on your
+computer. - “remote” repository: the version of your repo on GitHub, for
+example.
+</p>
+
+</div>
+
+Like so:
+
+    cd ~/best_project  # for example
+    git init
+
+You can check that you have successfully initialised your repo by
+checking its *status*:
+
+    git status
+
+## Our first commit
+
+**Terminology alert!** “commit”: a discrete change to your repository.
+Each commit is a snapshot of the repository. We’ll control the changes
+that are included in our commits {: .notice–info}
+
+<div class="notice">
+
+<h4>
+
+Terminology alert!
+</h4>
+
+<p>
+
+“commit”: a discrete change to your repository. Each commit is a
+snapshot of the repository. We’ll control the changes that are included
+in our commits
 </p>
 
 </div>

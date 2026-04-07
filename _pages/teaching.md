@@ -1,6 +1,7 @@
 ---
 permalink: /teaching/
 title: Teaching Resources
+toc: true
 ---
 
 Here's an archive of bits and bobs I've made up for workshops and tutoring. Added and updated sporadically.
@@ -25,6 +26,6 @@ Some introductory slides for a peer-to-peer workshop on visualising research at 
 
 ## Misc.
 
-- <a href="/teaching/mapping_intro">Introduction to version control with git and GitHub</a>, April 2026  
+- <a href="/teaching/version_control">Introduction to version control with git and GitHub</a>, April 2026  
 
 [Foundations of Computing resources are not uploaded here but I'll put them in a private repo]
