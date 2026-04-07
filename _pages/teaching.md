@@ -14,7 +14,6 @@ How to use the `malariaAtlas` package to extract MAP estimates of malaria transm
 - <a href="/teaching/mapping_intro">Introduction to mapping in R</a>, January 2025  
 An introduction to manipulating spatial data in R with `raster`, `sf`, and `terra`
 
-
 ## Visualisation and presentation skills
 
 - <a href="/teaching/how_to_poster">How to give a great poster presentation</a>, August 2025  
@@ -25,5 +24,7 @@ Some introductory slides for a peer-to-peer workshop on visualising research at 
   For the UCT-CCOAT MARC SE-Africa writing retreat
 
 ## Misc.
+
+- <a href="/teaching/mapping_intro">Introduction to version control with git and GitHub</a>, April 2026  
 
 [Foundations of Computing resources are not uploaded here but I'll put them in a private repo]
