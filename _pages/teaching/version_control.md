@@ -77,32 +77,24 @@ One widely-used system for version control is
 To make your first repository, navigate to the directory where you would
 like it to be located.
 
-{% capture notice-2 %}
+<div class="notice--primary" markdown="1">
 
-#### Repository
-
-AKA “repo”: think of this as a folder where all your code and other
-stuff goes. Each repo is a self-contained unit for a single project.
-
-- “Local” repository: the version of your repo on your computer.
-- “Remote” repository: the version of your repo on GitHub, for example.
-  {% endcapture %}
-
-<div class="notice">
-
-<h4>
-
-Terminology alert!
-</h4>
-
-<p>
-
-“repository” or “repo”: think of this as a folder where all your code
+**Repository** AKA “repo”: think of this as a folder where all your code
 and other stuff goes. Each repo is a self-contained unit for a single
-project. - “local” repository: the version of your repo on your
-computer. - “remote” repository: the version of your repo on GitHub, for
-example.
-</p>
+project.
+<ul>
+
+<li>
+
+“Local” repository: the version of your repo on your computer.
+</li>
+
+<li>
+
+“Remote” repository: the version of your repo on GitHub, for example.
+</li>
+
+</ul>
 
 </div>
 
@@ -148,27 +140,9 @@ This tells a couple of important things. We’ll get to branches later,
 but importantly, the status message tells us the repo has *no commits
 yet*. Let’s remedy that!
 
-**Terminology alert!** “commit”: a discrete change to your repository.
-Each commit is a snapshot of the repository. Commits are a two-step
-process: 1. Add files to *staging area*. (Or, prepare your snapshot.) 2.
-Commit! (Take a photo!) {: .notice–info}
-
 <div class="notice--primary" markdown="1">
 
-**Commit** a discrete change to your repository. Each commit is a
-snapshot of the repository. Commits are a two-step process:
-
-``` html
-<html>
-  <body>Some body.<body>
-</html>
-```
-
-</div>
-
-<div class="notice--primary" markdown="1">
-
-**Commit** a discrete change to your repository. Each commit is a
+**Commit** A discrete change to your repository. Each commit is a
 snapshot of the repository. Commits are a two-step process:
 <ol>
 
@@ -203,16 +177,19 @@ git commit -m "my first commit"
 
 The text that follows `-m` is the **commit message**. We write this
 ourselves to give a human-readable description of changes in the new
-commit. The commit message is more important than you might think! Use
-it to track your own progress as you write your code: what are the key
-changes in each commit? Consider yourself in the future, when you’ve
-forgotten the train of thought you had as you wrote and edited your
-code: what will you need to know in order to find your place. It might
-help to think of your set of commit messages as a *lab book*. In a wet
-lab, scientists use a lab book to track each of the things they do
-during their experiment, so that they have a record when their results
-don’t turn out how they would expect. This is what we should be using
-commit messages for!
+commit.
+
+The commit message is more important than you might think! Use it to
+track your own progress as you write your code: what are the key changes
+in each commit? Consider yourself in the future, when you’ve forgotten
+the train of thought you had as you wrote and edited your code: what
+will you need to know in order to find your place.
+
+It might help to think of your set of commit messages as a *lab book*.
+In a wet lab, scientists use a lab book to track each of the things they
+do during their experiment, so that they have a record when their
+results don’t turn out how they would expect. This is what we should be
+using commit messages for!
 
 ### Exercise: our second commit
 
@@ -261,15 +238,18 @@ command line and git. For example:
     promise :)
 - To maintain websites
   - Surprise surprise, you have been using GitHub this whole time: this
-    website is running through GitHub Pages. This website is a GitHub
-    repo that is published as a static website.
+    website is running through GitHub Pages. This website is a [GitHub
+    repo](https://github.com/lu-harr/lu-harr.github.io) that is
+    published as a static website.
 
 ### Our first remote repository
 
 To create a repo on GitHub, navigate to the repositories page of your
 GitHub profile and click **New**.
 
-![](version_control_files/1_repo.png) Now to make some decisions:
+![](version_control_files/1_repo.png)
+
+Now to make some decisions:
 
 - Give your repo a name
 - Provide a short description. The shorter + clearer the better!
@@ -287,3 +267,59 @@ GitHub profile and click **New**.
     commits. We’ll leave this for now.
   - A license: a file that describes the terms under which other people
     can use your code.
+
+Click go! Congrats! You’re first repo on GitHub!
+
+### Linking remote to local
+
+We now have a *local repository* and a *remote repository*. It’s time to
+link them up!
+
+Run the following commands in your terminal, from the directory where
+your local repo is located:
+
+``` sh
+git remote add origin https://github.com/<your-github-username>/<your-remote-repo-name>.git
+git branch -M main
+git push -u origin main
+```
+
+Translated, this means:
+
+1.  “This \[local\] repo corresponds to our repo on GitHub \[which we
+    nickname ‘origin’\].”
+2.  “Rename the central branch of my \[local\] repo to be ‘main’”
+3.  “**Push** everything that’s in the ‘main’ branch of my local repo to
+    ‘origin’.”
+
+<div class="notice--primary" markdown="1">
+
+**Branch** A series of related commits. You can maintain multiple
+branches in one repo, for example, to trial a change to the repo while
+maintaining a central, stable version.
+
+If you’re familiar with the concept of a **pointer**, that’s what this
+is: in a single-branch repo, your branch points at your most recent
+commit, and moves forward as you add commits.
+
+</div>
+
+Step 2 isn’t necessary but is convention: until relatively recently, the
+default name for the central branch of Git repositories was “master”.
+However, the term’s [historical association with “slave” in broader
+computer science + software
+engineering](https://www.theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main)
+led Git and GitHub to change it. In fact, the branch in your local repo
+was *probably* already called “main”, but GitHub have included Step 2 to
+make sure it is.
+
+We skated over another powerful Git operation in the list above:
+
+<div class="notice--primary" markdown="1">
+
+[**Push**](https://git-scm.com/docs/git-push) Updates one or more
+branches, tags, or other references in a remote repository from your
+local repository, and sends all necessary data that isn’t already on the
+remote.
+
+</div>
