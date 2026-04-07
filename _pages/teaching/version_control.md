@@ -1,5 +1,4 @@
-
-<!---
+---
 permalink: /teaching/version_control
 title: Intro to version control with git and GitHub
 categories:
@@ -8,7 +7,7 @@ tags:
   - R
 toc: true
 author_profile: false
---->
+---
 
 ## Preamble
 
