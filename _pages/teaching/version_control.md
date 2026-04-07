@@ -39,14 +39,14 @@ Today, we’ll be driving git using *the command line*. In RStudio (or
 whichever IDE you’re using), navigate to the *Terminal* window. Welcome
 to the command line. Some useful commands:
 
-- pwd: print working directory
-- cd: change directories
-- mkdir: make directory
-- mv: move (a file or files from one location to another)
-- cp: copy (a file or files from one location to another)
-- ls: list all files in a directory
-- less: view the contents of a file
-- man: show the *manual* for a command, with all the different options
+- `pwd`: print working directory
+- `cd`: change directories
+- `mkdir`: make directory
+- `mv`: move (a file or files from one location to another)
+- `cp`: copy (a file or files from one location to another)
+- `ls`: list all files in a directory
+- `less`: view the contents of a file
+- `man`: show the *manual* for a command, with all the different options
   associated with it, e.g. `man ls`
 
 If you’re unfamiliar, let’s have a quick play around with these. CMD/A
@@ -57,9 +57,10 @@ now!
 ## Version control: why are we here?
 
 Have you ever found yourself hours or days into a change to a coding or
-stats project, only to realise you need to go back? It’s times like
-these when **version control** can be very powerful! By tracking your
-progress on your code you can:
+stats project, only to realise you need to go back?
+
+It’s times like these when **version control** can be very powerful! By
+tracking your progress on your code you can:
 
 - go back to specific versions of your code
 - track your progress with annotations on each major change to your code
@@ -152,6 +153,39 @@ Each commit is a snapshot of the repository. Commits are a two-step
 process: 1. Add files to *staging area*. (Or, prepare your snapshot.) 2.
 Commit! (Take a photo!) {: .notice–info}
 
+<div class="notice--primary" markdown="1">
+
+**Commit** a discrete change to your repository. Each commit is a
+snapshot of the repository. Commits are a two-step process:
+
+``` html
+<html>
+  <body>Some body.<body>
+</html>
+```
+
+</div>
+
+<div class="notice--primary" markdown="1">
+
+**Commit** a discrete change to your repository. Each commit is a
+snapshot of the repository. Commits are a two-step process:
+<ol>
+
+<li>
+
+Add files to *staging area*. (Or, prepare your snapshot.)
+</li>
+
+<li>
+
+Commit! (Take a photo!)
+</li>
+
+</ol>
+
+</div>
+
 To add files to the staging area, we can use `add`:
 
 ``` sh
@@ -193,6 +227,12 @@ commit messages for!
     ```
 
 3.  Commit! Make sure you use a descriptive commit message.
+
+4.  Check your repo’s log - what does this tell us?
+
+    ``` sh
+    git log
+    ```
 
 ## Let’s get remote! To GitHub!
 
