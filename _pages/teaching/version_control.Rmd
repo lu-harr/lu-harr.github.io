@@ -61,6 +61,7 @@ One widely-used system for version control is [**git**](https://en.wikipedia.org
 To make your first repository, navigate to the directory where you would like it to be located.
 
 {% capture notice-2 %}
+
 #### Repository
 
 AKA "repo": think of this as a folder where all your code and other stuff goes. Each repo is a self-contained unit for a single project.
@@ -120,11 +121,21 @@ This tells a couple of important things. We'll get to branches later, but import
 2. Commit! (Take a photo!)
 {: .notice--info}
 
-<div class="notice">
-  <h4>Terminology alert!</h4>
-  <p>"commit": a discrete change to your repository. Each commit is a snapshot of the repository. We'll control the changes that are included in our commits</p>
-</div>
+To add files to the staging area, we can use `add`:
 
+```bash
+git add README.txt
+```
+
+Check your repo's status again. Has the README made it to the staging area?
+
+Now commit:
+
+```
+git commit -m "my first commit"
+```
+
+The text that follows `-m` is the **commit message**. 
 
 
 

@@ -1,4 +1,5 @@
----
+
+<!---
 permalink: /teaching/version_control
 title: Intro to version control with git and GitHub
 categories:
@@ -7,7 +8,7 @@ tags:
   - R
 toc: true
 author_profile: false
----
+--->
 
 ## Preamble
 
@@ -27,7 +28,8 @@ confusing! Once you’ve got through the basics, here are some resources
 for different skills levels:
 
 - git is my lab book
-- and of course, your friendly local LLM is absolutely welcome :)
+- and of course, your friendly neighbourhood LLM is absolutely welcome
+  :)
 
 ## Before we get started: the command line
 
@@ -72,7 +74,9 @@ One widely-used system for version control is
 To make your first repository, navigate to the directory where you would
 like it to be located.
 
-{% capture notice-2 %} \#### Repository
+{% capture notice-2 %}
+
+#### Repository
 
 AKA “repo”: think of this as a folder where all your code and other
 stuff goes. Each repo is a self-contained unit for a single project.
@@ -138,18 +142,17 @@ Each commit is a snapshot of the repository. Commits are a two-step
 process: 1. Add files to *staging area*. (Or, prepare your snapshot.) 2.
 Commit! (Take a photo!) {: .notice–info}
 
-<div class="notice">
+To add files to the staging area, we can use `add`:
 
-<h4>
+``` bash
+git add README.txt
+```
 
-Terminology alert!
-</h4>
+Check your repo’s status again. Has the README made it to the staging
+area?
 
-<p>
+Now commit:
 
-“commit”: a discrete change to your repository. Each commit is a
-snapshot of the repository. We’ll control the changes that are included
-in our commits
-</p>
+    git commit -m "my first commit"
 
-</div>
+The text that follows `-m` is the **commit message**.
