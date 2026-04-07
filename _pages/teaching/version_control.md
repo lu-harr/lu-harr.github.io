@@ -30,6 +30,9 @@ for different skills levels:
 - and of course, your friendly neighbourhood LLM is absolutely welcome
   :)
 
+To complete this workshop, we’ll assume you have git on your machine and
+that you have an account set up on GitHub.
+
 ## Before we get started: the command line
 
 Today, we’ll be driving git using *the command line*. In RStudio (or
@@ -104,33 +107,41 @@ example.
 
 Like so:
 
-    mkdir best_project  # for example
-    cd best_project  
-    git init
+``` sh
+mkdir best_project  # for example
+cd best_project  
+git init
+```
 
 You can check that you have successfully initialised your repo by
 checking its *status*:
 
-    git status
+``` sh
+git status
+```
 
 ## Our first commit
 
 There’s nothing in our repo yet! Let’s add a README. This command
 creates a file called `README.txt` and puts some text in it
 
-    echo "a very nice readme" > README.txt
+``` sh
+echo "a very nice readme" > README.txt
+```
 
 Check the status of your repo again. I get:
 
-    On branch main
+``` sh
+On branch main
 
-    No commits yet
+No commits yet
 
-    Untracked files:
-      (use "git add <file>..." to include in what will be committed)
-        README.txt
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+    README.txt
 
-    nothing added to commit but untracked files present (use "git add" to track)
+nothing added to commit but untracked files present (use "git add" to track)
+```
 
 This tells a couple of important things. We’ll get to branches later,
 but importantly, the status message tells us the repo has *no commits
@@ -143,7 +154,7 @@ Commit! (Take a photo!) {: .notice–info}
 
 To add files to the staging area, we can use `add`:
 
-``` bash
+``` sh
 git add README.txt
 ```
 
@@ -152,7 +163,9 @@ area?
 
 Now commit:
 
-    git commit -m "my first commit"
+``` sh
+git commit -m "my first commit"
+```
 
 The text that follows `-m` is the **commit message**. We write this
 ourselves to give a human-readable description of changes in the new
@@ -170,12 +183,67 @@ commit messages for!
 ### Exercise: our second commit
 
 1.  Make a change to your repository. Edit your README, or add a file.
+
 2.  Check the status of your repository, add your changes to the staging
-    area. This command might be useful:
+    area. This command will add all untracked changes to the staging
+    area:
 
-<!-- -->
-
+    ``` sh
     git add *
+    ```
 
-This will add all untracked changes to the staging area. 3. Commit! Make
-sure you use a descriptive commit message.
+3.  Commit! Make sure you use a descriptive commit message.
+
+## Let’s get remote! To GitHub!
+
+Now that we’re feeling super confident, let’s jump onto GitHub. GitHub
+is one cloud-based platform that hosts Git repositories - GitLab and
+Bitbucket are widely-used alternatives. There are lots of features of
+GitHub that you can take advantage of with minimal confidence with the
+command line and git. For example:
+
+- To backup projects
+  - GitHub and Overleaf talk to each other so that you can use GitHub to
+    version control your LaTeX documents. I have used this feature very
+    successfully on papers and my PhD thesis. Highly recommend!
+- To share code
+  - Journals increasingly require code to be open access along with data
+    supporting peer-reviewed publications. GitHub is a useful platform
+    for this as everyone can see the version history of your code!
+  - The only limitation I’ve found here is that GitHub has a file size
+    limit of 50MB. It can be necessary to put data elsewhere, but for
+    code/figures/small datasets, GitHub will do the whole job.
+- To collaborate on code
+  - GitHub allows users to work on the same code and track who has made
+    which changes when.
+  - Collaboration is where I have the most trouble navigating all of the
+    features of Git and GitHub, but it need not be complicated, I
+    promise :)
+- To maintain websites
+  - Surprise surprise, you have been using GitHub this whole time: this
+    website is running through GitHub Pages. This website is a GitHub
+    repo that is published as a static website.
+
+### Our first remote repository
+
+To create a repo on GitHub, navigate to the repositories page of your
+GitHub profile and click **New**.
+
+![](version_control_files/1_repo.png) Now to make some decisions:
+
+- Give your repo a name
+- Provide a short description. The shorter + clearer the better!
+- Choose visibility:
+  - **Public** repos are visible to everyone. This is fine for us today.
+  - **Private** repos are visible only to users you specify. This is for
+    when you don’t want everyone to be able to see your repo. For
+    example, when you’re working on a paper but have not yet published
+    it anywhere. Private repos can be made public later.
+- Decide whether to add:
+  - A `README`: all repositories need a README, but we can turn this off
+    today as we have already initialised a README in the local version
+    of our repo
+  - A `.gitignore`: a file that lets us control which files are added to
+    commits. We’ll leave this for now.
+  - A license: a file that describes the terms under which other people
+    can use your code.
