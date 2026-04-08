@@ -26,7 +26,8 @@ This workshop is for **absolute beginners**. Version control is
 confusing! Once you’ve got through the basics, here are some resources
 for different skills levels:
 
-- git is my lab book
+- [Git is my lab book](https://git-is-my-lab-book.net) A compendium of
+  guides/tutorials
 - and of course, your friendly neighbourhood LLM is absolutely welcome
   :)
 
@@ -268,7 +269,7 @@ Now to make some decisions:
   - A license: a file that describes the terms under which other people
     can use your code.
 
-Click go! Congrats! You’re first repo on GitHub!
+Click go! Congrats! Your first repo on GitHub!
 
 ### Linking remote to local
 
@@ -294,9 +295,11 @@ Translated, this means:
 
 <div class="notice--primary" markdown="1">
 
-**Branch** A series of related commits. You can maintain multiple
-branches in one repo, for example, to trial a change to the repo while
-maintaining a central, stable version.
+**Branch**
+
+A series of related commits. You can maintain multiple branches in one
+repo, for example, to trial a change to the repo while maintaining a
+central, stable version.
 
 If you’re familiar with the concept of a **pointer**, that’s what this
 is: in a single-branch repo, your branch points at your most recent
@@ -317,9 +320,10 @@ We skated over another powerful Git operation in the list above:
 
 <div class="notice--primary" markdown="1">
 
-[**Push**](https://git-scm.com/docs/git-push) Updates one or more
-branches, tags, or other references in a remote repository from your
-local repository, and sends all necessary data that isn’t already on the
-remote.
+[**Push**](https://git-scm.com/docs/git-push)
+
+Updates one or more branches, tags, or other references in a remote
+repository from your local repository, and sends all necessary data that
+isn’t already on the remote.
 
 </div>
