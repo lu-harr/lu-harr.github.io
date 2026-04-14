@@ -50,7 +50,7 @@ gallery:
     position: absolute;
     inset: auto 0 0 0;
     z-index: 1;
-    padding: 1rem;
+    padding: 1.25rem 0.95rem 0.7rem;
     color: #fff;
     opacity: 0;
     transform: translateY(8px);
@@ -65,7 +65,7 @@ gallery:
 
   .highlight-card__journal {
     margin: 0;
-    font-size: 0.8rem;
+    font-size: 0.82rem;
     opacity: 0.9;
   }
 

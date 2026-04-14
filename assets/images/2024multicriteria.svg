@@ -27,7 +27,7 @@
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
      inkscape:zoom="0.038610971"
-     inkscape:cx="10502.196"
+     inkscape:cx="10515.146"
      inkscape:cy="7355.4224"
      inkscape:window-width="1920"
      inkscape:window-height="1027"
@@ -40,6 +40,13 @@
      inkscape:label="Image"
      id="g1"
      transform="translate(-77.225679,2046.523)">
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#f03500;stroke-width:0.944882"
+       id="rect2"
+       width="17585.676"
+       height="14400.053"
+       x="77.225677"
+       y="-2046.5229" />
     <image
        width="17777.332"
        height="10000"
