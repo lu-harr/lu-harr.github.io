@@ -13,20 +13,105 @@ gallery:
     title: "ECMTB 2022: Multi-criteria decision framework"
 ---
 
+<style>
+  .publication-grid {
+    display: grid;
+    gap: 1.5rem;
+    margin: 1.5rem 0 2rem;
+  }
+
+  .publication-card {
+    display: grid;
+    grid-template-columns: minmax(120px, 180px) 1fr;
+    gap: 1.25rem;
+    align-items: start;
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 0.75rem;
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  .publication-card__thumb {
+    display: block;
+  }
+
+  .publication-card__thumb img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 0.5rem;
+  }
+
+  .publication-card__title {
+    margin: 0 0 0.5rem;
+    font-size: 1.05rem;
+    line-height: 1.35;
+  }
+
+  .publication-card__citation,
+  .publication-card__note {
+    margin: 0;
+  }
+
+  .publication-card__note {
+    margin-top: 0.5rem;
+  }
+
+  @media (max-width: 640px) {
+    .publication-card {
+      grid-template-columns: 1fr;
+    }
+
+    .publication-card__thumb {
+      max-width: 180px;
+    }
+  }
+</style>
+
 ## First author papers
 
-- <a href="https://doi.org/10.64898/2026.03.03.26347488">Estimating the changing prevalence of molecular markers of artemisinin partial resistance in *Plasmodium falciparum* malaria in Sub-Saharan Africa</a> (*preprint*) \
-**Lucinda E Harrison**, Nick Golding, Tianxiao Hao, Imke Botha, Stephanie van Wyk, Donnie Mategula, Prabin Dahal, Jaishree Raman, Daniel J Weiss, Karen I Barnes, Philippe J Guérin, and Jennifer A Flegg. (2026). *MedRxiv*.  
+<div class="publication-grid">
+  <div class="publication-card">
+    <a class="publication-card__thumb" href="https://doi.org/10.64898/2026.03.03.26347488">
+      <img src="/assets/images/cape_town_vis.jpg" alt="Thumbnail for the artemisinin resistance preprint">
+    </a>
+    <div>
+      <h3 class="publication-card__title">
+        <a href="https://doi.org/10.64898/2026.03.03.26347488">Estimating the changing prevalence of molecular markers of artemisinin partial resistance in <i>Plasmodium falciparum</i> malaria in Sub-Saharan Africa</a> <em>(preprint)</em>
+      </h3>
+      <p class="publication-card__citation"><strong>Lucinda E Harrison</strong>, Nick Golding, Tianxiao Hao, Imke Botha, Stephanie van Wyk, Donnie Mategula, Prabin Dahal, Jaishree Raman, Daniel J Weiss, Karen I Barnes, Philippe J Gu&eacute;rin, and Jennifer A Flegg. (2026). <em>MedRxiv</em>.</p>
+    </div>
+  </div>
 
-- <a href="https://doi.org/10.1371/journal.pgph.0004717">Model-based geospatial surveillance system for antimalarial drug resistance</a>  \
-Apoorv Gupta\*, **Lucinda E. Harrison**\*, Minu Nain, Sauman Singh-Phulgenda, Rutuja Chhajed, Roopal S kumar, Aishika Das, Manju Rahi, Philippe J. Guerin, Anup R Anvikar, Mehul Dhorda, Jennifer A. Flegg, and Praveen K. Bharti. (2026). *PLOS Global Public Health*  \
-See <a href="https://iddo.shinyapps.io/pf_drug_resistance/">companion RShiny app</a>.
+  <div class="publication-card">
+    <a class="publication-card__thumb" href="https://doi.org/10.1371/journal.pgph.0004717">
+      <img src="/assets/images/mim_poster_2023.jpeg" alt="Thumbnail for the antimalarial drug resistance paper">
+    </a>
+    <div>
+      <h3 class="publication-card__title">
+        <a href="https://doi.org/10.1371/journal.pgph.0004717">Model-based geospatial surveillance system for antimalarial drug resistance</a>
+      </h3>
+      <p class="publication-card__citation">Apoorv Gupta*, <strong>Lucinda E. Harrison</strong>*, Minu Nain, Sauman Singh-Phulgenda, Rutuja Chhajed, Roopal S kumar, Aishika Das, Manju Rahi, Philippe J. Guerin, Anup R Anvikar, Mehul Dhorda, Jennifer A. Flegg, and Praveen K. Bharti. (2026). <em>PLOS Global Public Health</em>.</p>
+      <p class="publication-card__note">See the <a href="https://iddo.shinyapps.io/pf_drug_resistance/">companion RShiny app</a>.</p>
+    </div>
+  </div>
 
-- <a href="https://doi.org/10.1098/rsos.230641">A multi-criteria framework for disease surveillance site selection: case study for *Plasmodium knowlesi* malaria in Indonesia</a>  \
-**Lucinda E. Harrison**, Jennifer A. Flegg, Ruarai Tobin, Inke N. D. Lubis, Rintis Noviyanti, Matthew J. Grigg, Freya M. Shearer and David J. Price. (2024). *Royal Society Open Science*.  \
-Have a play with the companion Shiny app <a href="http://lucyharrison.shinyapps.io/pk_multicrit_shiny/">here</a>.
+  <div class="publication-card">
+    <a class="publication-card__thumb" href="https://doi.org/10.1098/rsos.230641">
+      <img src="/assets/images/2024multicriteria.jpg" alt="Thumbnail for the multi-criteria surveillance paper">
+    </a>
+    <div>
+      <h3 class="publication-card__title">
+        <a href="https://doi.org/10.1098/rsos.230641">A multi-criteria framework for disease surveillance site selection: case study for <i>Plasmodium knowlesi</i> malaria in Indonesia</a>
+      </h3>
+      <p class="publication-card__citation"><strong>Lucinda E. Harrison</strong>, Jennifer A. Flegg, Ruarai Tobin, Inke N. D. Lubis, Rintis Noviyanti, Matthew J. Grigg, Freya M. Shearer and David J. Price. (2024). <em>Royal Society Open Science</em>.</p>
+      <p class="publication-card__note">Have a play with the companion Shiny app <a href="http://lucyharrison.shinyapps.io/pk_multicrit_shiny/">here</a>.</p>
+    </div>
+  </div>
+</div>
 
-\* Contributed equally
+* Contributed equally
 
 ## Other papers
 
@@ -82,4 +167,3 @@ With Freya Shearer, Jennifer Flegg, David Price, David Duncan, Nick Golding and 
 - *Gender representation at mathematics conferences in Australia: all a matter of perception?*  \
 We all seek to improve gender representation in mathematics academia, but do we all share the same understanding of the current state of affairs? Are there biases unique to each of us that change our individual perception of gender representation? Anecdotal evidence suggests gender and age shape an individual's perception of gender representation and therefore their commitment to the advancement of gender equality, however a quantitative dataset for the Australian mathematics community does not exist. With the support of local mathematics and statistics societies, we aim to evaluate the current state of gender representation at mathematics and statistics conferences.  \
 With Adriana Zanca, Isobel Abell, Punya Alahakoon, Jennifer Flegg and others.
-
