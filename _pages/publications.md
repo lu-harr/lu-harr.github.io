@@ -41,7 +41,7 @@ gallery:
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(10, 10, 10, 0.88), rgba(10, 10, 10, 0.08) 60%);
+    background: linear-gradient(to top, rgba(10, 10, 10, 0.96), rgba(10, 10, 10, 0.28) 60%);
     opacity: 0;
     transition: opacity 180ms ease;
   }
@@ -50,22 +50,21 @@ gallery:
     position: absolute;
     inset: auto 0 0 0;
     z-index: 1;
-    padding: 1.25rem 0.95rem 0.7rem;
+    padding: 1.55rem 0.9rem 0.5rem;
     color: #fff;
     opacity: 0;
-    transform: translateY(8px);
-    transition: opacity 180ms ease, transform 180ms ease;
+    transition: opacity 180ms ease;
   }
 
   .highlight-card__title {
     margin: 0 0 0.35rem;
-    font-size: 0.82rem;
+    font-size: 0.74rem;
     line-height: 1.3;
   }
 
   .highlight-card__journal {
     margin: 0;
-    font-size: 0.82rem;
+    font-size: 0.74rem;
     opacity: 0.9;
   }
 
@@ -79,11 +78,6 @@ gallery:
   .highlight-card:hover .highlight-card__meta,
   .highlight-card:focus-visible .highlight-card__meta {
     opacity: 1;
-  }
-
-  .highlight-card:hover .highlight-card__meta,
-  .highlight-card:focus-visible .highlight-card__meta {
-    transform: translateY(0);
   }
 
   @media (max-width: 720px) {

@@ -4,11 +4,14 @@
 <svg
    version="1.1"
    id="svg1"
-   width="17716.117"
-   height="14375.099"
-   viewBox="0 0 17716.117 14375.099"
+   width="17777.332"
+   height="17964.016"
+   viewBox="0 0 17777.332 17964.016"
    sodipodi:docname="2024multicriteria.svg"
    inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+   inkscape:export-filename="2024multicriteria.jpg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -26,27 +29,27 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
-     inkscape:zoom="0.038610971"
-     inkscape:cx="10515.146"
-     inkscape:cy="7355.4224"
-     inkscape:window-width="1920"
+     inkscape:zoom="0.024417506"
+     inkscape:cx="9358.0402"
+     inkscape:cy="10975.732"
+     inkscape:window-width="1104"
      inkscape:window-height="1027"
-     inkscape:window-x="0"
+     inkscape:window-x="906"
      inkscape:window-y="25"
-     inkscape:window-maximized="1"
+     inkscape:window-maximized="0"
      inkscape:current-layer="g1" />
   <g
      inkscape:groupmode="layer"
      inkscape:label="Image"
      id="g1"
-     transform="translate(-77.225679,2046.523)">
+     transform="translate(-51.798748,3971.8443)">
     <rect
-       style="fill:#ffffff;fill-opacity:1;stroke:#f03500;stroke-width:0.944882"
+       style="fill:#ffffff;fill-opacity:1;stroke:#f03500;stroke-width:1.05531"
        id="rect2"
-       width="17585.676"
-       height="14400.053"
-       x="77.225677"
-       y="-2046.5229" />
+       width="17585.566"
+       height="17962.961"
+       x="77.280891"
+       y="-3971.3167" />
     <image
        width="17777.332"
        height="10000"
