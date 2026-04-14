@@ -62,7 +62,7 @@ gallery:
     line-height: 1.3;
   }
 
-  .highlight-card__journal {
+  .highlight-card__subtitle {
     margin: 0;
     font-size: 0.74rem;
     opacity: 0.9;
@@ -94,7 +94,7 @@ gallery:
     <img src="/assets/images/policy_k13.png" alt="Thumbnail for artemisinin resistance preprint">
     <div class="highlight-card__meta">
       <h3 class="highlight-card__title">Estimating the changing prevalence of molecular markers of artemisinin partial resistance in <i>Plasmodium falciparum</i> malaria in Sub-Saharan Africa</h3>
-      <p class="highlight-card__journal"><i>MedRxiv</i></p>
+      <h3 class="highlight-card__subtitle"><i>MedRxiv</i></h3>
     </div>
   </a>
 
@@ -102,7 +102,7 @@ gallery:
     <img src="/assets/images/2024multicriteria.svg" alt="Thumbnail for multi-criteria surveillance paper">
     <div class="highlight-card__meta">
       <h3 class="highlight-card__title">A multi-criteria framework for disease surveillance site selection: case study for <i>Plasmodium knowlesi</i> malaria in Indonesia</h3>
-      <p class="highlight-card__journal"><i>Royal Society Open Science</i></p>
+      <h3 class="highlight-card__subtitle"><i>Royal Society Open Science</i></h3>
     </div>
   </a>
 
@@ -110,7 +110,7 @@ gallery:
     <img src="/assets/images/jev_birds_vectors.tif" alt="Thumbnail for Japanese encephalitis habitat suitability paper">
     <div class="highlight-card__meta">
       <h3 class="highlight-card__title">A time-varying geospatial model of habitat suitability for Japanese encephalitis virus vectors and vertebrate hosts in Australia</h3>
-      <p class="highlight-card__journal"><i>PLOS Neglected Tropical Diseases</i></p>
+      <h3 class="highlight-card__subtitle"><i>PLOS Neglected Tropical Diseases</i></h3>
     </div>
   </a>
 </div>
