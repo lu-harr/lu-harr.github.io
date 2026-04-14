@@ -14,104 +14,127 @@ gallery:
 ---
 
 <style>
-  .publication-grid {
+  .highlights-grid {
     display: grid;
-    gap: 1.5rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
     margin: 1.5rem 0 2rem;
   }
 
-  .publication-card {
-    display: grid;
-    grid-template-columns: minmax(120px, 180px) 1fr;
-    gap: 1.25rem;
-    align-items: start;
-    padding: 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 0.75rem;
-    background: rgba(255, 255, 255, 0.03);
-  }
-
-  .publication-card__thumb {
+  .highlight-card {
+    position: relative;
     display: block;
+    overflow: hidden;
+    border-radius: 0.85rem;
+    background: rgba(255, 255, 255, 0.04);
   }
 
-  .publication-card__thumb img {
+  .highlight-card img {
     display: block;
     width: 100%;
     aspect-ratio: 4 / 5;
     object-fit: cover;
-    border-radius: 0.5rem;
+    transition: transform 180ms ease;
   }
 
-  .publication-card__title {
-    margin: 0 0 0.5rem;
-    font-size: 1.05rem;
-    line-height: 1.35;
+  .highlight-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(10, 10, 10, 0.88), rgba(10, 10, 10, 0.08) 60%);
+    opacity: 0;
+    transition: opacity 180ms ease;
   }
 
-  .publication-card__citation,
-  .publication-card__note {
+  .highlight-card__meta {
+    position: absolute;
+    inset: auto 0 0 0;
+    z-index: 1;
+    padding: 1rem;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 180ms ease, transform 180ms ease;
+  }
+
+  .highlight-card__title {
+    margin: 0 0 0.35rem;
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+
+  .highlight-card__journal {
     margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
   }
 
-  .publication-card__note {
-    margin-top: 0.5rem;
+  .highlight-card:hover img,
+  .highlight-card:focus-visible img {
+    transform: scale(1.03);
   }
 
-  @media (max-width: 640px) {
-    .publication-card {
+  .highlight-card:hover::after,
+  .highlight-card:focus-visible::after,
+  .highlight-card:hover .highlight-card__meta,
+  .highlight-card:focus-visible .highlight-card__meta {
+    opacity: 1;
+  }
+
+  .highlight-card:hover .highlight-card__meta,
+  .highlight-card:focus-visible .highlight-card__meta {
+    transform: translateY(0);
+  }
+
+  @media (max-width: 720px) {
+    .highlights-grid {
       grid-template-columns: 1fr;
-    }
-
-    .publication-card__thumb {
-      max-width: 180px;
     }
   }
 </style>
 
-## First author papers
+## Highlights
 
-<div class="publication-grid">
-  <div class="publication-card">
-    <a class="publication-card__thumb" href="https://doi.org/10.64898/2026.03.03.26347488">
-      <img src="/assets/images/cape_town_vis.jpg" alt="Thumbnail for the artemisinin resistance preprint">
-    </a>
-    <div>
-      <h3 class="publication-card__title">
-        <a href="https://doi.org/10.64898/2026.03.03.26347488">Estimating the changing prevalence of molecular markers of artemisinin partial resistance in <i>Plasmodium falciparum</i> malaria in Sub-Saharan Africa</a> <em>(preprint)</em>
-      </h3>
-      <p class="publication-card__citation"><strong>Lucinda E Harrison</strong>, Nick Golding, Tianxiao Hao, Imke Botha, Stephanie van Wyk, Donnie Mategula, Prabin Dahal, Jaishree Raman, Daniel J Weiss, Karen I Barnes, Philippe J Gu&eacute;rin, and Jennifer A Flegg. (2026). <em>MedRxiv</em>.</p>
+<div class="highlights-grid">
+  <a class="highlight-card" href="https://doi.org/10.64898/2026.03.03.26347488">
+    <img src="/assets/images/policy_k13.png" alt="Thumbnail for artemisinin resistance preprint">
+    <div class="highlight-card__meta">
+      <h3 class="highlight-card__title">Estimating the changing prevalence of molecular markers of artemisinin partial resistance in <i>Plasmodium falciparum</i> malaria in Sub-Saharan Africa</h3>
+      <p class="highlight-card__journal"><i>MedRxiv</i></p>
     </div>
-  </div>
+  </a>
 
-  <div class="publication-card">
-    <a class="publication-card__thumb" href="https://doi.org/10.1371/journal.pgph.0004717">
-      <img src="/assets/images/mim_poster_2023.jpeg" alt="Thumbnail for the antimalarial drug resistance paper">
-    </a>
-    <div>
-      <h3 class="publication-card__title">
-        <a href="https://doi.org/10.1371/journal.pgph.0004717">Model-based geospatial surveillance system for antimalarial drug resistance</a>
-      </h3>
-      <p class="publication-card__citation">Apoorv Gupta*, <strong>Lucinda E. Harrison</strong>*, Minu Nain, Sauman Singh-Phulgenda, Rutuja Chhajed, Roopal S kumar, Aishika Das, Manju Rahi, Philippe J. Guerin, Anup R Anvikar, Mehul Dhorda, Jennifer A. Flegg, and Praveen K. Bharti. (2026). <em>PLOS Global Public Health</em>.</p>
-      <p class="publication-card__note">See the <a href="https://iddo.shinyapps.io/pf_drug_resistance/">companion RShiny app</a>.</p>
+  <a class="highlight-card" href="https://doi.org/10.1098/rsos.230641">
+    <img src="/assets/images/2024multicriteria.jpg" alt="Thumbnail for multi-criteria surveillance paper">
+    <div class="highlight-card__meta">
+      <h3 class="highlight-card__title">A multi-criteria framework for disease surveillance site selection: case study for <i>Plasmodium knowlesi</i> malaria in Indonesia</h3>
+      <p class="highlight-card__journal"><i>Royal Society Open Science</i></p>
     </div>
-  </div>
+  </a>
 
-  <div class="publication-card">
-    <a class="publication-card__thumb" href="https://doi.org/10.1098/rsos.230641">
-      <img src="/assets/images/2024multicriteria.jpg" alt="Thumbnail for the multi-criteria surveillance paper">
-    </a>
-    <div>
-      <h3 class="publication-card__title">
-        <a href="https://doi.org/10.1098/rsos.230641">A multi-criteria framework for disease surveillance site selection: case study for <i>Plasmodium knowlesi</i> malaria in Indonesia</a>
-      </h3>
-      <p class="publication-card__citation"><strong>Lucinda E. Harrison</strong>, Jennifer A. Flegg, Ruarai Tobin, Inke N. D. Lubis, Rintis Noviyanti, Matthew J. Grigg, Freya M. Shearer and David J. Price. (2024). <em>Royal Society Open Science</em>.</p>
-      <p class="publication-card__note">Have a play with the companion Shiny app <a href="http://lucyharrison.shinyapps.io/pk_multicrit_shiny/">here</a>.</p>
+  <a class="highlight-card" href="https://doi.org/10.1371/journal.pntd.0014127">
+    <img src="/assets/images/jev_birds_vectors.tif" alt="Thumbnail for Japanese encephalitis habitat suitability paper">
+    <div class="highlight-card__meta">
+      <h3 class="highlight-card__title">A time-varying geospatial model of habitat suitability for Japanese encephalitis virus vectors and vertebrate hosts in Australia</h3>
+      <p class="highlight-card__journal"><i>PLOS Neglected Tropical Diseases</i></p>
     </div>
-  </div>
+  </a>
 </div>
 
-* Contributed equally
+## First author papers
+
+- <a href="https://doi.org/10.64898/2026.03.03.26347488">Estimating the changing prevalence of molecular markers of artemisinin partial resistance in *Plasmodium falciparum* malaria in Sub-Saharan Africa</a> (*preprint*) \
+**Lucinda E Harrison**, Nick Golding, Tianxiao Hao, Imke Botha, Stephanie van Wyk, Donnie Mategula, Prabin Dahal, Jaishree Raman, Daniel J Weiss, Karen I Barnes, Philippe J Guérin, and Jennifer A Flegg. (2026). *MedRxiv*.  
+
+- <a href="https://doi.org/10.1371/journal.pgph.0004717">Model-based geospatial surveillance system for antimalarial drug resistance</a>  \
+Apoorv Gupta\*, **Lucinda E. Harrison**\*, Minu Nain, Sauman Singh-Phulgenda, Rutuja Chhajed, Roopal S kumar, Aishika Das, Manju Rahi, Philippe J. Guerin, Anup R Anvikar, Mehul Dhorda, Jennifer A. Flegg, and Praveen K. Bharti. (2026). *PLOS Global Public Health*  \
+See <a href="https://iddo.shinyapps.io/pf_drug_resistance/">companion RShiny app</a>.
+
+- <a href="https://doi.org/10.1098/rsos.230641">A multi-criteria framework for disease surveillance site selection: case study for *Plasmodium knowlesi* malaria in Indonesia</a>  \
+**Lucinda E. Harrison**, Jennifer A. Flegg, Ruarai Tobin, Inke N. D. Lubis, Rintis Noviyanti, Matthew J. Grigg, Freya M. Shearer and David J. Price. (2024). *Royal Society Open Science*.  \
+Have a play with the companion Shiny app <a href="http://lucyharrison.shinyapps.io/pk_multicrit_shiny/">here</a>.
+
+\* Contributed equally
 
 ## Other papers
 
