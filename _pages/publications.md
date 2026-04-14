@@ -25,14 +25,14 @@ gallery:
     position: relative;
     display: block;
     overflow: hidden;
-    border-radius: 0.85rem;
+    border-radius: 0.35rem;
     background: rgba(255, 255, 255, 0.04);
   }
 
   .highlight-card img {
     display: block;
     width: 100%;
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
     transition: transform 180ms ease;
   }
@@ -59,13 +59,13 @@ gallery:
 
   .highlight-card__title {
     margin: 0 0 0.35rem;
-    font-size: 1rem;
+    font-size: 0.82rem;
     line-height: 1.3;
   }
 
   .highlight-card__journal {
     margin: 0;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     opacity: 0.9;
   }
 
@@ -105,7 +105,7 @@ gallery:
   </a>
 
   <a class="highlight-card" href="https://doi.org/10.1098/rsos.230641">
-    <img src="/assets/images/2024multicriteria.jpg" alt="Thumbnail for multi-criteria surveillance paper">
+    <img src="/assets/images/2024multicriteria.svg" alt="Thumbnail for multi-criteria surveillance paper">
     <div class="highlight-card__meta">
       <h3 class="highlight-card__title">A multi-criteria framework for disease surveillance site selection: case study for <i>Plasmodium knowlesi</i> malaria in Indonesia</h3>
       <p class="highlight-card__journal"><i>Royal Society Open Science</i></p>
