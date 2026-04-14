@@ -40,7 +40,7 @@ title: "Hello"
     position: absolute;
     inset: auto 0 0 0;
     z-index: 1;
-    padding: 1.55rem 0.9rem 0.5rem;
+    padding: 1.55rem 0.9rem 0.15rem;
     color: #fff;
     opacity: 0;
     transition: opacity 180ms ease;
