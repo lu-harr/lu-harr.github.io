@@ -58,13 +58,13 @@ gallery:
 
   .highlight-card__title {
     margin: 0 0 0.35rem;
-    font-size: 0.74rem;
+    font-size: 0.68rem;
     line-height: 1.3;
   }
 
   .highlight-card__subtitle {
     margin: 0;
-    font-size: 0.74rem;
+    font-size: 0.68rem;
     opacity: 0.9;
   }
 
