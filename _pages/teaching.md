@@ -24,11 +24,14 @@ Some introductory slides for a peer-to-peer workshop on visualising research at 
 - <a href="/teaching/how_to_poster">How to give a great poster presentation</a>, August 2025  
 Some resources for a workshop on making up a research poster
 - [Lightning talks](https://lu-harr.github.io/_pages/teaching/3mt.pdf), April 2026  
-Some *brief* pointers on giving lightning talks in preparation for IDDO's inaugural lightning talk competition
+Some *brief* and *basic* pointers on giving lightning talks in preparation for IDDO's inaugural lightning talk competition
 
 ## Miscellaneous
 
-- <a href="/teaching/version_control">Introduction to version control with git and GitHub</a>, April 2026 
+- <a href="/teaching/version_control">Introduction to version control with git and GitHub</a>, June 2026 
 - <a href="/teaching/latex_and_overleaf">Introduction to academic writing with LaTeX and Overleaf</a>, April 2026 
+
+
+
 
 <!-- [Foundations of Computing resources are not uploaded here but I'll put them in a private repo] -->
