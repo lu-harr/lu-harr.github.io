@@ -1,4 +1,5 @@
----
+
+<!---
 permalink: /teaching/version_control
 title: Intro to version control with git and GitHub
 categories:
@@ -7,13 +8,13 @@ tags:
   - R
 toc: true
 author_profile: false
----
+--->
 
 ## Preamble
 
-This a workshop I wrote for IDDO’s coding club to introduce complete
-beginners to version control with git and the many pros to using GitHub.
-During this workshop, we will:
+This a workshop for IDDO’s coding club to introduce complete beginners
+to version control with git and the many pros to using GitHub. During
+this workshop, we will:
 
 - Learn how to initialise a local repository, how to make commits, and
   how to go back to past versions of our repo
@@ -34,6 +35,31 @@ for different skills levels:
 To complete this workshop, we’ll assume you have git on your machine and
 that you have an account set up on GitHub.
 
+## Version control: why are we here?
+
+Have you ever found yourself hours or days into a change to a coding or
+stats project, only to realise you need to go back?
+
+It’s times like these when **version control** can be very powerful! By
+tracking your progress you can:
+
+- go back to specific versions of your code
+- track your progress with annotations on each major change to your code
+  (like a lab book)
+- try out new additions to your code without losing a stable version of
+  it
+
+One widely-used system for version control is
+[**git**](https://en.wikipedia.org/wiki/Git).
+
+In combination with a platform like GitHub, Git allows you to:
+
+- keep a backup of your code that you can pull down to different
+  machines
+- allow other people to see your code / track your progress
+  (e.g. readers of a paper)
+- collaborate with other people
+
 ## Before we get started: the command line
 
 Today, we’ll be driving git using *the command line*. In RStudio (or
@@ -50,28 +76,9 @@ to the command line. Some useful commands:
 - `man`: show the *manual* for a command, with all the different options
   associated with it, e.g. `man ls`
 
-If you’re unfamiliar, let’s have a quick play around with these. CMD/A
-and CMD/E are my favourite command line shortcuts. There are lots of
-other commands and interesting ways to use them but we’ll move on for
-now!
-
-## Version control: why are we here?
-
-Have you ever found yourself hours or days into a change to a coding or
-stats project, only to realise you need to go back?
-
-It’s times like these when **version control** can be very powerful! By
-tracking your progress on your code you can:
-
-- go back to specific versions of your code
-- track your progress with annotations on each major change to your code
-- try out new additions of your code without losing a stable version of
-  it
-- (and, with a platform like GitHub, allow other people to track your
-  progress)
-
-One widely-used system for version control is
-[**git**](https://en.wikipedia.org/wiki/Git).
+If you’re unfamiliar, let’s have a quick play around with these. There
+are lots of other commands and interesting ways to use them but we’ll
+move on for now!
 
 ## Our first repository
 
@@ -265,7 +272,7 @@ Now to make some decisions:
     today as we have already initialised a README in the local version
     of our repo
   - A `.gitignore`: a file that lets us control which files are added to
-    commits. We’ll leave this for now.
+    commits. Very handy to keep sensitive files out of commits.
   - A license: a file that describes the terms under which other people
     can use your code.
 
@@ -313,8 +320,8 @@ However, the term’s [historical association with “slave” in broader
 computer science + software
 engineering](https://www.theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main)
 led Git and GitHub to change it. In fact, the branch in your local repo
-was *probably* already called “main”, but GitHub have included Step 2 to
-make sure it is.
+was *probably* already called “main”, but GitHub have included Step 2 in
+their guide to make sure it is.
 
 We skated over another powerful Git operation in the list above:
 
@@ -327,3 +334,40 @@ repository from your local repository, and sends all necessary data that
 isn’t already on the remote.
 
 </div>
+
+There is (of course) the opposite operation of `git pull`. When changes
+have been made to your remote repo, *pulling* lets you bring those
+changes down to your local repo.
+
+## The story so far …
+
+Today we’ve learnt all the steps we’ll need to maintain a single-author
+git repo that we’re adding to one commit at a time. To recap, we:
+
+1.  Put all of our code and outputs in a single folder
+2.  Initialise a git repo in that folder
+3.  Make regular commits as we update our work
+4.  Push these commits to a remote repository, e.g., on GitHub
+
+## Collaboration
+
+Here’s a quick taster of some of the terminology - we’ll go further into
+collaborating with git and GitHub in part 2.
+
+### One-way: cloning and forking
+
+To use someone else’s code, without your changes being reflected in
+their code, you have a couple of options.
+
+**Cloning** involves downloading an external repo onto your local
+machine.
+
+**Forking** involves making a copy of an external repo within GitHub -
+you can make changes to your forked repo where other users can see them.
+
+### Two-way: pull requests
+
+To make edits to someone else’s code when you don’t have permission to
+write to it directly, you can submit a **pull request**. This means
+proposing your changes to a repo’s authors who review the changes and
+can accept to **merge** them in.

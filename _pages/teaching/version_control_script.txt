@@ -1,0 +1,45 @@
+# command line intro
+cd ~
+mkdir best_project
+cd best_project
+pwd
+ls
+echo "a very nice text file" > test.txt
+ls
+less test.txt
+cp test.txt test2.txt
+less test2.txt
+
+
+# initialise repo
+git init
+git status
+echo "a very nice readme" > README.txt
+git status
+
+# first commit
+git add README.txt
+git status
+
+git commit -m "my first commit"
+git status
+
+
+# second commit
+# make a change! (Let everyone use their ide to open up their txt)
+vi README.txt
+touch test.txt > .gitignore
+git add *
+git commit -m "edit readme"
+git log
+
+
+# link local to remote
+git remote add origin https://github.com/lu-harr/.git
+git branch -M main
+git push -u origin main
+
+# show example repo
+# - file structure
+# - README.md rendered nicely
+# - multiple commits
