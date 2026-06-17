@@ -1,11 +1,10 @@
-
 ---
 permalink: /teaching/version_control
 title: Intro to version control with git and GitHub
 categories:
   - howto
 tags:
-  - R
+  - git
 toc: true
 author_profile: false
 ---
