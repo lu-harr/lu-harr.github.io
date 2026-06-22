@@ -4,7 +4,7 @@ title: Intro to version control with git and GitHub
 categories:
   - howto
 tags:
-  - git
+  - ReproducibleResearch
 toc: true
 author_profile: false
 ---
@@ -26,6 +26,9 @@ This workshop is for **absolute beginners**. Version control is
 confusing! Once you’ve got through the basics, here are some resources
 for different skills levels:
 
+- Our Coding Club’s
+  [tutorial](https://ourcodingclub.github.io/tutorials/git-for-labs/)
+  for setting up a lab repo
 - [Git is my lab book](https://git-is-my-lab-book.net) A compendium of
   guides/tutorials
 - and of course, your friendly neighbourhood LLM is absolutely welcome
@@ -108,6 +111,7 @@ project.
 Like so:
 
 ``` sh
+cd ~/  # let's put our repo in the home directory
 mkdir best_project  # for example
 cd best_project  
 git init
@@ -122,14 +126,16 @@ git status
 
 ## Our first commit
 
-There’s nothing in our repo yet! Let’s add a README. This command
-creates a file called `README.txt` and puts some text in it
+There’s nothing in our repo yet! Let’s add a README, a text file that
+will be the first thing a reader of your code looks at. This command
+creates a file called `README.txt` and puts some text in it:
 
 ``` sh
 echo "a very nice readme" > README.txt
 ```
 
-Check the status of your repo again. I get:
+Try opening the file and checking that “a very nice readme” is in there.
+Then, check the status of your repo again. I get:
 
 ``` sh
 On branch main
@@ -202,9 +208,9 @@ using commit messages for!
 
 1.  Make a change to your repository. Edit your README, or add a file.
 
-2.  Check the status of your repository, add your changes to the staging
-    area. This command will add all untracked changes to the staging
-    area:
+2.  Check the status of your repository and add your changes to the
+    staging area. This command will add all untracked changes to the
+    staging area:
 
     ``` sh
     git add *
@@ -291,7 +297,19 @@ git branch -M main
 git push -u origin main
 ```
 
-Translated, this means:
+<div class="notice--primary" markdown="1">
+
+**Authentication**
+
+At this point, you’ll be prompted to input your *GitHub username* and a
+*password*. As of 2021, this “password” will be a **personal access
+token** - have a look
+[here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic)
+for instructions on how to make one.
+
+</div>
+
+Translated, the commands above mean:
 
 1.  “This \[local\] repo corresponds to our repo on GitHub \[which we
     nickname ‘origin’\].”
@@ -351,7 +369,7 @@ git repo that we’re adding to one commit at a time. To recap, we:
 ## Collaboration
 
 Here’s a quick taster of some of the terminology - we’ll go further into
-collaborating with git and GitHub in part 2.
+collaborating with git and GitHub at a future workshop.
 
 ### One-way: cloning and forking
 
