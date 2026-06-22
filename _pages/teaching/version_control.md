@@ -1,3 +1,4 @@
+
 ---
 permalink: /teaching/version_control
 title: Intro to version control with git and GitHub

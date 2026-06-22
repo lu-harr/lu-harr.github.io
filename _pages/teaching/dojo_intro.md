@@ -1,6 +1,7 @@
+
 ---
 permalink: /teaching/dojo_intro
-title: IDDO Data Dojo 1: Hey presto dojo repo intro
+title: IDDO Data Dojo 1 - Hey presto dojo repo intro
 categories:
   - howto
 tags:
