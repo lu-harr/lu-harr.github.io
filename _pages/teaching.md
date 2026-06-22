@@ -28,6 +28,7 @@ Some *brief* and *basic* pointers on giving lightning talks in preparation for I
 
 ## Miscellaneous
 
+- <a href="/teaching/dojo_intro">IDDO Data Dojo 1</a> (outline only), June 2026
 - <a href="/teaching/version_control">Introduction to version control with git and GitHub</a>, June 2026 
 - <a href="/teaching/latex_and_overleaf">Introduction to academic writing with LaTeX and Overleaf</a>, April 2026 
 
