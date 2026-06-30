@@ -24,25 +24,28 @@ Before we start, we need everyone to:
 - Ideally, have followed a beginner tutorial to git/GitHub - see
   [Resources](/teaching/dojo_intro#resources) below.
 
-## Preamble
+## Structure
 
-Welcome to the IDDO Data Dojo! We’ll use this session to share R/r
+Welcome to the IDDO Data Dojo! We’ll use this session to share
+interesting tips and tricks for data processing, coding, and
+reproducible research.
 
 To get started, we will need to set up a GitHub repo to share resources
 for future workshops - the task for today! We will cover:
 
-- Basic command line operations
 - How to initialise a git repo locally, and on GitHub
 - How to structure a git repo, including:
   - directory structure
   - README
   - .gitignore
+- How to add content to our repo - we’ll add our very first post in
+  markdown.
 - How to use somebody else’s git repo, including forking, cloning, and
   pull requests
 
 ## Resources
 
-- I’ve already written a [beginner
+- Have a look at my [beginner
   tutorial](https://lu-harr.github.io/teaching/version_control) for git
   and GitHub
 - Our Coding Club’s intro to GitHub
@@ -53,3 +56,12 @@ for future workshops - the task for today! We will cover:
 - [Git is my lab book](https://git-is-my-lab-book.net) A compendium of
   guides/tutorials (see their GitHub here:
   <https://github.com/robmoss/git-is-my-lab-book/>)
+
+\[Off we go to GitHub!\]
+
+## Terminology
+
+A quick recap! By the end of today, we should be familiar with:
+
+- Staging/committing/pushing
+- Cloning/forking/pulling/pull requests

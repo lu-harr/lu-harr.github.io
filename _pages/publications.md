@@ -164,6 +164,11 @@ Steve Simpson-Yap, Federico Frascoli, **Lucinda Harrison**, Charles Malpas, Jame
   Report to Australian Government Department of Health and Aged Care.
 
 \* Not published in the public domain
+
+## Thesis
+
+<a href="https://hdl.handle.net/11343/355997">*Informing public health decisions with geospatial models of vector-borne disease risk*</a> (2024)  
+(Currently under embargo)
       
 ## Manuscripts in prep.
 
