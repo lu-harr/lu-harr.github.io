@@ -1,6 +1,3 @@
-
-<!---Note this will remove itself:-->
-
 ---
 permalink: /teaching/chloropleths_101
 title: Chloropleths! Chloropleths! Chloropleths!
