@@ -37,13 +37,25 @@ theme_set(theme_bw()) # save myself some time later ...
 library(sf)
 library(terra) # for rasters
 library(malariaAtlas)
+library(rnaturalearth)
 ```
 
 ## Polygons
 
-Lots of spatial analysis relies on data associated with specific administrative units. For the purposes of this demonstration, let's retrieve admin level 1s in Nigeria.
+Lots of spatial analysis relies on data associated with specific administrative units.
 
-There's lots of packages we can grab these sort of data from, e.g. `rnaturalearth` and `worlddatr`. Here's how you can do it with the MAP package:
+There's lots of packages we can grab these sort of data from, e.g. `rnaturalearth` and `worlddatr`. 
+
+Here's how you can retrieve national borders in Africa with `rnaturalearth`:
+
+```{r message=FALSE, warning=FALSE}
+afr <- rnaturalearth::ne_countries(continent = "Africa", scale = "medium")
+
+ggplot() +
+  geom_sf(data = afr)
+```
+
+Here's how you can retrieve admin level-1s in Nigeria with the MAP package:
 
 ```{r message=FALSE, warning=FALSE}
 nigeria <- malariaAtlas::getShp(country = "Nigeria", 
@@ -72,7 +84,7 @@ nigeria %>%
 plot(st_geometry(nigeria[1,]))
 ```
 
-## Our first chloropleth
+## Our first chloropleth: Nigeria
 
 Let's have a first go at a chloropleth map ... in this example, I map the first letter of the state name:
 
@@ -107,6 +119,41 @@ ggplot() +
   xlab("Longitude") +
   ylab("Latitude") +
   labs(title = "Nigerian states with the most common first letter")
+```
+
+## Our second chloropleth: Africa
+
+Say we have our own dataset, and we want to map that (highly likely I know!). We can join that dataset to our simple feature collection like so:
+
+```{r}
+our_own_data <- data.frame(country = afr$name,
+                           # this is a factor variables with levels in user-specified
+                           # order:
+                           how_much_stuff = sample(c("None", "A bit", "A lot", "Too much"),
+                                                   size = nrow(afr), replace = TRUE) %>%
+                             factor(levels = c("None", "A bit", "A lot", "Too much")))
+
+head(our_own_data)
+
+ggplot(data = afr %>% left_join(our_own_data,
+                                by = join_by(name == country))) +
+  geom_sf(aes(fill = how_much_stuff)) +
+  scale_fill_viridis_d()
+```
+
+If we want to specify our own colours, that's easy too. I can also crop the map, e.g. to remove sub-Antarctic Marion Island:
+
+```{r}
+library(viridisLite) # for the colours
+
+ggplot(data = afr %>% left_join(our_own_data,
+                                # note that all of the names need to match !
+                                # e.g., "DRC" != "Dem. Rep. Congo"
+                                by = join_by(name == country)) %>%
+         st_crop(c(xmin = -30, xmax = 50, ymin = -40, ymax = 40))) +
+  geom_sf(aes(fill = how_much_stuff)) +
+  scale_fill_manual(values = c("grey80", viridis(3))) +
+  labs(title = "How much stuff?")
 ```
 
 Great! We've made some chloropleth maps to visualise discrete data. 

@@ -1,4 +1,7 @@
----
+
+<!---Note this will remove itself:-->
+
+<!---
 permalink: /teaching/chloropleths_101
 title: Chloropleths + the malariaAtlas accessibility raster in one go!
 categories:
@@ -8,7 +11,7 @@ tags:
   - R
 toc: true
 author_profile: false
----
+--->
 
 ## Preamble
 
@@ -29,17 +32,31 @@ theme_set(theme_bw()) # save myself some time later ...
 library(sf)
 library(terra) # for rasters
 library(malariaAtlas)
+library(rnaturalearth)
 ```
 
 ## Polygons
 
 Lots of spatial analysis relies on data associated with specific
-administrative units. For the purposes of this demonstration, let’s
-retrieve admin level 1s in Nigeria.
+administrative units.
 
 There’s lots of packages we can grab these sort of data from,
-e.g. `rnaturalearth` and `worlddatr`. Here’s how you can do it with the
-MAP package:
+e.g. `rnaturalearth` and `worlddatr`.
+
+Here’s how you can retrieve national borders in Africa with
+`rnaturalearth`:
+
+``` r
+afr <- rnaturalearth::ne_countries(continent = "Africa", scale = "medium")
+
+ggplot() +
+  geom_sf(data = afr)
+```
+
+![](chloropleths_101_files/figure-gfm/unnamed-chunk-1-1.png)<!-- -->
+
+Here’s how you can retrieve admin level-1s in Nigeria with the MAP
+package:
 
 ``` r
 nigeria <- malariaAtlas::getShp(country = "Nigeria", 
@@ -55,7 +72,7 @@ nigeria <- malariaAtlas::getShp(country = "Nigeria",
 plot(st_geometry(nigeria))
 ```
 
-![](chloropleths_101_files/figure-gfm/unnamed-chunk-1-1.png)<!-- -->
+![](chloropleths_101_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
 
 ``` r
 # in ggplot
@@ -63,7 +80,7 @@ ggplot() +
   geom_sf(data = nigeria)
 ```
 
-![](chloropleths_101_files/figure-gfm/unnamed-chunk-1-2.png)<!-- -->
+![](chloropleths_101_files/figure-gfm/unnamed-chunk-2-2.png)<!-- -->
 
 Have a look at `nigeria`: it’s a simple feature collection that looks a
 bit like a data.frame. However, each row has geometry associated with
@@ -107,31 +124,29 @@ nigeria %>%
   head()
 ```
 
-    ## Geometry set for 6 features 
-    ## Geometry type: MULTIPOLYGON
-    ## Dimension:     XY
-    ## Bounding box:  xmin: 3.4711 ymin: 7.4341 xmax: 14.6781 ymax: 13.7146
-    ## Geodetic CRS:  WGS 84
-    ## First 5 geometries:
-
-    ## MULTIPOLYGON (((13.332 13.7146, 13.3381 13.7144...
-
-    ## MULTIPOLYGON (((11.1776 13.3754, 11.181 13.3747...
-
-    ## MULTIPOLYGON (((7.8783 13.3311, 7.8818 13.3297,...
-
-    ## MULTIPOLYGON (((4.3615 13.2092, 4.3798 13.1896,...
-
-    ## MULTIPOLYGON (((11.2449 11.2936, 11.2878 11.266...
+    ##   iso admn_level  name_0     id_0  type_0  name_1     id_1 type_1 name_2 id_2
+    ## 1 NGA          1 Nigeria 10000939 Country   Borno 10316414  State     NA   NA
+    ## 2 NGA          1 Nigeria 10000939 Country    Yobe 10314496  State     NA   NA
+    ## 3 NGA          1 Nigeria 10000939 Country Katsina 10314910  State     NA   NA
+    ## 4 NGA          1 Nigeria 10000939 Country   Kebbi 10314662  State     NA   NA
+    ## 5 NGA          1 Nigeria 10000939 Country   Gombe 10313923  State     NA   NA
+    ## 6 NGA          1 Nigeria 10000939 Country Adamawa 10315851  State     NA   NA
+    ##   type_2 name_3 id_3 type_3    source country_level
+    ## 1     NA     NA   NA     NA GAUL 2015         NGA_1
+    ## 2     NA     NA   NA     NA GAUL 2015         NGA_1
+    ## 3     NA     NA   NA     NA GAUL 2015         NGA_1
+    ## 4     NA     NA   NA     NA GAUL 2015         NGA_1
+    ## 5     NA     NA   NA     NA GAUL 2015         NGA_1
+    ## 6     NA     NA   NA     NA GAUL 2015         NGA_1
 
 ``` r
 # we can pick out rows just like a data frame:
 plot(st_geometry(nigeria[1,]))
 ```
 
-![](chloropleths_101_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
+![](chloropleths_101_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
-## Our first chloropleth
+## Our first chloropleth: Nigeria
 
 Let’s have a first go at a chloropleth map … in this example, I map the
 first letter of the state name:
@@ -145,7 +160,7 @@ ggplot() +
           aes(fill = first_letter))
 ```
 
-![](chloropleths_101_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+![](chloropleths_101_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
 That’s way too many colours! How about we just look at the five most
 common letters? And go for some groovy colours?
@@ -171,7 +186,69 @@ ggplot() +
   labs(title = "Nigerian states with the most common first letter")
 ```
 
-![](chloropleths_101_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+![](chloropleths_101_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+
+## Our second chloropleth: Africa
+
+Say we have our own dataset, and we want to map that (highly likely I
+know!). We can join that dataset to our simple feature collection like
+so:
+
+``` r
+our_own_data <- data.frame(country = afr$name,
+                           # this is a factor variables with levels in user-specified
+                           # order:
+                           how_much_stuff = sample(c("None", "A bit", "A lot", "Too much"),
+                                                   size = nrow(afr), replace = TRUE) %>%
+                             factor(levels = c("None", "A bit", "A lot", "Too much")))
+
+head(our_own_data)
+```
+
+    ##    country how_much_stuff
+    ## 1 Zimbabwe          A bit
+    ## 2   Zambia          A lot
+    ## 3   Uganda          A bit
+    ## 4  Tunisia       Too much
+    ## 5     Togo           None
+    ## 6 Tanzania       Too much
+
+``` r
+ggplot(data = afr %>% left_join(our_own_data,
+                                by = join_by(name == country))) +
+  geom_sf(aes(fill = how_much_stuff)) +
+  scale_fill_viridis_d()
+```
+
+![](chloropleths_101_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
+
+If we want to specify our own colours, that’s easy too. I can also crop
+the map, e.g. to remove sub-Antarctic Marion Island:
+
+``` r
+library(viridisLite) # for the colours
+```
+
+    ## Warning: package 'viridisLite' was built under R version 4.4.3
+
+``` r
+ggplot(data = afr %>% left_join(our_own_data,
+                                # note that all of the names need to match !
+                                # e.g., "DRC" != "Dem. Rep. Congo"
+                                by = join_by(name == country)) %>%
+         st_crop(c(xmin = -30, xmax = 50, ymin = -40, ymax = 40))) +
+  geom_sf(aes(fill = how_much_stuff)) +
+  scale_fill_manual(values = c("grey80", viridis(3))) +
+  labs(title = "How much stuff?")
+```
+
+    ## although coordinates are longitude/latitude, st_intersection assumes that they
+    ## are planar
+
+    ## Warning: attribute variables are assumed to be spatially constant throughout
+    ## all geometries
+
+![](chloropleths_101_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
 
 Great! We’ve made some chloropleth maps to visualise discrete data.
 
@@ -237,7 +314,7 @@ Let’s have a look at our raster:
 plot(travel_time, main = "Travel time to cities in Nigeria")
 ```
 
-![](chloropleths_101_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
+![](chloropleths_101_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
 
 If we wanted to capture *accessibility*, we could invert travel time and
 rescale:
@@ -251,7 +328,7 @@ values(access) <- (values(access) - ran[1]) /
 plot(access, main = "Access to cities in Nigeria")
 ```
 
-![](chloropleths_101_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+![](chloropleths_101_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
 
 And in ggplot:
 
@@ -270,7 +347,7 @@ ggplot() +
   scale_fill_viridis_c("Access")
 ```
 
-![](chloropleths_101_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+![](chloropleths_101_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
 
 ## Bring it all together: chloropleth of accessibility
 
@@ -295,7 +372,7 @@ ggplot() +
   scale_fill_viridis_c("Mean access")
 ```
 
-![](chloropleths_101_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
+![](chloropleths_101_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
 
 I highly recommend checking out Paula Moraga’s 2023 textbook [*Spatial
 Statistics or Data Science: Theory and Practice with
