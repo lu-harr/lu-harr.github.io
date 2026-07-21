@@ -1,9 +1,9 @@
 
 <!---Note this will remove itself:-->
 
-<!---
+---
 permalink: /teaching/chloropleths_101
-title: Chloropleths + the malariaAtlas accessibility raster in one go!
+title: Chloropleths! Chloropleths! Chloropleths!
 categories:
   - howto
 tags:
@@ -11,7 +11,7 @@ tags:
   - R
 toc: true
 author_profile: false
---->
+---
 
 ## Preamble
 
@@ -206,12 +206,12 @@ head(our_own_data)
 ```
 
     ##    country how_much_stuff
-    ## 1 Zimbabwe          A bit
-    ## 2   Zambia          A lot
+    ## 1 Zimbabwe       Too much
+    ## 2   Zambia           None
     ## 3   Uganda          A bit
-    ## 4  Tunisia       Too much
-    ## 5     Togo           None
-    ## 6 Tanzania       Too much
+    ## 4  Tunisia           None
+    ## 5     Togo          A lot
+    ## 6 Tanzania          A lot
 
 ``` r
 ggplot(data = afr %>% left_join(our_own_data,
