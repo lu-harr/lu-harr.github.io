@@ -3,13 +3,17 @@ permalink: /publications/
 title: Publications
 toc: true
 gallery:
+  - url: /assets/images/ndmrs_poster_2026.jpeg
+    image_path: /assets/images/ndmrs_poster_2026.jpeg
+    alt: "Scientific poster"
+    title: "NDM 2026: Kelch 13 & ACT partner drug markers in Africa"
   - url: /assets/images/mim_poster_2023.jpeg
     image_path: /assets/images/mim_poster_2023.jpeg
-    alt: "placeholder image 1"
+    alt: "Scientific poster"
     title: "Malaria in Melbourne 2023: Multi-objective decision framework"
   - url: /assets/images/smb_poster_2022.jpeg
     image_path: /assets/images/smb_poster_2022.jpeg
-    alt: "placeholder image 2"
+    alt: "Scientific poster"
     title: "ECMTB 2022: Multi-criteria decision framework"
 ---
 
