@@ -79,6 +79,9 @@ author:
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://lu-harr.github.io"
+    - label: "LinkedIn"
+      icon: "fas fa-fw fa-linkedin"
+      url: "www.linkedin.com/in/lucy-harrison-104008410"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/lu-harr"
@@ -91,6 +94,9 @@ author:
 
 footer:
   links:
+    - label: "LinkedIn"
+      icon: "fas fa-fw fa-linkedin"
+      url: "www.linkedin.com/in/lucy-harrison-104008410"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/lu-harr" 
