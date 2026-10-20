@@ -126,6 +126,7 @@ gallery:
 
 - <a href="https://doi.org/10.64898/2026.03.03.26347488">Estimating the changing prevalence of molecular markers of artemisinin partial resistance in *Plasmodium falciparum* malaria in Sub-Saharan Africa</a> (*preprint*) \
 **Lucinda E Harrison**, Nick Golding, Tianxiao Hao, Imke Botha, Stephanie van Wyk, Donnie Mategula, Prabin Dahal, Jaishree Raman, Daniel J Weiss, Karen I Barnes, Philippe J Guérin, and Jennifer A Flegg. (2026). *MedRxiv*.  
+See <a href="https://iddo-marcse-models.share.connect.posit.cloud">companion RShiny app</a>.
 
 - <a href="https://doi.org/10.1371/journal.pgph.0004717">Model-based geospatial surveillance system for antimalarial drug resistance</a>  \
 Apoorv Gupta\*, **Lucinda E. Harrison**\*, Minu Nain, Sauman Singh-Phulgenda, Rutuja Chhajed, Roopal S kumar, Aishika Das, Manju Rahi, Philippe J. Guerin, Anup R Anvikar, Mehul Dhorda, Jennifer A. Flegg, and Praveen K. Bharti. (2026). *PLOS Global Public Health*  \
@@ -178,10 +179,6 @@ Steve Simpson-Yap, Federico Frascoli, **Lucinda Harrison**, Charles Malpas, Jame
 (Currently under embargo)
       
 ## Manuscripts in prep.
-
-- *Geospatial assessment of Japanese encephalitis virus infection risk in Australia* (LH first author)  \
-A description of models of potential and realised niche of Japanese encephalitis virus, drawing on pathogen surveillance data; first described in reports to government.  \
-With David Duncan, Freya Shearer, Nick Golding, Jennifer Flegg, David Price, Domenic Germano and others.
   
 - *Using geospatial models to select primary healthcare centres for surveillance of <i>Plasmodium knowlesi</i> malaria* (LH first author)  \
 Disease surveillance produces critical information on disease prevalence, incidence and clinical outcomes, however it is limited by available resources and should be carefully planned. The spatial distribution of risk of <i>Plasmodium knowlesi</i> malaria in north-western Indonesia is not well understood. However, numerous studies have linked disease risk to environments where humans, macaque hosts and mosquito vectors interact, on the forest fringe and in croplands and plantations. We present a flexible framework for the selection of primary healthcare centres for targeted disease surveillance, applied to the surveillance of <i>P. knowlesi</i> malaria in north-western Indonesia. We consider several definitions of healthcare centre catchment area, and explore a number of possible objectives for disease surveillance, incorporating the outputs of a geospatial model of disease risk. These objectives can be optimised for individual sites or complete surveillance designs, and can be optimised independently or simultaneously, in a multi-objective decision problem.  \
