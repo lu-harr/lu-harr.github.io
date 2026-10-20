@@ -121,6 +121,9 @@ gallery:
 
 ## First author papers
 
+- <a href="https://doi.org/10.64898/2026.10.15.26365607">Geospatial assessment of Japanese encephalitis infection risk in Australia</a> (*preprint*) \
+**Lucinda E Harrison**, David H Duncan, Jennifer A Flegg, David J Price, Nina Kurucz, Ximena Tolosa, Peter J Neville, Cassie C Jansen, Abbey Potter, Craig Brockway, Kimberly L Miller, Michaela Hobby, Vicki Burns, Keira M Glasgow, Anthony DK Draper, Josef Schmidt, Guy Weerasinghe, Andrew F van den Hurk, David T Williams, Stephen L Doggett, Nick Golding, Freya M Shearer (2026). *MedRxiv*. 
+
 - <a href="https://doi.org/10.64898/2026.03.03.26347488">Estimating the changing prevalence of molecular markers of artemisinin partial resistance in *Plasmodium falciparum* malaria in Sub-Saharan Africa</a> (*preprint*) \
 **Lucinda E Harrison**, Nick Golding, Tianxiao Hao, Imke Botha, Stephanie van Wyk, Donnie Mategula, Prabin Dahal, Jaishree Raman, Daniel J Weiss, Karen I Barnes, Philippe J Guérin, and Jennifer A Flegg. (2026). *MedRxiv*.  
 

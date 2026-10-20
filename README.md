@@ -12,3 +12,4 @@ TODO
 - hidden recipes/hairdressing testimonials because that would amuse me
 - (Populate project pages)
 - Add list of lectures/tutorials to teaching page as part of dynamic resume? Even if I don't upload the actual resources, visitors probably expect the "teaching" page to have that sort of information?
+- Add blog post/teaching post on pie charts/raster alternative with ggplot
