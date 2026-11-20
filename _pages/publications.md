@@ -144,7 +144,7 @@ Have a play with the companion Shiny app <a href="http://lucyharrison.shinyapps.
 David H. Duncan, **Lucinda Harrison**, Abbey Potter, Craig Brockway, Kimberly Evasco, Stephen Doggett, Rebecca Feldman, Peter Neville, Andrew van den Hurk, Cassie Jansen, Michaela Hobby, Vicky Burns, Andrew Vickers, Nina Kurucz, Nick Golding, and Freya Shearer. *PLOS Neglected Tropical Diseases*.
 
 - <a href="https://doi.org/10.1371/journal.pntd.0011570">Updating estimates of *Plasmodium knowlesi* malaria risk in response to changing land use patterns across Southeast Asia</a> (2024)  \
-Ruarai J. Tobin, **Lucinda E. Harrison**, Meg K. Tully, Inke N. D. Lubis, Rintis Noviyanti, Nicholas M. Anstey, Giri S. Rajahram, Matthew J. Grigg, Jennifer A. Flegg, David J. Price, and Freya M. Shearer. *PLOS Neglected Tropical Diseases*.
+Ruarai J. Tobin, **Lucinda E. Harrison**, Meg K. Tully, Inke N. D. Lubis, Rintis Noviyanti, Nicholas M. Anstey, Giri S. Rajahram, Matthew J. Grigg, Jennifer A. Flegg, David J. Price, and Freya M. Shearer. *PLOS Neglected Tropical Diseases*. Companion interactive dashboard <a href="https://019f600f-482a-3ea7-f415-6f5bcf66d6ce.share.connect.posit.cloud/">here</a>.
           
 - <a href="https://doi.org/10.4269/ajtmh.23-0631">Systematic Review 
 and Geospatial Modeling of Molecular Markers of Resistance to Artemisinins 
@@ -172,6 +172,13 @@ Steve Simpson-Yap, Federico Frascoli, **Lucinda Harrison**, Charles Malpas, Jame
   Report to Australian Government Department of Health and Aged Care.
 
 \* Not published in the public domain
+
+## My research in policy
+
+- <a href="https://www.cdc.gov.au/sites/default/files/2025-12/joint-national-japanese-encephalitis-virus-outbreak-response-plan_0.pdf">*Joint National Japanese Encephalitis Virus Outbreak Response Plan*</a> (2023), Australian Government Department of Health and Aged Care and Australian Government
+Department of Agriculture, Fisheries, and Forestry
+
+- *SADC Integrated Regional Strategy on Antimalarial Drug Resistance and Malaria Vector Insecticide Resistance (2026–2030)* (2026), Southern African Development Community
 
 ## Thesis
 
