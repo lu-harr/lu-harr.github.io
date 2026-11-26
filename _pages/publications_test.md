@@ -1,35 +1,39 @@
 ---
 permalink: /publications_test/
-title: Publications (ORCID test)
+title: Publications
 toc: true
+publication_links:
+  "10.64898/2026.03.03.26347488":
+    - label: Companion RShiny app
+      url: https://iddo-marcse-models.share.connect.posit.cloud
+  "10.1371/journal.pgph.0004717":
+    - label: Companion RShiny app
+      url: https://iddo.shinyapps.io/pf_drug_resistance/
+  "10.1098/rsos.230641":
+    - label: Companion Shiny app
+      url: http://lucyharrison.shinyapps.io/pk_multicrit_shiny/
+  "10.1371/journal.pntd.0011570":
+    - label: Companion interactive dashboard
+      url: https://019f600f-482a-3ea7-f415-6f5bcf66d6ce.share.connect.posit.cloud/
 ---
-
-This page lists public works from [my ORCID record](https://orcid.org/0000-0002-0590-1444). The list is refreshed when the site is built.
 
 {% assign works = site.data.orcid_works %}
 {% if works and works.size > 0 %}
 
-{% assign sorted_works = works | sort: "year" | reverse %}
-{% assign last_year = "" %}
-{% for work in sorted_works %}
-  {% assign year = work.year | default: "Date unknown" %}
-  {% if year != last_year %}
-    {% unless forloop.first %}</ul>{% endunless %}
+{% assign first_author_works = works | where: "first_author", true | sort: "sort_date" | reverse %}
+{% assign other_works = works | where: "first_author", false | sort: "sort_date" | reverse %}
 
-## {{ year }}
+{% if first_author_works.size > 0 %}
+## First-author publications
 
-<ul>
-    {% assign last_year = year %}
-  {% endif %}
-  <li>
-    {% if work.url %}<a href="{{ work.url | escape }}">{{ work.title | escape }}</a>{% else %}{{ work.title | escape }}{% endif %}
-    {% if work.authors and work.authors.size > 0 %}<br>
-      {% for author in work.authors limit:10 %}{% if author.is_self %}<strong>{{ author.name | escape }}</strong>{% else %}{{ author.name | escape }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}{% if work.authors.size > 10 %}, et al.{% endif %}
-    {% endif %}
-    {% if work.year %} ({{ work.year }}){% endif %}{% if work.journal %}. <em>{{ work.journal | escape }}</em>{% endif %}{% if work.type %}.{% endif %}
-  </li>
-{% endfor %}
-</ul>
+{% include orcid_publication_list.html works=first_author_works %}
+{% endif %}
+
+{% if other_works.size > 0 %}
+## Other publications
+
+{% include orcid_publication_list.html works=other_works %}
+{% endif %}
 
 {% else %}
 

@@ -57,14 +57,20 @@ selected_works = groups.filter_map do |group|
   doi = summary.dig("external-ids", "external-id")&.find do |external_id|
     external_id["external-id-type"] == "doi"
   end&.dig("external-id-value")
+  doi = doi&.downcase
   url = summary.dig("url", "value")
   url = "https://doi.org/#{doi}" if (url.nil? || url.empty?) && doi && !doi.empty?
+  month = date.dig("month", "value").to_i
+  day = date.dig("day", "value").to_i
+  sort_date = year ? format("%04d-%02d-%02d", year.to_i, month, day) : "0000-00-00"
 
   {
     "title" => title,
     "year" => year,
+    "sort_date" => sort_date,
     "type" => summary["type"],
     "journal" => summary.dig("journal-title", "value"),
+    "doi" => doi,
     "url" => url,
     "put_code" => summary["put-code"]
   }.compact
@@ -89,24 +95,30 @@ works = selected_works.map do |summary|
 
     orcid_uri = contributor.dig("contributor-orcid", "uri").to_s
     is_self = orcid_uri.end_with?(orcid_id) || credit_name.match?(/\bLucinda\b.*\bHarrison\b|\bHarrison\b.*\bLucinda\b/i)
-    if credit_name.include?(",")
-      surname, given_names_text = credit_name.split(",", 2).map(&:strip)
-      given_names = given_names_text.split(/\s+/)
+    is_group = credit_name.match?(/\b(study group|consortium|collaboration|working group|network)\b/i)
+    if is_group
+      initials = credit_name
     else
-      parts = credit_name.strip.split(/\s+/)
-      surname_start = parts.length - 1
-      while surname_start > 1 && surname_particles.include?(parts[surname_start - 1].downcase)
-        surname_start -= 1
+      if credit_name.include?(",")
+        surname, given_names_text = credit_name.split(",", 2).map(&:strip)
+        given_names = given_names_text.split(/\s+/)
+      else
+        parts = credit_name.strip.split(/\s+/)
+        surname_start = parts.length - 1
+        while surname_start > 1 && surname_particles.include?(parts[surname_start - 1].downcase)
+          surname_start -= 1
+        end
+        surname = parts[surname_start..].join(" ")
+        given_names = parts[0...surname_start]
       end
-      surname = parts[surname_start..].join(" ")
-      given_names = parts[0...surname_start]
+      initials = given_names.empty? ? credit_name : "#{given_names.map { |part| part.scan(/[[:alpha:]]/).first }.compact.join(" ")} #{surname}"
     end
-    initials = given_names.empty? ? credit_name : "#{given_names.map { |part| part.scan(/[[:alpha:]]/).first }.compact.join(" ")} #{surname}"
 
     { "name" => initials, "is_self" => is_self }
   end
 
-  summary.merge("authors" => authors)
+  preprint = summary["type"].to_s.match?(/preprint/i) || summary["journal"].to_s.match?(/medrxiv|biorxiv|arxiv|preprint/i)
+  summary.merge("authors" => authors, "first_author" => authors.first&.fetch("is_self", false) || false, "preprint" => preprint)
 end
 
 FileUtils.mkdir_p("_data")

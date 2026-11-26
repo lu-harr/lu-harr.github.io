@@ -1,0 +1,28 @@
+{% assign last_year = "" %}
+{% for work in include.works %}
+  {% assign year = work.year | default: "Date unknown" %}
+  {% if year != last_year %}
+    {% unless forloop.first %}</ul>{% endunless %}
+
+### {{ year }}
+
+<ul>
+    {% assign last_year = year %}
+  {% endif %}
+  <li>
+    {% if work.url %}<a href="{{ work.url | escape }}">{{ work.title | escape }}</a>{% else %}{{ work.title | escape }}{% endif %}{% if work.preprint %} <em>(preprint)</em>{% endif %}
+    {% if work.authors and work.authors.size > 0 %}<br>
+      {% for author in work.authors limit:10 %}{% if author.is_self %}<strong>{{ author.name | escape }}</strong>{% else %}{{ author.name | escape }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}{% if work.authors.size > 10 %}, et al.{% endif %}
+    {% endif %}
+    {% if work.year %} ({{ work.year }}){% endif %}{% if work.journal %}. <em>{{ work.journal | escape }}</em>{% endif %}{% if work.type %}.{% endif %}
+    {% assign related_links = page.publication_links[work.doi] %}
+    {% if related_links and related_links.size > 0 %}
+    <ul>
+      {% for link in related_links %}
+      <li><a href="{{ link.url | escape }}">{{ link.label | escape }}</a></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </li>
+{% endfor %}
+</ul>
