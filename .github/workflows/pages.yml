@@ -31,6 +31,9 @@ jobs:
           ruby-version: "3.2"
           bundler-cache: true
       - name: Fetch public ORCID works
+        env:
+          ORCID_CLIENT_ID: ${{ secrets.ORCID_CLIENT_ID }}
+          ORCID_CLIENT_SECRET: ${{ secrets.ORCID_CLIENT_SECRET }}
         run: ruby scripts/fetch_orcid_works.rb
       - name: Build site
         run: bundle exec jekyll build

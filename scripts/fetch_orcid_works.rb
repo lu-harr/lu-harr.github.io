@@ -7,22 +7,46 @@ require "time"
 require "uri"
 
 orcid_id = "0000-0002-0590-1444"
+surname_particles = %w[al ap da das de del della den der di dos du la le van von].freeze
+client_id = ENV["ORCID_CLIENT_ID"]
+client_secret = ENV["ORCID_CLIENT_SECRET"]
+abort "Set ORCID_CLIENT_ID and ORCID_CLIENT_SECRET as GitHub Actions secrets." if client_id.to_s.empty? || client_secret.to_s.empty?
+
+token_uri = URI("https://orcid.org/oauth/token")
+token_request = Net::HTTP::Post.new(token_uri)
+token_request["Accept"] = "application/json"
+token_request["Content-Type"] = "application/x-www-form-urlencoded"
+token_request["User-Agent"] = "lu-harr.github.io ORCID publications importer"
+token_request.body = URI.encode_www_form(
+  "client_id" => client_id,
+  "client_secret" => client_secret,
+  "grant_type" => "client_credentials",
+  "scope" => "/read-public"
+)
+
+token_response = Net::HTTP.start(token_uri.host, token_uri.port, use_ssl: true, open_timeout: 10, read_timeout: 30) do |http|
+  http.request(token_request)
+end
+abort "ORCID token request returned HTTP #{token_response.code}: #{token_response.message}" unless token_response.is_a?(Net::HTTPSuccess)
+access_token = JSON.parse(token_response.body).fetch("access_token")
+
 uri = URI("https://pub.orcid.org/v3.0/#{orcid_id}/works")
 request = Net::HTTP::Get.new(uri)
 request["Accept"] = "application/json"
+request["Authorization"] = "Bearer #{access_token}"
 request["User-Agent"] = "lu-harr.github.io ORCID publications importer"
 
 response = Net::HTTP.start(uri.host, uri.port, use_ssl: true, open_timeout: 10, read_timeout: 30) do |http|
   http.request(request)
 end
-abort "ORCID API returned HTTP #{response.code}: #{response.message}" unless response.is_a?(Net::HTTPSuccess)
+abort "ORCID works request returned HTTP #{response.code}: #{response.message}" unless response.is_a?(Net::HTTPSuccess)
 
 payload = JSON.parse(response.body)
 abort "ORCID response did not contain a work list." unless payload.key?("group")
 groups = payload.fetch("group")
-works = groups.filter_map do |group|
-  summaries = group.fetch("work-summary", [])
-  summary = summaries.max_by { |item| item.dig("publication-date", "year", "value").to_i }
+selected_works = groups.filter_map do |group|
+  work_summaries = group.fetch("work-summary", [])
+  summary = work_summaries.max_by { |item| item.dig("publication-date", "year", "value").to_i }
   next unless summary
 
   title = summary.dig("title", "title", "value")
@@ -44,6 +68,45 @@ works = groups.filter_map do |group|
     "url" => url,
     "put_code" => summary["put-code"]
   }.compact
+end
+
+works = selected_works.map do |summary|
+  detail_uri = URI("https://pub.orcid.org/v3.0/#{orcid_id}/work/#{summary.fetch("put_code")}")
+  detail_request = Net::HTTP::Get.new(detail_uri)
+  detail_request["Accept"] = "application/json"
+  detail_request["Authorization"] = "Bearer #{access_token}"
+  detail_request["User-Agent"] = "lu-harr.github.io ORCID publications importer"
+
+  detail_response = Net::HTTP.start(detail_uri.host, detail_uri.port, use_ssl: true, open_timeout: 10, read_timeout: 30) do |http|
+    http.request(detail_request)
+  end
+  abort "ORCID work #{summary.fetch("put_code")} returned HTTP #{detail_response.code}: #{detail_response.message}" unless detail_response.is_a?(Net::HTTPSuccess)
+
+  detail = JSON.parse(detail_response.body)
+  authors = detail.dig("contributors", "contributor").to_a.filter_map do |contributor|
+    credit_name = contributor.dig("credit-name", "value")
+    next if credit_name.nil? || credit_name.empty?
+
+    orcid_uri = contributor.dig("contributor-orcid", "uri").to_s
+    is_self = orcid_uri.end_with?(orcid_id) || credit_name.match?(/\bLucinda\b.*\bHarrison\b|\bHarrison\b.*\bLucinda\b/i)
+    if credit_name.include?(",")
+      surname, given_names_text = credit_name.split(",", 2).map(&:strip)
+      given_names = given_names_text.split(/\s+/)
+    else
+      parts = credit_name.strip.split(/\s+/)
+      surname_start = parts.length - 1
+      while surname_start > 1 && surname_particles.include?(parts[surname_start - 1].downcase)
+        surname_start -= 1
+      end
+      surname = parts[surname_start..].join(" ")
+      given_names = parts[0...surname_start]
+    end
+    initials = given_names.empty? ? credit_name : "#{given_names.map { |part| part.scan(/[[:alpha:]]/).first }.compact.join(" ")} #{surname}"
+
+    { "name" => initials, "is_self" => is_self }
+  end
+
+  summary.merge("authors" => authors)
 end
 
 FileUtils.mkdir_p("_data")
