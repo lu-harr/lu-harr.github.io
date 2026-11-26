@@ -144,7 +144,7 @@ Have a play with the companion Shiny app <a href="http://lucyharrison.shinyapps.
 David H. Duncan, **Lucinda Harrison**, Abbey Potter, Craig Brockway, Kimberly Evasco, Stephen Doggett, Rebecca Feldman, Peter Neville, Andrew van den Hurk, Cassie Jansen, Michaela Hobby, Vicky Burns, Andrew Vickers, Nina Kurucz, Nick Golding, and Freya Shearer. *PLOS Neglected Tropical Diseases*.
 
 - <a href="https://doi.org/10.1371/journal.pntd.0011570">Updating estimates of *Plasmodium knowlesi* malaria risk in response to changing land use patterns across Southeast Asia</a> (2024)  \
-Ruarai J. Tobin, **Lucinda E. Harrison**, Meg K. Tully, Inke N. D. Lubis, Rintis Noviyanti, Nicholas M. Anstey, Giri S. Rajahram, Matthew J. Grigg, Jennifer A. Flegg, David J. Price, and Freya M. Shearer. *PLOS Neglected Tropical Diseases*. Companion interactive dashboard <a href="https://019f600f-482a-3ea7-f415-6f5bcf66d6ce.share.connect.posit.cloud/">here</a>.
+Ruarai J. Tobin, **Lucinda E. Harrison**, Meg K. Tully, Inke N. D. Lubis, Rintis Noviyanti, Nicholas M. Anstey, Giri S. Rajahram, Matthew J. Grigg, Jennifer A. Flegg, David J. Price, and Freya M. Shearer. *PLOS Neglected Tropical Diseases*. Companion interactive dashboard <a href="https://019f600f-482a-3ea7-f415-6f5bcf66d6ce.share.connect.posit.cloud/">here</a>. <!--https://01a1ee06-ba8c-eaea-99a9-b7f684b978d1.share.connect.posit.cloud/-->
           
 - <a href="https://doi.org/10.4269/ajtmh.23-0631">Systematic Review 
 and Geospatial Modeling of Molecular Markers of Resistance to Artemisinins 
