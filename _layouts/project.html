@@ -9,19 +9,35 @@ layout: single
 {% assign sorted_publications = site.data.orcid_works | sort: "sort_date" | reverse %}
 {% assign publication_count = 0 %}
 {% for work in sorted_publications %}
-  {% if page.publication_dois contains work.doi %}
-    {% assign publication_count = publication_count | plus: 1 %}
-  {% endif %}
+  {% assign normalized_title = work.title | downcase %}
+  {% assign is_project_publication = false %}
+  {% for keyword in page.publication_title_keywords %}
+    {% if normalized_title contains keyword %}
+      {% assign is_project_publication = true %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+  {% if is_project_publication %}{% assign publication_count = publication_count | plus: 1 %}{% endif %}
 {% endfor %}
 {% if publication_count > 0 %}
 <ul>
 {% for work in sorted_publications %}
-  {% if page.publication_dois contains work.doi and work.first_author_surname == "Harrison" %}
+  {% assign normalized_title = work.title | downcase %}
+  {% assign is_project_publication = false %}
+  {% for keyword in page.publication_title_keywords %}
+    {% if normalized_title contains keyword %}{% assign is_project_publication = true %}{% break %}{% endif %}
+  {% endfor %}
+  {% if is_project_publication and work.first_author_surname == "Harrison" %}
     {% include project_publication.html work=work %}
   {% endif %}
 {% endfor %}
 {% for work in sorted_publications %}
-  {% if page.publication_dois contains work.doi and work.first_author_surname != "Harrison" %}
+  {% assign normalized_title = work.title | downcase %}
+  {% assign is_project_publication = false %}
+  {% for keyword in page.publication_title_keywords %}
+    {% if normalized_title contains keyword %}{% assign is_project_publication = true %}{% break %}{% endif %}
+  {% endfor %}
+  {% if is_project_publication and work.first_author_surname != "Harrison" %}
     {% include project_publication.html work=work %}
   {% endif %}
 {% endfor %}
@@ -33,7 +49,7 @@ No ORCID publications are currently linked to this project.
 <h2>Blog posts</h2>
 
 {% assign post_count = 0 %}
-<div class="entries-list">
+<ul>
 {% for post in site.posts %}
   {% assign belongs_to_project = false %}
   {% for project_tag in page.project_tags %}
@@ -44,14 +60,10 @@ No ORCID publications are currently linked to this project.
   {% endfor %}
   {% if belongs_to_project %}
     {% assign post_count = post_count | plus: 1 %}
-    <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-      <h3 class="archive__item-title no_toc" itemprop="headline"><a class="u-url" href="{{ post.url | relative_url }}" rel="permalink">{{ post.title | escape }}</a></h3>
-      <p class="page__meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d/%m/%Y" }}</time></p>
-      {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 240 }}</p>{% endif %}
-    </article>
+    <li><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a> <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d/%m/%Y" }}</time></li>
   {% endif %}
 {% endfor %}
-</div>
+</ul>
 {% if post_count == 0 %}
 No blog posts are currently tagged for this project.
 {% endif %}
