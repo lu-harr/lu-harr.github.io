@@ -113,6 +113,9 @@ footer:
       icon: "fa-solid fa-fw fa-flask"
       url: "/cookbook/"
       # RSS there automatically ?
+    - label: " "
+      icon: "fa-solid fa-fw fa-clone"
+      url: "#card-game-modal"
 
 defaults:
   # _posts
