@@ -58,7 +58,7 @@ selected_works = groups.filter_map do |group|
   doi = summary.dig("external-ids", "external-id")&.find do |external_id|
     external_id["external-id-type"] == "doi"
   end&.dig("external-id-value")
-  doi = doi&.downcase
+  doi = doi&.strip&.downcase&.sub(%r{\Ahttps?://(?:dx\.)?doi\.org/}, "")&.sub(/\Adoi:\s*/, "")
   url = summary.dig("url", "value")
   url = "https://doi.org/#{doi}" if (url.nil? || url.empty?) && doi && !doi.empty?
   month = date.dig("month", "value").to_i
@@ -78,6 +78,8 @@ selected_works = groups.filter_map do |group|
 end
 
 works = selected_works.map do |summary|
+  normalized_title = summary["title"].downcase.gsub(/[^a-z0-9]+/, " ").strip
+  gupta_equal_contribution_paper = summary["doi"] == equal_contribution_doi || normalized_title.include?("model based geospatial surveillance system for antimalarial drug resistance")
   detail_uri = URI("https://pub.orcid.org/v3.0/#{orcid_id}/work/#{summary.fetch("put_code")}")
   detail_request = Net::HTTP::Get.new(detail_uri)
   detail_request["Accept"] = "application/json"
@@ -99,6 +101,7 @@ works = selected_works.map do |summary|
     is_group = credit_name.match?(/\b(study group|consortium|collaboration|working group|network)\b/i)
     if is_group
       initials = credit_name
+      surname = credit_name
     else
       if credit_name.include?(",")
         surname, given_names_text = credit_name.split(",", 2).map(&:strip)
@@ -116,14 +119,19 @@ works = selected_works.map do |summary|
     end
 
     is_gupta = initials.match?(/\bGupta\b/i)
-    equal_contribution = summary["doi"] == equal_contribution_doi && (is_self || is_gupta)
-    { "name" => initials, "is_self" => is_self, "equal_contribution" => equal_contribution }
+    equal_contribution = gupta_equal_contribution_paper && (is_self || is_gupta)
+    { "name" => initials, "surname" => surname, "is_group" => is_group, "is_self" => is_self, "equal_contribution" => equal_contribution }
   end
 
   preprint = summary["type"].to_s.match?(/preprint/i) || summary["journal"].to_s.match?(/medrxiv|biorxiv|arxiv|preprint/i)
-  first_author = authors.first&.fetch("is_self", false) || false
-  first_author = true if summary["doi"] == equal_contribution_doi
-  summary.merge("authors" => authors, "first_author" => first_author, "preprint" => preprint)
+  first_author = authors.first || {}
+  summary.merge(
+    "authors" => authors,
+    "first_author" => first_author.fetch("is_self", false) || gupta_equal_contribution_paper,
+    "first_author_surname" => first_author["surname"],
+    "first_author_is_group" => first_author.fetch("is_group", false),
+    "preprint" => preprint
+  )
 end
 
 FileUtils.mkdir_p("_data")

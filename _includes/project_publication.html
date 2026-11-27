@@ -1,0 +1,7 @@
+<li>
+  {% if work.first_author_surname %}
+    {{ work.first_author_surname | escape }}{% if work.authors.size > 1 and work.first_author_is_group != true %} et al.{% endif %}.
+  {% endif %}
+  {% if work.year %}({{ work.year }}). {% endif %}
+  {% if work.url %}<a href="{{ work.url | escape }}">{{ work.title | escape }}</a>{% else %}{{ work.title | escape }}{% endif %}{% if work.preprint %} <em>(preprint)</em>{% endif %}{% if work.journal %}. <em>{{ work.journal | escape }}</em>{% endif %}
+</li>
