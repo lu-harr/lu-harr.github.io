@@ -1,0 +1,46 @@
+---
+layout: single
+---
+
+{{ content }}
+
+## Publications
+
+{% assign sorted_publications = site.data.orcid_works | sort: "sort_date" | reverse %}
+{% assign publication_count = 0 %}
+<ul>
+{% for work in sorted_publications %}
+  {% if page.publication_dois contains work.doi %}
+    {% assign publication_count = publication_count | plus: 1 %}
+    <li>
+      {% if work.url %}<a href="{{ work.url | escape }}">{{ work.title | escape }}</a>{% else %}{{ work.title | escape }}{% endif %}{% if work.preprint %} <em>(preprint)</em>{% endif %}
+      {% if work.year %} ({{ work.year }}){% endif %}{% if work.journal %}. <em>{{ work.journal | escape }}</em>{% endif %}
+    </li>
+  {% endif %}
+{% endfor %}
+</ul>
+{% if publication_count == 0 %}
+No ORCID publications are currently linked to this project.
+{% endif %}
+
+## Blog posts
+
+{% assign post_count = 0 %}
+<ul>
+{% for post in site.posts %}
+  {% assign belongs_to_project = false %}
+  {% for project_tag in page.project_tags %}
+    {% if post.tags contains project_tag %}
+      {% assign belongs_to_project = true %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+  {% if belongs_to_project %}
+    {% assign post_count = post_count | plus: 1 %}
+    <li><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a> <time datetime="{{ post.date | date_to_xmlschema }}">({{ post.date | date: "%-d %B %Y" }})</time></li>
+  {% endif %}
+{% endfor %}
+</ul>
+{% if post_count == 0 %}
+No blog posts are currently tagged for this project.
+{% endif %}
