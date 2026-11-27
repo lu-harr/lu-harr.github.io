@@ -7,6 +7,7 @@ require "time"
 require "uri"
 
 orcid_id = "0000-0002-0590-1444"
+equal_contribution_doi = "10.1371/journal.pgph.0004717"
 surname_particles = %w[al ap da das de del della den der di dos du la le van von].freeze
 client_id = ENV["ORCID_CLIENT_ID"]
 client_secret = ENV["ORCID_CLIENT_SECRET"]
@@ -114,11 +115,15 @@ works = selected_works.map do |summary|
       initials = given_names.empty? ? credit_name : "#{given_names.map { |part| part.scan(/[[:alpha:]]/).first }.compact.join(" ")} #{surname}"
     end
 
-    { "name" => initials, "is_self" => is_self }
+    is_gupta = initials.match?(/\bGupta\b/i)
+    equal_contribution = summary["doi"] == equal_contribution_doi && (is_self || is_gupta)
+    { "name" => initials, "is_self" => is_self, "equal_contribution" => equal_contribution }
   end
 
   preprint = summary["type"].to_s.match?(/preprint/i) || summary["journal"].to_s.match?(/medrxiv|biorxiv|arxiv|preprint/i)
-  summary.merge("authors" => authors, "first_author" => authors.first&.fetch("is_self", false) || false, "preprint" => preprint)
+  first_author = authors.first&.fetch("is_self", false) || false
+  first_author = true if summary["doi"] == equal_contribution_doi
+  summary.merge("authors" => authors, "first_author" => first_author, "preprint" => preprint)
 end
 
 FileUtils.mkdir_p("_data")

@@ -15,6 +15,19 @@ gallery:
     image_path: /assets/images/smb_poster_2022.jpeg
     alt: "Scientific poster"
     title: "ECMTB 2022: Multi-criteria decision framework"
+publication_links:
+  "10.64898/2026.03.03.26347488":
+    - label: Companion RShiny app
+      url: https://iddo-marcse-models.share.connect.posit.cloud
+  "10.1371/journal.pgph.0004717":
+    - label: Companion RShiny app
+      url: https://iddo.shinyapps.io/pf_drug_resistance/
+  "10.1098/rsos.230641":
+    - label: Companion Shiny app
+      url: http://lucyharrison.shinyapps.io/pk_multicrit_shiny/
+  "10.1371/journal.pntd.0011570":
+    - label: Companion interactive dashboard
+      url: https://019f600f-482a-3ea7-f415-6f5bcf66d6ce.share.connect.posit.cloud/
 ---
 
 <style>
@@ -119,41 +132,18 @@ gallery:
   </a>
 </div>
 
-## First author papers
+## First-author publications
 
-- <a href="https://doi.org/10.64898/2026.10.15.26365607">Geospatial assessment of Japanese encephalitis infection risk in Australia</a> (*preprint*) \
-**Lucinda E Harrison**, David H Duncan, Jennifer A Flegg, David J Price, Nina Kurucz, Ximena Tolosa, Peter J Neville, Cassie C Jansen, Abbey Potter, Craig Brockway, Kimberly L Miller, Michaela Hobby, Vicki Burns, Keira M Glasgow, Anthony DK Draper, Josef Schmidt, Guy Weerasinghe, Andrew F van den Hurk, David T Williams, Stephen L Doggett, Nick Golding, Freya M Shearer (2026). *MedRxiv*. 
+{% assign publications = site.data.orcid_works %}
+{% assign first_author_publications = publications | where: "first_author", true | sort: "sort_date" | reverse %}
+{% assign other_publications = publications | where: "first_author", false | sort: "sort_date" | reverse %}
+{% include orcid_publication_list.html works=first_author_publications %}
 
-- <a href="https://doi.org/10.64898/2026.03.03.26347488">Estimating the changing prevalence of molecular markers of artemisinin partial resistance in *Plasmodium falciparum* malaria in Sub-Saharan Africa</a> (*preprint*) \
-**Lucinda E Harrison**, Nick Golding, Tianxiao Hao, Imke Botha, Stephanie van Wyk, Donnie Mategula, Prabin Dahal, Jaishree Raman, Daniel J Weiss, Karen I Barnes, Philippe J Guérin, and Jennifer A Flegg. (2026). *MedRxiv*.  
-See <a href="https://iddo-marcse-models.share.connect.posit.cloud">companion RShiny app</a>.
+\* Equal contribution
 
-- <a href="https://doi.org/10.1371/journal.pgph.0004717">Model-based geospatial surveillance system for antimalarial drug resistance</a>  \
-Apoorv Gupta\*, **Lucinda E. Harrison**\*, Minu Nain, Sauman Singh-Phulgenda, Rutuja Chhajed, Roopal S kumar, Aishika Das, Manju Rahi, Philippe J. Guerin, Anup R Anvikar, Mehul Dhorda, Jennifer A. Flegg, and Praveen K. Bharti. (2026). *PLOS Global Public Health*  \
-See <a href="https://iddo.shinyapps.io/pf_drug_resistance/">companion RShiny app</a>.
+## Other publications
 
-- <a href="https://doi.org/10.1098/rsos.230641">A multi-criteria framework for disease surveillance site selection: case study for *Plasmodium knowlesi* malaria in Indonesia</a>  \
-**Lucinda E. Harrison**, Jennifer A. Flegg, Ruarai Tobin, Inke N. D. Lubis, Rintis Noviyanti, Matthew J. Grigg, Freya M. Shearer and David J. Price. (2024). *Royal Society Open Science*.  \
-Have a play with the companion Shiny app <a href="http://lucyharrison.shinyapps.io/pk_multicrit_shiny/">here</a>.
-
-\* Contributed equally
-
-## Other papers
-
-- <a href="https://doi.org/10.1371/journal.pntd.0014127">A time-varying geospatial model of habitat suitability for Japanese encephalitis virus vectors and vertebrate hosts in Australia</a> (2026) \
-David H. Duncan, **Lucinda Harrison**, Abbey Potter, Craig Brockway, Kimberly Evasco, Stephen Doggett, Rebecca Feldman, Peter Neville, Andrew van den Hurk, Cassie Jansen, Michaela Hobby, Vicky Burns, Andrew Vickers, Nina Kurucz, Nick Golding, and Freya Shearer. *PLOS Neglected Tropical Diseases*.
-
-- <a href="https://doi.org/10.1371/journal.pntd.0011570">Updating estimates of *Plasmodium knowlesi* malaria risk in response to changing land use patterns across Southeast Asia</a> (2024)  \
-Ruarai J. Tobin, **Lucinda E. Harrison**, Meg K. Tully, Inke N. D. Lubis, Rintis Noviyanti, Nicholas M. Anstey, Giri S. Rajahram, Matthew J. Grigg, Jennifer A. Flegg, David J. Price, and Freya M. Shearer. *PLOS Neglected Tropical Diseases*. Companion interactive dashboard <a href="https://019f600f-482a-3ea7-f415-6f5bcf66d6ce.share.connect.posit.cloud/">here</a>. <!--https://01a1ee06-ba8c-eaea-99a9-b7f684b978d1.share.connect.posit.cloud/-->
-          
-- <a href="https://doi.org/10.4269/ajtmh.23-0631">Systematic Review 
-and Geospatial Modeling of Molecular Markers of Resistance to Artemisinins 
-and Sulfadoxine-Pyrimethamine in *Plasmodium falciparum* in India</a> (2024) \
-M Nain, M Dhorda, J. A. Flegg, A. Gupta, **L. E. Harrison**, S. Singh-Phulgenda , S. D. Otienoburu, E. Harriss, P. K. Bharti, B. Behera, M. Rahi, P. J. Guerin, and A Sharma. *The American Journal of Tropical Medicine and Hygiene*.
-        
-- <a href="https://doi.org/10.1136%2Fbmjno-2023-000407">Modelling 
-accessibility of adult neurology care in Australia, 2020–2034</a> (2023)  \
-Steve Simpson-Yap, Federico Frascoli, **Lucinda Harrison**, Charles Malpas, James Burrell, Nicholas Child, Lauren P Giles, Christian Lueck, Merrilee Needham, Benjamin Tsang, and Tomas Kalincik. *BMJ Neurology Open*.
+{% include orcid_publication_list.html works=other_publications %}
 
 ## Presentations and posters
 
@@ -178,7 +168,9 @@ Steve Simpson-Yap, Federico Frascoli, **Lucinda Harrison**, Charles Malpas, Jame
 - <a href="https://www.cdc.gov.au/sites/default/files/2025-12/joint-national-japanese-encephalitis-virus-outbreak-response-plan_0.pdf">*Joint National Japanese Encephalitis Virus Outbreak Response Plan*</a> (2023), Australian Government Department of Health and Aged Care and Australian Government
 Department of Agriculture, Fisheries, and Forestry
 
-- *SADC Integrated Regional Strategy on Antimalarial Drug Resistance and Malaria Vector Insecticide Resistance (2026–2030)* (2026), Southern African Development Community
+- <a href="https://static1.squarespace.com/static/642d71cc1411cb48f2f48ecc/t/6af6b5fbf27bb1544f40fefb/1794553339789/SADC_AMDR_IR_Strategy_2026-2030_Final_12_Nov2026.pdf">*SADC Integrated Regional Strategy on Antimalarial Drug Resistance and Malaria Vector Insecticide Resistance (2026–2030)*</a> (2026), Southern African Development Community
+
+
 
 ## Thesis
 
