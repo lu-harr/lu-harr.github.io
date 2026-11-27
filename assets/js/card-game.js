@@ -8,7 +8,6 @@
   var closeButtons = modal.querySelectorAll("[data-card-game-close]");
   var card = modal.querySelector(".card-game");
   var front = modal.querySelector(".card-game__front");
-  var status = modal.querySelector(".card-game-modal__status");
   var closeButton = modal.querySelector(".card-game-modal__close");
   var previousFocus = null;
   var currentCardName = null;
@@ -32,7 +31,6 @@
       currentCardName = null;
       card.classList.remove("is-flipped");
       card.setAttribute("aria-label", "Flip the card");
-      status.textContent = "Click the card to flip it.";
       closeButton.focus();
     });
   }
@@ -56,19 +54,16 @@
     var selected = availableCards[Math.floor(Math.random() * availableCards.length)];
     currentCardName = selected.name;
     front.src = selected.src;
-    front.alt = selected.name;
+    front.alt = "Clues about a mathematician; flip the card to read them";
     card.classList.add("is-flipped");
-    status.textContent = selected.name;
     card.setAttribute("aria-label", "Show another card");
   }
 
   card.addEventListener("click", function () {
     if (card.classList.contains("is-flipped")) {
       card.classList.remove("is-flipped");
-      card.setAttribute("aria-label", "Flip to another card");
-      status.textContent = "Drawing another card…";
-      window.clearTimeout(flipTimer);
-      flipTimer = window.setTimeout(drawCard, 700);
+      card.setAttribute("aria-label", "Flip the card to reveal the clues");
+      currentCardName = null;
       return;
     }
 

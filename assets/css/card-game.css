@@ -96,11 +96,6 @@
   transform: rotateY(180deg);
 }
 
-.card-game-modal__status {
-  min-height: 1.5em;
-  margin: 0.4rem 0 0;
-}
-
 body.card-game-open {
   overflow: hidden;
 }

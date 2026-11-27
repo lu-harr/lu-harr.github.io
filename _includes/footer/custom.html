@@ -2,14 +2,13 @@
   <div class="card-game-modal__backdrop" data-card-game-close></div>
   <section class="card-game-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="card-game-title" aria-describedby="card-game-instructions">
     <button class="card-game-modal__close" type="button" aria-label="Close card game" data-card-game-close>&times;</button>
-    <h2 id="card-game-title">Random woman in maths</h2>
-    <p id="card-game-instructions">Click the card to reveal a mathematician.</p>
+    <h2 id="card-game-title">Random woman or non-binary mathematician</h2>
+    <p id="card-game-instructions">Click the card to reveal the clues.</p>
     <button class="card-game" type="button" aria-label="Flip the card">
       <span class="card-game__inner">
         <img class="card-game__face card-game__back" src="{{ '/assets/cards/frontface.png' | relative_url }}" alt="Back of a Women in Maths card">
         <img class="card-game__face card-game__front" src="{{ '/assets/cards/ada.png' | relative_url }}" alt="A Women in Maths card">
       </span>
     </button>
-    <p class="card-game-modal__status" aria-live="polite">Click the card to flip it.</p>
   </section>
 </div>
