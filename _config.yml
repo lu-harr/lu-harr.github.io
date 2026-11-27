@@ -110,11 +110,11 @@ footer:
       icon: "fab fa-fw fa-ravelry"
       url: "https://www.ravelry.com/projects/luharr"
     - label: ""
-      icon: "fa-solid fa-fw fa-flask"
+      icon: "fa-solid fa-fw fa-bowl-rice"
       url: "/cookbook/"
       # RSS there automatically ?
     - label: " "
-      icon: "fa-solid fa-fw fa-square-root-variable"
+      icon: "fa-solid fa-fw fa-dice-five"
       url: "#card-game-modal"
 
 defaults:
