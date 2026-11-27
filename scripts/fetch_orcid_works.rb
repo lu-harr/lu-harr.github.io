@@ -79,7 +79,7 @@ end
 
 works = selected_works.map do |summary|
   normalized_title = summary["title"].downcase.gsub(/[^a-z0-9]+/, " ").strip
-  gupta_equal_contribution_paper = summary["doi"] == equal_contribution_doi || normalized_title.include?("model based geospatial surveillance system for antimalarial drug resistance")
+  equal_contribution_paper = summary["doi"] == equal_contribution_doi || normalized_title.include?("model based geospatial surveillance system for antimalarial drug resistance")
   detail_uri = URI("https://pub.orcid.org/v3.0/#{orcid_id}/work/#{summary.fetch("put_code")}")
   detail_request = Net::HTTP::Get.new(detail_uri)
   detail_request["Accept"] = "application/json"
@@ -119,7 +119,7 @@ works = selected_works.map do |summary|
     end
 
     is_gupta = initials.match?(/\bGupta\b/i)
-    equal_contribution = gupta_equal_contribution_paper && (is_self || is_gupta)
+    equal_contribution = equal_contribution_paper && (is_self || is_gupta)
     { "name" => initials, "surname" => surname, "is_group" => is_group, "is_self" => is_self, "equal_contribution" => equal_contribution }
   end
 
@@ -127,7 +127,7 @@ works = selected_works.map do |summary|
   first_author = authors.first || {}
   summary.merge(
     "authors" => authors,
-    "first_author" => first_author.fetch("is_self", false) || gupta_equal_contribution_paper,
+    "first_author" => first_author.fetch("is_self", false) || equal_contribution_paper,
     "first_author_surname" => first_author["surname"],
     "first_author_is_group" => first_author.fetch("is_group", false),
     "preprint" => preprint

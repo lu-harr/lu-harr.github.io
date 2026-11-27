@@ -17,16 +17,16 @@ gallery:
     title: "ECMTB 2022: Multi-criteria decision framework"
 publication_links:
   "10.64898/2026.03.03.26347488":
-    - label: Companion RShiny app
+    - label: Companion Shiny app
       url: https://iddo-marcse-models.share.connect.posit.cloud
   "10.1371/journal.pgph.0004717":
-    - label: Companion RShiny app
+    - label: Companion Shiny app
       url: https://iddo.shinyapps.io/pf_drug_resistance/
   "10.1098/rsos.230641":
     - label: Companion Shiny app
       url: http://lucyharrison.shinyapps.io/pk_multicrit_shiny/
   "10.1371/journal.pntd.0011570":
-    - label: Companion interactive dashboard
+    - label: Companion Shiny app
       url: https://019f600f-482a-3ea7-f415-6f5bcf66d6ce.share.connect.posit.cloud/
 ---
 
@@ -139,13 +139,13 @@ publication_links:
 {% assign other_publications = publications | where: "first_author", false | sort: "sort_date" | reverse %}
 {% include orcid_publication_list.html works=first_author_publications %}
 
-\* Equal contribution
+\* Contributed equally
 
 ## Other publications
 
 {% include orcid_publication_list.html works=other_publications %}
 
-## Presentations and posters
+## Poster library
 
 {% include gallery %}
 
@@ -163,14 +163,12 @@ publication_links:
 
 \* Not published in the public domain
 
-## My research in policy
+## Research in policy
 
 - <a href="https://www.cdc.gov.au/sites/default/files/2025-12/joint-national-japanese-encephalitis-virus-outbreak-response-plan_0.pdf">*Joint National Japanese Encephalitis Virus Outbreak Response Plan*</a> (2023), Australian Government Department of Health and Aged Care and Australian Government
 Department of Agriculture, Fisheries, and Forestry
 
 - <a href="https://static1.squarespace.com/static/642d71cc1411cb48f2f48ecc/t/6af6b5fbf27bb1544f40fefb/1794553339789/SADC_AMDR_IR_Strategy_2026-2030_Final_12_Nov2026.pdf">*SADC Integrated Regional Strategy on Antimalarial Drug Resistance and Malaria Vector Insecticide Resistance (2026–2030)*</a> (2026), Southern African Development Community
-
-
 
 ## Thesis
 
